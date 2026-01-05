@@ -1,0 +1,41 @@
+﻿<Window x:Class="Edge.Tower2.UI.wpfDemo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ui="clr-namespace:Edge.Tower2.UI"
+        Style="{StaticResource Window}" 
+        Title="wpfDemo" Height="1024" Width="1280" Deactivated="Window_Deactivated"   Unloaded="Window_Unloaded" Activated="Window_Activated">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources\rsStyle.xaml"/>
+                <ResourceDictionary Source="Resources\rsRoundButton.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Window.Background>
+        <ImageBrush />
+    </Window.Background>
+    
+    <Grid>
+        <Viewbox Stretch="Fill" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="1024" Height="768">
+
+            <Grid Width="1280" Height="1024">
+                <Canvas>
+                    <TextBox x:Name="txtCode" Height="48" Canvas.Left="105" TextWrapping="Wrap" Canvas.Top="312" Width="545" FontSize="28" AcceptsReturn="True" Style="{StaticResource st_TextBox}" AcceptsTab="True" Foreground="#FF6C6A6A" PreviewMouseDown="txtCode_PreviewMouseDown"/>
+                    <Button x:Name="btnVerify" Style="{StaticResource st_BlueButton}" Content="Verify" Canvas.Left="961" Canvas.Top="300" Width="220" Height="73" FontSize="24" Click="btnVerify_Click" />
+                    <Label Content="Please enter the demo code" Height="42" Canvas.Left="105" Canvas.Top="265" Width="515" Style="{StaticResource st_Label}" FontSize="24" Foreground="#FF6C6A6A"/>
+
+                    <Line X1="0" X2="800" Y1="0"  Y2="0" Canvas.Left="261" Canvas.Top="410" Stroke="#FFcccccc" StrokeThickness="1" Visibility="Hidden" />
+
+                    <ui:NavBar x:Name="NavBar" Canvas.Left="520" Canvas.Top="0" Height="77" />
+                    <ui:uc_User x:Name="ucUser" Canvas.Left="0" Canvas.Top="80" Height="80" />
+                    <ui:UC_Keyboard x:Name="UC_Keyboard1" Canvas.Left="100" Canvas.Top="522"  Visibility="Visible" Height="Auto" Width="Auto" />
+                    <Label x:Name="lblMessage" Content="* Code Invalid" Height="40" Canvas.Left="105" Canvas.Top="374" Width="545" Style="{StaticResource st_Label}" FontSize="20" Foreground="#FFDC1212"/>
+
+                </Canvas>
+            </Grid>
+        </Viewbox>
+    </Grid>
+</Window>

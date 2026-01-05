@@ -1,0 +1,31 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <SolidColorBrush x:Key="st_mainblue" Color="#ff45abc2"/>            <!--ff00a5e2-->    <!-- 00115a1-0005-->
+
+    <SolidColorBrush x:Key="st_mainblue_default" Color="#ff00a5e2"/>    <!--ff00a5e2-->
+    
+    <SolidColorBrush x:Key="st_mainblue_pg1" Color="#ff00a5e2"/>        <!--ff00a5e2-->
+
+    <SolidColorBrush x:Key="st_mainblue_pg2" Color="#ff775cd1"/>        <!--ff00a5e2-->
+
+    <SolidColorBrush x:Key="st_ringcolor_default" Color="#ff45abc2"/>   <!--ff00a5e2-->    <!-- 00115a1-0005-->
+
+    <SolidColorBrush x:Key="st_ringcolor_pg1" Color="#ff45abc2"/>       <!--ff00a5e2-->    <!-- 00115a1-0005-->
+
+    <SolidColorBrush x:Key="st_ringcolor_pg2" Color="#ff775cd1"/>       <!--ff00a5e2-->
+
+    <SolidColorBrush x:Key="st_leftpanelcolor1" Color="#ffffffff"/>     <!--ffffffff-->
+
+    <SolidColorBrush x:Key="st_leftpanelcolor2" Color="#ffeeeeee"/>     <!--ffeeeeee-->
+
+    <FontFamily x:Key="st_fonts">Bebas Neue Regular,Impact,ImpGotham Light,Verdana</FontFamily>     <!-- 00115a1-0005-->
+
+    <FontFamily x:Key="st_fonts_medium">Bebas Neue Bold,Impact,ImpGotham Light,Verdana</FontFamily> <!-- 00115a1-0005-->
+
+    <FontFamily x:Key="st_fonts_bold">Bebas Neue Bold,Impact,ImpGotham Light,Verdana</FontFamily>   <!-- 00115a1-0005-->
+    
+
+    <Color x:Key="db_selected">#ff00a5e2</Color>
+    
+</ResourceDictionary>

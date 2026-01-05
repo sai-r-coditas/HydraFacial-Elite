@@ -1,0 +1,88 @@
+﻿<Window x:Class="Edge.Tower2.UI.wpfSystem"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Style="{StaticResource Window}"
+        xmlns:ui="clr-namespace:Edge.Tower2.UI"
+        Title="wpfSystem" Height="1024" Width="1280"
+         >
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources\rsStyle.xaml"/>
+                <ResourceDictionary Source="Resources\rsRoundButton.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Window.Background>
+        <ImageBrush />
+    </Window.Background>
+
+    <Grid>
+
+        <Viewbox Stretch="Fill" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="1024" Height="819">
+
+            <Grid Width="1280" Height="1024">
+
+                <Image x:Name="imgBG" Source="Skin\Images\en-US\WindowBackground_datetimechanges.png" Width="1280" Height="1024" />
+
+                <Canvas x:Name="cvsRoot" Width="1280" Height="1024" >
+
+                    <ui:NavBar x:Name="NavBar" Canvas.Left="0" Canvas.Top="0" Height="77" />
+
+                    <Canvas x:Name="cvsDate" Canvas.Left="-50" Canvas.Top="50" Width="660" Height="791">
+                        <TextBox x:Name="txtYear" Height="38" Canvas.Left="514" TextWrapping="Wrap" FontSize="22" Style="{StaticResource st_TextBox}" Canvas.Top="262" Width="108" PreviewMouseDown="txtYear_PreviewMouseDown" MaxLength="4" Foreground="#FF555555" KeyDown="txtYear_KeyDown" BorderThickness="0" Background="{x:Null}"/>        <!-- 00115a1-0006-->
+                        <TextBox x:Name="txtMonth" Height="38" Canvas.Left="137" TextWrapping="Wrap"  FontSize="22"  Style="{StaticResource st_TextBox}" Canvas.Top="262" Width="108" PreviewMouseDown="txtMonth_PreviewMouseDown" MaxLength="2" Foreground="#FF555555" KeyDown="txtMonth_KeyDown" BorderThickness="0" Background="{x:Null}"/>   <!-- 00115a1-0006-->
+                        <TextBox x:Name="txtDay" Height="38" Canvas.Left="322" TextWrapping="Wrap"  FontSize="22"  Style="{StaticResource st_TextBox}" Canvas.Top="262" Width="108" PreviewMouseDown="txtDay_PreviewMouseDown" MaxLength="2" Foreground="#FF555555" KeyDown="txtDay_KeyDown" BorderThickness="0" Background="{x:Null}"/>         <!-- 00115a1-0006-->
+                        <TextBox x:Name="txtHour" Height="38" Canvas.Left="133" TextWrapping="Wrap"  FontSize="22"  Style="{StaticResource st_TextBox}" Canvas.Top="409" Width="108" PreviewMouseDown="txtHour_PreviewMouseDown" MaxLength="2" Foreground="#FF555555" KeyDown="txtHour_KeyDown" BorderThickness="0" Background="{x:Null}"/>      <!-- 00115a1-0006-->
+                        <TextBox x:Name="txtMinute" Height="38" Canvas.Left="322" TextWrapping="Wrap"  FontSize="22"  Style="{StaticResource st_TextBox}" Canvas.Top="409" Width="108" PreviewMouseDown="txtMinute_PreviewMouseDown" MaxLength="2" Foreground="#FF555555" KeyDown="txtMinute_KeyDown" BorderThickness="0" Background="{x:Null}"/><!-- 00115a1-0006-->
+                        <TextBox x:Name="txtSecond" Height="38" Canvas.Left="511" TextWrapping="Wrap" FontSize="22"  Style="{StaticResource st_TextBox}" Canvas.Top="409" Width="108" PreviewMouseDown="txtSecond_PreviewMouseDown" MaxLength="2" Foreground="#FF555555" KeyDown="txtSecond_KeyDown" BorderThickness="0" Background="{x:Null}"/> <!-- 00115a1-0006-->
+
+                        <!--<Label x:Name="lblYear" Content="Year" Height="38" Canvas.Left="512"  FontSize="22"  Style="{StaticResource st_Label}" Canvas.Top="221" Width="124" Foreground="#FF555555"/>
+                        <Label x:Name="lblMonth" Content="Month" Height="38" Canvas.Left="135" FontSize="22"  Style="{StaticResource st_Label}" Canvas.Top="221" Width="124" Foreground="#FF555555"/>
+                        <Label x:Name="lblDay" Content="Day" Height="38" Canvas.Left="333" FontSize="22"  Style="{StaticResource st_Label}" Canvas.Top="221" Width="124" Foreground="#FF555555"/>
+                        <Label x:Name="lblHour" Content="Hour" Height="38" Canvas.Left="131" FontSize="22"  Style="{StaticResource st_Label}" Canvas.Top="371" Width="124" Foreground="#FF555555" />
+                        <Label x:Name="lblMinute" Content="Minute" Height="38" Canvas.Left="321" FontSize="22"  Style="{StaticResource st_Label}" Canvas.Top="371" Width="89" Foreground="#FF555555"/>
+                        <Label x:Name="lblSecond" Content="Second" Height="38" Canvas.Left="505" FontSize="22"  Style="{StaticResource st_Label}" Canvas.Top="371" Width="107" Foreground="#FF555555" />-->
+
+                        <Button x:Name="btnSet" Style="{StaticResource  st_FlatButton1}" Content="" HorizontalAlignment="Left" Height="60" VerticalAlignment="Top" Width="230" Click="btnSet_Click" IsCancel="True" FontSize="22" Canvas.Left="212" Canvas.Top="543"/>
+
+                        <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="147" Height="61" Click="Button_Click" Canvas.Left="216" Canvas.Top="558" Visibility = "Hidden"/>
+                        
+                        <!--<Label Content="/" Height="38" Canvas.Left="266" Canvas.Top="257" Width="40" FontSize="26" Foreground="#FF888888"/>
+                        <Label Content="/" Height="36" Canvas.Left="457" Canvas.Top="261" Width="37" FontSize="26" Foreground="#FF888888"/>
+                        <Label Content=":" Height="38" Canvas.Left="264" Canvas.Top="399" Width="40" FontSize="26"/>
+                        <Label Content=":" Height="38" Canvas.Left="457" Canvas.Top="399" Width="37" FontSize="26"/>-->
+
+
+                    </Canvas>
+
+                    <Canvas x:Name="cvsKeyBoard"  Visibility="Visible" Width="761" Canvas.Left="470" Canvas.Top="235">   <!-- offset -40-->
+                        <!--Style="{StaticResource st_Transparent}"-->
+
+                        <Button x:Name="btn0"  Style="{StaticResource  st_FlatButton1}"   Width="137" Height="131"  FontSize="38" Click="btn_Click" Canvas.Left="323" Canvas.Top="512"  Content="" Foreground="#FF555555" />
+                        <Button x:Name="btn1"  Style="{StaticResource  st_FlatButton1}"  Width="137" Height="131"  FontSize="38" Click="btn_Click" Canvas.Left="146" Canvas.Top="36"   Content="" Foreground="#FF555555"/>
+                        <Button x:Name="btn2"  Style="{StaticResource  st_FlatButton1}"   Width="137" Height="131"  FontSize="38" Click="btn_Click" Canvas.Left="323" Canvas.Top="36" Content="" Foreground="#FF555555" />
+                        <Button x:Name="btn3"  Style="{StaticResource  st_FlatButton1}"   Width="137" Height="131"  FontSize="38" Click="btn_Click" Canvas.Left="502" Canvas.Top="36" Content="" Foreground="#FF555555" />
+                        <Button x:Name="btn4"  Style="{StaticResource  st_FlatButton1}"   Width="137" Height="131"  FontSize="38" Click="btn_Click" Canvas.Left="146" Canvas.Top="193" Content="" Foreground="#FF555555" />
+                        <Button x:Name="btn5"  Style="{StaticResource  st_FlatButton1}"  Width="137" Height="131"  FontSize="38" Click="btn_Click" Canvas.Left="323" Canvas.Top="193" Content="" Foreground="#FF555555" />
+                        <Button x:Name="btn6"  Style="{StaticResource  st_FlatButton1}"   Width="137" Height="131"  FontSize="38" Click="btn_Click" Canvas.Left="502" Canvas.Top="193" Content="" Foreground="#FF555555" />
+                        <Button x:Name="btn7"  Style="{StaticResource  st_FlatButton1}"  Width="137" Height="131"  FontSize="38" Click="btn_Click" Canvas.Left="146" Canvas.Top="350" Content="" Foreground="#FF555555" />
+                        <Button x:Name="btn8"  Style="{StaticResource  st_FlatButton1}"   Width="137" Height="131"  FontSize="38" Click="btn_Click" Canvas.Left="323" Canvas.Top="350" Content="" Foreground="#FF555555" />
+                        <Button x:Name="btn9"  Style="{StaticResource  st_FlatButton1}"  Width="137" Height="131"  FontSize="38" Click="btn_Click" Canvas.Left="502" Canvas.Top="350"  Content="" Foreground="#FF555555" />
+                        <Button x:Name="btnDel"  Style="{StaticResource  st_FlatButton1}"  Width="137" Height="131"  FontSize="38" Click="btn_Click" Canvas.Left="502" Canvas.Top="512" Content="" Foreground="#FF555555" />
+
+                    </Canvas>
+
+                </Canvas>
+
+                <!-- 00115a1-0003 -->  <!-- 00115a1-0005-->
+                <Label x:Name="lblMessage" Content="" Style="{StaticResource st_Label}" HorizontalAlignment="Left" Height="35" Margin="83,736,0,0" VerticalAlignment="Top" Width="594" Foreground="#FFCF3240" FontSize="20" HorizontalContentAlignment="Left"/>  <!-- 00115a1-0006>-->
+
+            </Grid>
+
+        </Viewbox>
+
+    </Grid>
+</Window>

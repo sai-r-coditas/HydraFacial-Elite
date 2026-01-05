@@ -1,0 +1,65 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ui="clr-namespace:Edge.Tower2.UI"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        mc:Ignorable="d" 
+        x:Class="Edge.Tower2.UI.wpfBackup"
+        x:Name="Me"
+        Style="{StaticResource Window}"  
+        Title="Backup"  Height="1024" Width="1280" Activated="Me_Activated" Unloaded="Me_Unloaded">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources\H_Scroll.xaml"/>
+                <ResourceDictionary Source="Resources\rsStyle.xaml"/>
+                <ResourceDictionary Source="Resources\rsRoundButton.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Window.Background>
+        <ImageBrush />
+    </Window.Background>
+
+    <Grid>
+        <Viewbox Stretch="Fill" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="1024" Height="819">
+
+            <Grid x:Name="grdBackup" Width="1280" Height="1024">
+
+                <!--0102-39-->
+                <Image x:Name="imgBG" Source="Skin\images\en-US\Windowbackground_restore.png"  Width="1280" Height="1024"/>
+
+                <Canvas >
+                    <ui:NavBar x:Name="NavBar" Canvas.Left="0" Canvas.Top="0" Height="77"  />
+
+                    <Label x:Name="lblMessageRestore" Content="" Style="{StaticResource st_Label}" FontSize="22" HorizontalContentAlignment="Right" Canvas.Left="786" Canvas.Top="565" Width="358"/>
+                    <Label x:Name="lblMessageBackup" Content="" Style="{StaticResource st_Label}" Height="35" Canvas.Left="778" Canvas.Top="297" Width="366" FontSize="22" HorizontalContentAlignment="Right"/>
+
+                    <Button x:Name="btnBackup" Style="{StaticResource st_GrayBlueButton}" FontSize="22" HorizontalAlignment="Left" VerticalAlignment="Top" Width="191" Height="71" Canvas.Left="953" Canvas.Top="295" Click="btnBackup_Click">
+                        <TextBlock Name="tbkBackup"   TextAlignment="Center" FontSize="22" TextWrapping="Wrap" MaxWidth="180">Backup</TextBlock>
+                    </Button>
+                    
+                    <Button x:Name="btnRestore" Style="{StaticResource st_GrayBlueButton}" FontSize="22" HorizontalAlignment="Left" VerticalAlignment="Top" Width="191" Height="71" Canvas.Left="953" Canvas.Top="566" Click="btnRestore_Click">
+                        <TextBlock Name="tbkRestore"   TextAlignment="Center" FontSize="22" TextWrapping="Wrap" MaxWidth="180">Restore</TextBlock>
+                    </Button>
+                    
+                    <!--For T2-->
+                    <TextBox x:Name="txtBackup"  FontSize="22" HorizontalAlignment="Left" Height="46"  TextWrapping="Wrap" VerticalAlignment="Top" Width="438" Canvas.Left="412" Canvas.Top="236" Background="#19FFFFFF"/>
+                    <ListBox x:Name="lstFolder" Height="144" Canvas.Left="138" Canvas.Top="603" FontSize="22" Width="571" Background="#19FFFFFF"/>
+                    <Button x:Name="btnRemove"  Content="Remove" Style="{StaticResource st_BlueButton}" FontSize="22" HorizontalAlignment="Left" VerticalAlignment="Top" Width="113" Height="45" Canvas.Left="1167" Canvas.Top="724" Click="btnRemove_Click"/>
+                   
+                    <Button x:Name="btnUserManagement" Style="{StaticResource st_BlueButton}"  Width="111" Height="83" Click="btnUserManagement_Click" Canvas.Left="1169" Canvas.Top="774" >
+                        <TextBlock TextWrapping="Wrap" MaxWidth="170" TextAlignment="Center"  FontSize="20" Height="53" Width="135" >User Management</TextBlock>
+                    </Button>
+
+                    <Button x:Name="btnSendMail" Content="Button" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="111" Height="46" Click="btnSendMail_Click" Canvas.Left="1169" Canvas.Top="862"/>
+                    <ProgressBar x:Name="progressbar" Style="{StaticResource st_BlueProgress}" Foreground="{StaticResource st_mainblue}"  Height="24" Canvas.Left="138" Canvas.Top="823" Width="1006"/>
+
+                </Canvas>
+
+            </Grid>
+        </Viewbox>
+    </Grid>
+</Window>

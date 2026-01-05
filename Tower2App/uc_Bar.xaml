@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="Edge.Tower2.UI.uc_Bar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+    </UserControl.Resources>
+    <Grid>
+        <!--<Border Background="#22000000" CornerRadius="5" BorderBrush="Black" BorderThickness="2"></Border>
+        <Rectangle Margin="2" RadiusX="5" RadiusY="5" Visibility="{Binding IsCharging, ElementName=Me, Converter={StaticResource BooleanToVisibilityConverter}, Mode=OneWay}">
+            <Rectangle.Fill>
+                <LinearGradientBrush>
+                    <GradientStop Color="Green" Offset="0"/>
+                    <GradientStop Color="Yellow" Offset=".5"/>
+                    <GradientStop Color="Red" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>-->
+        
+        <ProgressBar  Name="progressBar1"  Width="49" Height="236"  Value="10"  Foreground="#FF5EEA1C"  HorizontalAlignment="Stretch" Canvas.Left="28" Canvas.Top="169" Orientation="Vertical" BorderThickness="3">
+            <ProgressBar.BorderBrush>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFB2B2B2" Offset="0"/>
+                    <GradientStop Color="#FF575252"/>
+                </LinearGradientBrush>
+            </ProgressBar.BorderBrush>
+            <ProgressBar.Background>
+                <LinearGradientBrush EndPoint="1,0" StartPoint="0,0">
+                    <GradientStop Color="#FFE20D34" Offset="0"/>
+                    <GradientStop Color="#FFE2E21D" Offset="0.644"/>
+                    <GradientStop Color="#FF7EEC31" Offset="1"/>
+                    <GradientStop Color="#FFEE8F1D" Offset="0.368"/>
+                </LinearGradientBrush>
+            </ProgressBar.Background>
+            <ProgressBar.Clip >
+                <RectangleGeometry RadiusX="10"   RadiusY="10" Rect="0,0,50,300"/>
+            </ProgressBar.Clip>
+        </ProgressBar>
+
+        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding IsCharging, ElementName=Me, Converter={StaticResource BooleanToVisibilityConverter}}" Content="{Binding Path=Value, ElementName=Me, Mode=OneWay, StringFormat=\{0:D\}}"></Label>
+    </Grid>
+</UserControl>

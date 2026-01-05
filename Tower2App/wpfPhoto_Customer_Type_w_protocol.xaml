@@ -1,0 +1,156 @@
+﻿<Window x:Class="Edge.Tower2.UI.Photo_Customer_Type"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ui="clr-namespace:Edge.Tower2.UI"
+        Title="Photo_Customer_Type" 
+        Height="1024" Width="1280"
+        x:Name="Me"
+        Style="{StaticResource Window}" Activated="Me_Activated" Deactivated="Me_Deactivated">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources\rsStyle.xaml"/>
+                <ResourceDictionary Source="Resources\rsRoundButton.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Window.Background>
+        <ImageBrush ImageSource="Skin/Images/home1.png"/>
+    </Window.Background>
+
+    <Grid DataContext="{Binding ElementName=Me}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70" />
+            <RowDefinition Height="954" />
+        </Grid.RowDefinitions>
+
+        <!--====== Top Menu ======-->
+        <Grid x:Name="Bottom" Grid.Row="1">
+            <!--Main1-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="680" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="30" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!--====Left Side Bar Grid [====================================-->
+            <Grid Margin="595,72,5,31" Grid.ColumnSpan="2" >
+                <Canvas Margin="0,0,-94,0" HorizontalAlignment="Left" Width="736">
+                    <Button x:Name="btnNewCustomer" Height="128" Width ="180" Click="btnNewCustomer_Click" Style="{StaticResource st_FlatButton1}" Canvas.Left="161" Canvas.Top="587" Background="#FF08C5D8" Foreground="#FFFDF5F5">
+                        <Button.Content>
+                            <TextBlock  TextWrapping="Wrap" MaxWidth="190"  TextAlignment="Center" FontSize="24" Height="78" Width="116">New Customer</TextBlock>
+                        </Button.Content>
+                    </Button>
+
+                    <Button x:Name="btnExistCustomer"  Height="128" Width ="180" Click="btnExistCustomer_Click" Style="{StaticResource st_FlatButton1}" Canvas.Left="401" Canvas.Top="587" Background="#FF08C5D8" Foreground="#FFF9EFEF" >
+                        <Button.Content>
+                            <TextBlock  TextWrapping="Wrap" MaxWidth="110"  TextAlignment="Center" FontSize="24" Height="76" Width="115">Existing Customer</TextBlock>
+                        </Button.Content>
+                    </Button>
+                </Canvas>
+            </Grid>
+            <!--==== ] Left Side Bar Grid ====================================-->
+
+            <!--==== Right Side Bar Grid [====================================-->
+            <Grid Grid.Column="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+            </Grid>
+            <!--==== ] Right Side Bar Grid ====================================-->
+
+
+            <!--========================================-->
+            <!--<WebBrowser x:Name="TreatmentBrowser"/>-->
+            <!--<StackPanel Opacity=".5" Orientation="Horizontal" HorizontalAlignment="Center" DockPanel.Dock="Bottom">
+                    <Button Style="{StaticResource ControlButtonStyle}" Background="Black"/>
+                    <Button Style="{StaticResource ControlButtonStyle}" Background="Black"/>
+                    <Button Style="{StaticResource ControlButtonStyle}" Background="Black"/>
+                    <Button Style="{StaticResource ControlButtonStyle}" Background="Black"/>
+                </StackPanel>-->
+
+            <!--Inner Grid for content-->
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="70" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="100" />
+                </Grid.RowDefinitions>
+
+                <!--================-->
+                <!--Add Shadow      -->
+                <!--================-->
+                <Border Margin="1"  Grid.Row="1" BorderBrush="#FF880000" BorderThickness="0" CornerRadius="4"
+                     Background="#FFffffff">
+                    <Border.Effect>
+                        <DropShadowEffect Color="#FFeeeeee"/>
+                    </Border.Effect>
+                </Border>
+
+                <Label x:Name="lblLogin" Grid.Row="0" Content="Logged in as User" HorizontalAlignment="Left" Margin="55,25,0,0" VerticalAlignment="Top" Width="143" Foreground="#FF494848" FontFamily="Helvetica Neue LT Std"/>
+
+                <Button x:Name="btnLogout"   Grid.Row="0"  Width="50" Height="50" RenderTransformOrigin="-4.203,-3.744" Margin="0,8,630,7" Click="btnLogout_Click">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source = "Skin/Images/n_Login.png" Width="60" Height="60" />
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+                <!--====== Title ======-->
+                <Label HorizontalAlignment="Stretch" VerticalAlignment="Stretch" VerticalContentAlignment="Top" 
+                           HorizontalContentAlignment="Center" 
+                           FontSize="36"
+                           FontWeight="Bold"
+                           FontStyle="Oblique"
+                           Foreground="DarkSlateGray"
+                           Margin="0,0,10,51" Visibility="Hidden" >
+                    Photo/Image Capture
+                </Label>
+
+                <!--========== Document and Video Player ==========-->
+                <DockPanel x:Name="SP1" Grid.Column="0" Grid.Row="1" Height ="500"  Margin="0,0,0,0" HorizontalAlignment="Left">
+                    <ScrollViewer x:Name="ScrollViewer1" VerticalScrollBarVisibility="Hidden" Margin="30,0,30,0" PanningMode="HorizontalOnly" PreviewMouseMove="ScrollViewer1_PreviewMouseMove" PreviewMouseDown="ScrollViewer1_PreviewMouseDown" MouseLeave="ScrollViewer1_MouseLeave" PreviewMouseUp="ScrollViewer1_PreviewMouseUp"  >
+
+                        <!--<FlowDocumentScrollViewer x:Name="flowDocViewer" IsSelectionEnabled="False" Margin="20,0" VerticalScrollBarVisibility="Hidden"
+                                          HorizontalScrollBarVisibility="Auto"   Grid.Row="1" Grid.Column="0" Width="533">
+                            <FlowDocument FontSize="24" FontFamily="Arial" x:Name="Light_Therapy">
+                            </FlowDocument>
+                         </FlowDocumentScrollViewer>-->
+                        <Image x:Name="imgViewer"  Width="600"  />
+                    </ScrollViewer>
+                    
+                    <ScrollViewer x:Name="ScrollViewer2" Visibility="Hidden" VerticalScrollBarVisibility="Hidden" PanningMode="HorizontalOnly" PreviewMouseMove="ScrollViewer1_PreviewMouseMove" PreviewMouseDown="ScrollViewer1_PreviewMouseDown" MouseLeave="ScrollViewer1_MouseLeave" PreviewMouseUp="ScrollViewer1_PreviewMouseUp"  >
+
+                        <FlowDocumentScrollViewer x:Name="flowDocViewer" IsSelectionEnabled="False" Margin="20,0" VerticalScrollBarVisibility="Hidden"
+                                          HorizontalScrollBarVisibility="Auto"   Grid.Row="1" Grid.Column="0" Width="533">
+                            <FlowDocument FontSize="24" FontFamily="Arial" x:Name="Light_Therapy">
+
+
+                            </FlowDocument>
+                        </FlowDocumentScrollViewer>
+                    </ScrollViewer>
+                </DockPanel>
+
+
+            </Grid>
+
+        </Grid>
+
+        <Canvas Grid.Row="0" Grid.RowSpan="2">
+            <ui:NavBar x:Name="NavBar" Canvas.Left="520" Canvas.Top="0" Height="80" />
+        </Canvas>
+    </Grid>
+</Window>

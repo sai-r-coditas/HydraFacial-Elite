@@ -1,0 +1,422 @@
+﻿<UserControl x:Name="ucKeyBoard" x:Class="Edge.Tower2.UI.UC_Keyboard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" >
+
+    <UserControl.Resources>
+
+        <BooleanToVisibilityConverter x:Key="BoolToVisConverter" />
+
+        <Style x:Key="MyFocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Control}">
+                        <Grid Margin="4 2">
+                            <Rectangle Name="r1" StrokeThickness="1" Stroke="Black" StrokeDashArray="2 2"/>
+                            <Border Name="border" Width="{TemplateBinding ActualWidth}" Height="{TemplateBinding ActualHeight}"  CornerRadius="2" BorderThickness="1" />
+                    
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="ShadowStyle">
+            <Setter Property="Control.Foreground" Value="#0064676c" />
+        </Style>
+
+        <!--Foreground control for buttons-->
+        <SolidColorBrush x:Key="Button.ForeGround" Color="#0065686d" />
+        <!--#ffb3aa9c-->
+        <SolidColorBrush x:Key="Button.ForeGround.Border" Color="#0065686d" />
+        <!--#ffb3aa9c-->
+
+        <Style x:Key="InformButton" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Margin" Value="2"/>
+            <Setter Property="FontFamily" Value="Gotham Light"/>
+            <Setter Property="FontSize" Value="20px"/>
+            <Setter Property="FontWeight" Value="Normal"/>
+            <Setter Property="FocusVisualStyle" Value="{StaticResource MyFocusVisual}" />
+            <Setter Property="Background" Value="#00ffffff"/>
+
+            <Setter Property="Foreground" Value="{StaticResource Button.ForeGround}"/>
+
+            <Setter Property="Template">
+                <Setter.Value>
+
+                    <!-- Button shape -->
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" 
+				BorderThickness="1,1,1,1"
+				Padding="4,2" 
+				BorderBrush="{StaticResource Button.ForeGround.Border}"
+ 				CornerRadius="8" 
+				Background="{TemplateBinding Background}">
+                            <Grid >
+                                <ContentPresenter HorizontalAlignment="Left"  
+	                           VerticalAlignment="Center"  Name="contentShadow" 
+					Style="{StaticResource ShadowStyle}">
+
+                                </ContentPresenter>
+                                <ContentPresenter HorizontalAlignment="Left"  
+                            VerticalAlignment="Center" Name="content"/>
+                            </Grid>
+                        </Border>
+                        <ControlTemplate.Triggers>
+
+                            <!--
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="BorderBrush" Value="#FF4788c8" />
+                            <Setter Property="Foreground" Value="#FF4788c8" />
+                        </Trigger>
+                        -->
+
+                            <Trigger Property="IsDefaulted" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="#FF282828" />
+                            </Trigger>
+                            <Trigger Property="IsFocused" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="#00bfbcbb" />
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter TargetName="border" Property="Opacity" Value="0.7" />
+                                <Setter Property="Foreground" Value="#ff64676c" />
+                            </Trigger>
+
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!--For tab, backspace... buttons with color on background -->
+        <Style x:Key="InformButton1" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Margin" Value="2"/>
+            <Setter Property="FontFamily" Value="Gotham Light"/>
+            <Setter Property="FontSize" Value="20px"/>
+            <Setter Property="FontWeight" Value="Normal"/>
+            <Setter Property="FocusVisualStyle" Value="{StaticResource MyFocusVisual}" />
+            <Setter Property="Background" Value="#00d1d2d4"/>
+
+            <Setter Property="Foreground" Value="{StaticResource Button.ForeGround}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+
+                    <!-- Button shape -->
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" 
+				BorderThickness="1,1,1,1"
+				Padding="4,2" 
+				BorderBrush="{StaticResource Button.ForeGround.Border}" 
+				CornerRadius="8" 
+				Background="{TemplateBinding Background}">
+                            <Grid >
+                                <ContentPresenter HorizontalAlignment="Left"  
+	                           VerticalAlignment="Center"  Name="contentShadow" 
+					Style="{StaticResource ShadowStyle}">
+
+                                </ContentPresenter>
+                                <ContentPresenter HorizontalAlignment="Left"  
+                            VerticalAlignment="Center" Name="content"/>
+                            </Grid>
+                        </Border>
+                        <ControlTemplate.Triggers>
+
+                            <!--
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="#FF4788c8" />
+                                <Setter Property="Foreground" Value="#FF4788c8" />
+                            </Trigger>
+                            -->
+
+                            <Trigger Property="IsDefaulted" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="#FF282828" />
+                            </Trigger>
+                            <Trigger Property="IsFocused" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="#00bfbcbb" />
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter TargetName="border" Property="Opacity" Value="0.7" />
+                                <Setter Property="Foreground" Value="#ff64676c" />
+                            </Trigger>
+
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!--For Language button-->
+        <Style x:Key="InformButton2" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Margin" Value="2"/>
+            <Setter Property="FontFamily" Value="Gotham Light"/>
+            <Setter Property="FontSize" Value="20px"/>
+            <Setter Property="FontWeight" Value="Normal"/>
+            <Setter Property="FocusVisualStyle" Value="{StaticResource MyFocusVisual}" />
+            <Setter Property="Background" Value="#00d1d2d4"/>
+
+            <Setter Property="Foreground" Value="#ff65686d"/>
+            <Setter Property="Template">
+                <Setter.Value>
+
+                    <!-- Button shape -->
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" 
+				BorderThickness="1,1,1,1"
+				Padding="4,2" 
+				BorderBrush="{StaticResource Button.ForeGround.Border}" 
+				CornerRadius="8" 
+				Background="{TemplateBinding Background}">
+                            <Grid >
+                                <ContentPresenter HorizontalAlignment="Right"  
+	                            VerticalAlignment="Center"  Name="contentShadow" 
+					            Style="{StaticResource ShadowStyle}">
+
+                                </ContentPresenter>
+                                <ContentPresenter HorizontalAlignment="Right"  
+                                VerticalAlignment="Center" Name="content"/>
+                            </Grid>
+                        </Border>
+                        <ControlTemplate.Triggers>
+
+                            <Trigger Property="IsDefaulted" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="#FF282828" />
+                            </Trigger>
+                            <Trigger Property="IsFocused" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="#00bfbcbb" />
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter TargetName="border" Property="Opacity" Value="0.7" />
+                                <Setter Property="Foreground" Value="#ff64676c" />
+                            </Trigger>
+
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+ 
+        <Style x:Key="InformLabel" TargetType="Label">
+            <!--0106-10-->
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Margin" Value="2"/>
+            <Setter Property="FontFamily" Value="Gotham Light"/>
+            <Setter Property="FontSize" Value="20px"/>
+            <Setter Property="FontWeight" Value="Normal"/>
+            <Setter Property="FocusVisualStyle" Value="{StaticResource MyFocusVisual}" />
+            <Setter Property="Background" Value="#00d1d2d4"/>
+
+            <Setter Property="Foreground" Value="{StaticResource Button.ForeGround}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+
+                    <!-- Label shape -->
+                    <ControlTemplate TargetType="Label">
+                        <Border Name="border" 
+				BorderThickness="1,1,1,1"
+				Padding="4,2" 
+				BorderBrush="{StaticResource Button.ForeGround.Border}" 
+				CornerRadius="8" 
+				Background="{TemplateBinding Background}">
+                            <Grid >
+                                <ContentPresenter HorizontalAlignment="Left"  
+	                           VerticalAlignment="Center"  Name="contentShadow" 
+					Style="{StaticResource ShadowStyle}">
+
+                                </ContentPresenter>
+                                <ContentPresenter HorizontalAlignment="Left"  
+                            VerticalAlignment="Center" Name="content"/>
+                            </Grid>
+                        </Border>
+                        <ControlTemplate.Triggers>
+
+                            <!--
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="#FF4788c8" />
+                                <Setter Property="Foreground" Value="#FF4788c8" />
+                            </Trigger>
+                            -->
+
+                            <!--<Trigger Property="IsDefaulted" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="#FF282828" />
+                            </Trigger>-->
+                            <Trigger Property="IsFocused" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="#00bfbcbb" />
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter TargetName="border" Property="Opacity" Value="0.7" />
+                                <Setter Property="Foreground" Value="#ff64676c" />
+                            </Trigger>
+
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!--============================== keyboard base color ===================================-->
+
+        <!--<ImageBrush x:Name="ibh_Add" x:Key="AddImageBrush" ImageSource="/Skin/Images/keyboard1.png" Stretch="Fill"/>-->
+
+        <Style TargetType="{x:Type  UserControl}" >
+
+            <!--<Setter Property="Background" Value="Transparent"/>-->
+            <!--<Setter Property="Background" Value="#00ffffff"/>-->
+
+            <Setter Property="Background" Value="{DynamicResource dy_Keyboard}"/>
+
+            <Setter Property="Width" Value="1157"/>
+            <!--add 28, add 29-->
+            <Setter Property="Height" Value="380"/>
+
+            <Setter Property="Template">
+                <Setter.Value>
+
+                    <!--Keyboard corner edge-->
+                    <!--Background="{TemplateBinding Background}"-->
+                    <ControlTemplate TargetType="{x:Type UserControl}">
+                        <Border 
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            CornerRadius="10"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Focusable="False">
+
+                            <Grid>
+                            <!--<Border BorderBrush="lightblue" Opacity="0.85" BorderThickness="1" CornerRadius="10">
+                                <Border BorderBrush="lightblue" Opacity="0.85" BorderThickness="5" CornerRadius="10">
+                                    <Border BorderBrush= "White" Opacity="0.85" BorderThickness="2" CornerRadius="10" >-->
+
+                                <Image x:Name="img_bg2"  Width="1157" Height="380" Source="{Binding ImageSource}" 
+                                       Visibility="{Binding Path=BorderVisible, Converter={StaticResource BoolToVisConverter} }" Stretch="Fill"></Image>
+
+
+                                <StackPanel Orientation="Vertical">
+
+                                <StackPanel Orientation="Horizontal" >
+
+                                    <Label x:Name="lbl_Tlide" Style="{StaticResource InformLabel}" PreviewMouseDown="Label_PreviewMouseDown" Tag="CmdTlide"   HorizontalAlignment="Left" Width="105" Height="70"/>
+
+                                    <Label x:Name="lbl_1" Style="{StaticResource InformLabel}" PreviewMouseDown="Label_PreviewMouseDown" Tag="Cmd1"   HorizontalAlignment="Left" Width="70" Height="70"/>
+                                    <Label x:Name="lbl_2" Style="{StaticResource InformLabel}" PreviewMouseDown="Label_PreviewMouseDown" Tag="Cmd2"   HorizontalAlignment="Left" Width="70" Height="70"/>
+                                    <Label x:Name="lbl_3" Style="{StaticResource InformLabel}" PreviewMouseDown="Label_PreviewMouseDown" Tag="Cmd3"   HorizontalAlignment="Left" Width="70" Height="70"/>
+                                    <Label x:Name="lbl_4" Style="{StaticResource InformLabel}" PreviewMouseDown="Label_PreviewMouseDown" Tag="Cmd4"   HorizontalAlignment="Left" Width="70" Height="70"/>
+                                    <Label x:Name="lbl_5" Style="{StaticResource InformLabel}" PreviewMouseDown="Label_PreviewMouseDown" Tag="Cmd5"   HorizontalAlignment="Left" Width="70" Height="70"/>
+                                    <Label x:Name="lbl_6" Style="{StaticResource InformLabel}" PreviewMouseDown="Label_PreviewMouseDown" Tag="Cmd6"   HorizontalAlignment="Left" Width="70" Height="70"/>
+                                    <Label x:Name="lbl_7" Style="{StaticResource InformLabel}" PreviewMouseDown="Label_PreviewMouseDown" Tag="Cmd7"   HorizontalAlignment="Left" Width="70" Height="70"/>
+                                    <Label x:Name="lbl_8" Style="{StaticResource InformLabel}" PreviewMouseDown="Label_PreviewMouseDown" Tag="Cmd8"   HorizontalAlignment="Left" Width="70" Height="70"/>
+                                    <Label x:Name="lbl_9" Style="{StaticResource InformLabel}" PreviewMouseDown="Label_PreviewMouseDown" Tag="Cmd9"   HorizontalAlignment="Left" Width="70" Height="70"/>
+                                    <Label x:Name="lbl_0" Style="{StaticResource InformLabel}" PreviewMouseDown="Label_PreviewMouseDown" Tag="Cmd0"   HorizontalAlignment="Left" Width="70" Height="70"/>
+
+                                    <Label x:Name="lbl_Minus" Style="{StaticResource InformLabel}" PreviewMouseDown="Label_PreviewMouseDown" Tag="CmdMinus"  HorizontalAlignment="Left" Width="70" Height="70"/>
+                                    <Label x:Name="lbl_Plus" Style="{StaticResource InformLabel}" PreviewMouseDown="Label_PreviewMouseDown" Tag="CmdPlus"   HorizontalAlignment="Left" Width="70" Height="70"/>
+                                    <Label x:Name="lbl_Backspace" Style="{StaticResource InformLabel}" PreviewMouseDown="Label_PreviewMouseDown" Tag="CmdBackspace"  HorizontalAlignment="Left" Width="152" Height="70"/>
+
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal"  >
+                                        <Label x:Name="lbl_Tab" Style="{StaticResource InformLabel}" PreviewMouseDown="lblChar_PreviewMouseDown" Tag="CmdTab"  HorizontalAlignment="Left" Width="130" Height="70"/>
+                                        <Label x:Name="lbl_Q" Style="{StaticResource InformLabel}" PreviewMouseDown="lblChar_PreviewMouseDown" Tag="CmdQ"  HorizontalAlignment="Left" Width="70" Height="70"/>
+                                        <Label x:Name="lbl_W" Style="{StaticResource InformLabel}" PreviewMouseDown="lblChar_PreviewMouseDown" Tag="CmdW"  HorizontalAlignment="Left" Width="70" Height="70"/>
+                                        <Label x:Name="lbl_E" Style="{StaticResource InformLabel}" PreviewMouseDown="lblChar_PreviewMouseDown" Tag="CmdE"  HorizontalAlignment="Left" Width="70" Height="70"/>
+                                        <Label x:Name="lbl_R" Style="{StaticResource InformLabel}" PreviewMouseDown="lblChar_PreviewMouseDown" Tag="CmdR"  HorizontalAlignment="Left" Width="70" Height="70"/>
+                                        <Label x:Name="lbl_T" Style="{StaticResource InformLabel}" PreviewMouseDown="lblChar_PreviewMouseDown" Tag="CmdT"  HorizontalAlignment="Left" Width="70" Height="70"/>
+                                        <Label x:Name="lbl_Y" Style="{StaticResource InformLabel}" PreviewMouseDown="lblChar_PreviewMouseDown" Tag="CmdY"  HorizontalAlignment="Left" Width="70" Height="70"/>
+                                        <Label x:Name="lbl_U" Style="{StaticResource InformLabel}" PreviewMouseDown="lblChar_PreviewMouseDown" Tag="CmdU"  HorizontalAlignment="Left" Width="70" Height="70"/>
+                                        <Label x:Name="lbl_I" Style="{StaticResource InformLabel}" PreviewMouseDown="lblChar_PreviewMouseDown" Tag="CmdI"  HorizontalAlignment="Left" Width="70" Height="70"/>
+                                        <Label x:Name="lbl_O" Style="{StaticResource InformLabel}" PreviewMouseDown="Label_PreviewMouseDown" Tag="CmdO"  HorizontalAlignment="Left" Width="70" Height="70"/>
+                                        <Label x:Name="lbl_P" Style="{StaticResource InformLabel}" PreviewMouseDown="lblChar_PreviewMouseDown" Tag="CmdP"  HorizontalAlignment="Left" Width="70" Height="70"/>
+                                        <Label x:Name="lbl_OpenCrulyBrace" Style="{StaticResource InformLabel}" PreviewMouseDown="lblChar_PreviewMouseDown" Tag="CmdOpenCrulyBrace"  HorizontalAlignment="Left" Width="70" Height="70"/>
+                                        <Label x:Name="lbl_EndCrultBrace" Style="{StaticResource InformLabel}" PreviewMouseDown="lblChar_PreviewMouseDown" Tag="CmdEndCrultBrace"  HorizontalAlignment="Left" Width="70" Height="70"/>
+                                        <Label x:Name="lbl_OR" Style="{StaticResource InformLabel}" PreviewMouseDown="lblChar_PreviewMouseDown" Tag="CmdOR"  HorizontalAlignment="Left" Width="127" Height="70"/>
+                                 
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" >
+                               
+                                        <Label x:Name="lbl_CapsLock" Style="{StaticResource InformLabel}" PreviewMouseDown="lblChar_PreviewMouseDown" Tag="CmdCapsLock"  HorizontalAlignment="Left" Width="160" Height="70"/>
+                                        <Label x:Name="lbl_A" Style="{StaticResource InformLabel}" PreviewMouseDown="lblChar_PreviewMouseDown" Tag="CmdA"  HorizontalAlignment="Left" Width="70" Height="70"/>
+                                        <Label x:Name="lbl_S" Style="{StaticResource InformLabel}" PreviewMouseDown="lblChar_PreviewMouseDown" Tag="CmdS"  HorizontalAlignment="Left" Width="70" Height="70"/>
+                                        <Label x:Name="lbl_D" Style="{StaticResource InformLabel}" PreviewMouseDown="lblChar_PreviewMouseDown" Tag="CmdD"  HorizontalAlignment="Left" Width="70" Height="70"/>
+                                        <Label x:Name="lbl_F" Style="{StaticResource InformLabel}" PreviewMouseDown="lblChar_PreviewMouseDown" Tag="CmdF"  HorizontalAlignment="Left" Width="70" Height="70"/>
+                                        <Label x:Name="lbl_G" Style="{StaticResource InformLabel}" PreviewMouseDown="lblChar_PreviewMouseDown" Tag="CmdG"  HorizontalAlignment="Left" Width="70" Height="70"/>
+                                        <Label x:Name="lbl_H" Style="{StaticResource InformLabel}" PreviewMouseDown="lblChar_PreviewMouseDown" Tag="CmdH"  HorizontalAlignment="Left" Width="70" Height="70"/>
+                                        <Label x:Name="lbl_J" Style="{StaticResource InformLabel}" PreviewMouseDown="lblChar_PreviewMouseDown" Tag="CmdJ"  HorizontalAlignment="Left" Width="70" Height="70"/>
+                                        <Label x:Name="lbl_K" Style="{StaticResource InformLabel}" PreviewMouseDown="lblChar_PreviewMouseDown" Tag="CmdK"  HorizontalAlignment="Left" Width="70" Height="70"/>
+                                        <Label x:Name="lbl_L" Style="{StaticResource InformLabel}" PreviewMouseDown="lblChar_PreviewMouseDown" Tag="CmdL"  HorizontalAlignment="Left" Width="70" Height="70"/>
+                                        <Label x:Name="lbl_Colon" Style="{StaticResource InformLabel}" PreviewMouseDown="lblChar_PreviewMouseDown" Tag="CmdColon"  HorizontalAlignment="Left" Width="70" Height="70"/>
+                                        <Label x:Name="lbl_DoubleInvertedComma" Style="{StaticResource InformLabel}" PreviewMouseDown="lblChar_PreviewMouseDown" Tag="CmdDoubleInvertedComma"  HorizontalAlignment="Left" Width="70" Height="70"/>
+                                        <Label x:Name="lbl_Enter" Style="{StaticResource InformLabel}" PreviewMouseDown="lblChar_PreviewMouseDown" Tag="CmdEnter"  HorizontalAlignment="Left" Width="170" Height="70"/>
+
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" >
+
+                                        <Label x:Name="Cmd_Shift" Style="{StaticResource InformLabel}" PreviewMouseDown="Label_PreviewMouseDown" Tag="CmdShift"   HorizontalAlignment="Left"  Width="190" Height="70"/>
+                                
+                                        <Label x:Name="lbl_Z" Style="{StaticResource InformLabel}" PreviewMouseDown="lblChar_PreviewMouseDown" Tag="CmdZ"  HorizontalAlignment="Left" Width="70" Height="70"/>
+                                        <Label x:Name="lbl_X" Style="{StaticResource InformLabel}" PreviewMouseDown="lblChar_PreviewMouseDown" Tag="CmdX"  HorizontalAlignment="Left" Width="70" Height="70"/>
+                                        <Label x:Name="lbl_C" Style="{StaticResource InformLabel}" PreviewMouseDown="lblChar_PreviewMouseDown" Tag="CmdC"  HorizontalAlignment="Left" Width="70" Height="70"/>
+                                        <Label x:Name="lbl_V" Style="{StaticResource InformLabel}" PreviewMouseDown="lblChar_PreviewMouseDown" Tag="CmdV"  HorizontalAlignment="Left" Width="70" Height="70"/>
+                                        <Label x:Name="lbl_B" Style="{StaticResource InformLabel}" PreviewMouseDown="lblChar_PreviewMouseDown" Tag="CmdB"  HorizontalAlignment="Left" Width="70" Height="70"/>
+                                        <Label x:Name="lbl_N" Style="{StaticResource InformLabel}" PreviewMouseDown="lblChar_PreviewMouseDown" Tag="CmdN"  HorizontalAlignment="Left" Width="70" Height="70"/>
+                                        <Label x:Name="lbl_M" Style="{StaticResource InformLabel}" PreviewMouseDown="lblChar_PreviewMouseDown" Tag="CmdM"  HorizontalAlignment="Left" Width="70" Height="70"/>
+                                        <Label x:Name="lbl_LessThan" Style="{StaticResource InformLabel}" PreviewMouseDown="lblChar_PreviewMouseDown" Tag="CmdLessThan"  HorizontalAlignment="Left" Width="70" Height="70"/>
+                                        <Label x:Name="lbl_GreaterThan" Style="{StaticResource InformLabel}" PreviewMouseDown="lblChar_PreviewMouseDown" Tag="CmdGreaterThan"  HorizontalAlignment="Left" Width="70" Height="70"/>
+                                        <Label x:Name="lbl_Question" Style="{StaticResource InformLabel}" PreviewMouseDown="lblChar_PreviewMouseDown" Tag="CmdQuestion"  HorizontalAlignment="Left" Width="70" Height="70"/>
+                                        <Label x:Name="lbl_RShift" Style="{StaticResource InformLabel}" PreviewMouseDown="lblChar_PreviewMouseDown" Tag="CmdShift"  HorizontalAlignment="Left" Width="214" Height="70"/>
+
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" >
+
+                                     <Label Style="{StaticResource InformLabel}" Tag="CmdClear" PreviewMouseDown="Label_PreviewMouseDown" Width="160" Height="70" />
+                              
+                                        <!--<Label  Tag="CmdLanguage" PreviewMouseDown="Label_PreviewMouseDown" Width="150" Height="70" >
+                                              <TextBlock x:Name="tbkLanguage" Text="{Binding Path=CurrentLanguage, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Width="80" Height="40"    />
+                                        </Label>-->
+                                     <Label  Tag="CmdLanguage" PreviewMouseDown="Label_PreviewMouseDown" Width="150" Height="70" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontSize="20">
+                                        <StackPanel Orientation="Vertical"  Width="82" >
+                                                <TextBlock x:Name="tbkLanguage" Text="{Binding Path=CurrentLanguage, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  VerticalAlignment="Center"  Width="80" Height="40" FontFamily="Gotham Light" Foreground="#FF323131"    />
+                                        </StackPanel>
+                                    </Label>
+
+                                    <!--0106-10-->
+                                    <!--<Image x:Name="imgSpace"  PreviewMouseDown="Image_PreviewMouseDown" Tag="CmdBackspace" Stretch="Fill" Width="510" Height="70" HorizontalAlignment="Left"/>-->
+                                    <Label Style="{StaticResource InformLabel}" Tag="CmdSpaceBar" PreviewMouseDown="Label_PreviewMouseDown" Width="510" Height="70" />
+                                
+                                    <Label Style="{StaticResource InformLabel}" Tag="CmdHiragana" PreviewMouseDown="Label_PreviewMouseDown" Width="70" Height="70" />
+                                    <Label Style="{StaticResource InformLabel}" Tag="CmdKatakana" PreviewMouseDown="Label_PreviewMouseDown" Width="70" Height="70" />
+                                    
+                                    <Label Style="{StaticResource InformLabel}" Tag="CmdClear" PreviewMouseDown="Label_PreviewMouseDown" Width="180" Height="70" />
+
+                                </StackPanel>
+                            </StackPanel>
+
+
+                            <!--</Border>
+
+                                </Border>
+                            </Border>-->
+                            </Grid>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
+    </UserControl.Resources>
+
+
+    <UserControl >
+        <Grid>
+          
+        </Grid>
+    </UserControl>
+</UserControl>

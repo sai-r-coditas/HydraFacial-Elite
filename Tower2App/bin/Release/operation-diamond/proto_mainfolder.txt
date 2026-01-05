@@ -1,0 +1,3 @@
+9,Signature_deluxe,Age_CTGF,Age_DB,Radiance,Clarify,Sensitive,neck_signature,back_signature,hands_signature,0,0,0,0,Protocol_Main_Menu
+0,0               ,0       ,0     ,0       ,0      ,0        ,0             ,0             ,0              ,0,0,0,0,0
+0,0               ,0       ,0     ,0       ,0      ,0        ,0             ,0             ,0              ,0,0,0,0,0

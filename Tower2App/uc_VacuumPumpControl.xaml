@@ -1,0 +1,75 @@
+﻿<UserControl x:Class="Edge.Tower2.UI.VacuumPumpControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ui="clr-namespace:Edge.Tower2.UI" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" x:Name="Me" mc:Ignorable="d"
+             d:DesignHeight="550" Loaded="Me_Loaded" Width="600" Unloaded="Me_Unloaded">
+    
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources\rsStyle.xaml"/>
+                <ResourceDictionary Source="Resources\rsRoundButton.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid x:Name="grdRoot" DataContext="{Binding ElementName=Me}">
+        <!--<DockPanel x:Name="LeftBottom" Margin="20,10,0,0" Grid.RowSpan="1">-->
+        <!--On OFF-->
+        <Canvas>
+
+            <Button x:Name="OffButton" Background="#FF64666b" IsEnabled="{Binding OffEnabled}"  Opacity="1" Width="96" Height="93" 
+                        Style="{StaticResource st_ControlButtonStyle}"
+                        PreviewMouseDown="OffButtonPreviewMouseDown" Canvas.Left="18" Canvas.Top="41" Visibility="Hidden">
+                <Button.Content>
+                    <Image Stretch="None" Source="{StaticResource OffIcon}" />
+                </Button.Content>
+            </Button>
+
+            <Button x:Name="OnButton" Background="{x:Null}"  Opacity="1" Height="85" Width="85"
+                         Style="{StaticResource st_Transparent}" PreviewMouseDown="OnButtonPreviewMouseDown" Canvas.Left="505" Canvas.Top="32" BorderBrush="{x:Null}">
+                <Button.Content>
+                    <Image x:Name="imgPower" Source="Skin/Images/power-icon-off.png" />
+                </Button.Content>
+            </Button>
+
+        </Canvas>
+
+        <!--Button Plus/ Minus-->
+        <Canvas x:Name="cvsRing" >
+
+            <Image x:Name="imgRingBG" Height="317" Canvas.Left="115" Canvas.Top="171" Width="390" Source="Skin/Images/t2/Vacuum_ring_bg.png" Visibility="Hidden"/>
+
+            <Button x:Name="SlowerButton"  Opacity="1" Height="93" Width="96"
+                        Style="{StaticResource st_FlatButton1}" PreviewMouseDown="SlowerButtonPreviewMouseDown"
+                        PreviewMouseUp="SlowerButtonPreviewMouseUp" Canvas.Left="20" Canvas.Top="266" Background="{x:Null}" BorderBrush="{x:Null}" >
+               
+                        <Image x:Name="imgMinus" Source = "Skin/Images/minus1.png" Width="100" Height="100"/>
+            </Button>
+            
+            <Button  x:Name="rightFasterButton"  Opacity="1"  Height="93" Width="96"
+                        Style="{StaticResource st_FlatButton1}"
+                     
+                        PreviewMouseUp="rightFasterButtonPreviewMouseUp"
+                        PreviewMouseDown="rightFasterButtonPreviewMouseDown" Canvas.Left="407" Canvas.Top="266" Background="{x:Null}" BorderBrush="{x:Null}">
+                
+                        <Image x:Name="imgPlus" Source = "Skin/Images/plus1.png" Width="100" Height="100"/>
+                  
+            </Button>
+            <!--</Canvas>-->
+
+            <!--<Grid Margin="0,-4,0,-4">-->
+            <!--<Canvas>-->
+            <Image x:Name="imgRingBG2" Source = "Skin/Images/ring_my2_bg2.png"  HorizontalAlignment="Left" VerticalAlignment="Top" Height="225" Width="225" Canvas.Left="192" Canvas.Top="203"/>
+            <ui:uc_CircularBar HorizontalAlignment="Center" VerticalAlignment="Center" Percentage="{Binding Value, ElementName=slider}" SegmentColor="{DynamicResource st_ringcolor_default}" StrokeThickness="33" Height="264" Width="249" Radius="93" Canvas.Left="180" Canvas.Top="190"/>
+            <Image x:Name="imgRing" Source = "Skin/Images/ring_my2.png"  HorizontalAlignment="Left" VerticalAlignment="Top" Height="225" Width="225" Canvas.Left="193" Canvas.Top="203"/>
+            <Slider x:Name="slider" Maximum="100" Value="60" Height="30" Width="110" Canvas.Left="117" Canvas.Top="492" Visibility="Visible" />
+            <Label x:Name="VacuumSpeedLabel" Opacity="0.2" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="56" Padding="0" Height="90" Width="90" Canvas.Left="263" Canvas.Top="278" />
+        </Canvas>
+
+        <!--</Grid>-->
+        <!--</DockPanel>-->
+    </Grid>
+</UserControl>

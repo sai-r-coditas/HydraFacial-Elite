@@ -1,0 +1,174 @@
+﻿<Window x:Class="Edge.Tower2.UI.Photo_Comparison"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ui="clr-namespace:Edge.Tower2.UI"
+       
+        
+        Title="Photo_Comparison" Height="1024" Width="1280"
+        x:Name="Me" Style="{StaticResource Window}" Activated="Me_Activated" MouseWheel="Me_MouseWheel"
+        >
+
+    <DockPanel>
+
+        <!-- Top 3 Butons -->
+        <Grid DockPanel.Dock="Top">
+            <ui:NavBar />
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="380,10,0,0" >
+                <Button x:Name="btnBack" Margin="0,0,0,0" Width="90" Height="90" Style="{StaticResource NavigationButtonStyle}"
+                             IsEnabled="True" HorizontalContentAlignment="Center" Click="btnBack_Click" >
+                    <Button.Content>
+                        <TextBlock x:Name="blkBack" TextAlignment="Center" TextWrapping="Wrap" FontSize="18">Back</TextBlock>
+                    </Button.Content>
+                </Button>
+
+            </StackPanel>
+        </Grid>
+
+        <!--Session view-->
+        <Grid x:Name="root" Margin="0,0,0,0">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="500" />
+                <!--<ColumnDefinition Width="500" />-->
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="150" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!--Left Side 6 Photos-->
+            <Grid Grid.Column="0" Grid.Row="1" Margin="0,13,0,-13">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <!--<ColumnDefinition Width="500" />-->
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="5"/>
+                    <RowDefinition />
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel  Grid.Column="0" Grid.Row="1">
+                    <Border Width="160" Background="#CC98ACCF" Grid.Row="1" Grid.Column="0"   VerticalAlignment="Top" BorderBrush="#FF5892F7" BorderThickness="2"  >
+                        <Image x:Name="ImgProfile"   VerticalAlignment="Top"  AllowDrop ="True" MouseLeftButtonDown="ImgProfile_MouseLeftButtonDown" MouseLeftButtonUp="ImgProfile_MouseLeftButtonUp" />
+                    </Border>
+                    <Label x:Name="lblProfileShot" Width="160" FontWeight="Bold" >Profile</Label>
+                    <TextBlock  Name="tbkProfile" Width="160"  TextWrapping="Wrap" ></TextBlock>
+
+                    <Border Width="160" Background="#CC98ACCF" Grid.Row="1" Grid.Column="0"  VerticalAlignment="Top" BorderBrush="#FF5892F7" BorderThickness="2"  >
+                        <Image x:Name="ImgLeft"     VerticalAlignment="Top"  AllowDrop ="True" MouseLeftButtonDown="ImgLeft_MouseLeftButtonDown" MouseLeftButtonUp="ImgLeft_MouseLeftButtonUp"/>
+                    </Border>
+                    <Label x:Name="lblLeftShot" Width="160" FontWeight="Bold" >Left</Label>
+                    <TextBlock  Name="tbkLeft" Width="160"  TextWrapping="Wrap"></TextBlock>
+
+                    <Border  Width="160" Background="#CC98ACCF" Grid.Row="1" Grid.Column="0"  VerticalAlignment="Top"  BorderBrush="#FF5892F7" BorderThickness="2"  >
+                        <Image x:Name="ImgRight"    VerticalAlignment="Top" AllowDrop ="True" MouseLeftButtonDown="ImgRight_MouseLeftButtonDown" MouseLeftButtonUp="ImgRight_MouseLeftButtonUp"/>
+                    </Border>
+                    <Label x:Name="lblRightShot" Width="160" FontWeight="Bold" >Right</Label>
+                    <TextBlock  Name="tbkRight" Width="160"  TextWrapping="Wrap"></TextBlock>
+
+                    <Border  Width="160" Background="#CC98ACCF" Grid.Row="1" Grid.Column="1"  VerticalAlignment="Top"  BorderBrush="#FF5892F7" BorderThickness="2"  >
+                        <Image x:Name="ImgCloseUp1"   VerticalAlignment="Top" AllowDrop ="True" MouseLeftButtonDown="ImgCloseUp1_MouseLeftButtonDown" MouseLeftButtonUp="ImgCloseUp1_MouseLeftButtonUp"/>
+                    </Border>
+                    <Label x:Name="lblCloseUpShot1" Width="160" FontWeight="Bold" >Close Up #1</Label>
+                    <TextBlock  Name="tbkCloseUp1" Width="160"  TextWrapping="Wrap"></TextBlock>
+
+                    <Border  Width="160" Background="#CC98ACCF" Grid.Row="1" Grid.Column="1"  VerticalAlignment="Top" BorderBrush="#FF5892F7" BorderThickness="2"  >
+                        <Image x:Name="ImgCloseUp2"    VerticalAlignment="Top" AllowDrop ="True" MouseLeftButtonDown="ImgCloseUp2_MouseLeftButtonDown" MouseLeftButtonUp="ImgCloseUp2_MouseLeftButtonUp"/>
+                    </Border>
+                    <Label x:Name="lblCloseUpShot2" Width="160" FontWeight="Bold" >Close Up #2</Label>
+                    <TextBlock  Name="tbkCloseUp2" Width="160"  TextWrapping="Wrap"></TextBlock>
+
+                    <Border  Width="160" Background="#CC98ACCF" Grid.Row="1" Grid.Column="1"  VerticalAlignment="Top"  BorderBrush="#FF5892F7" BorderThickness="2"  >
+                        <Image x:Name="ImgCloseUp3"    VerticalAlignment="Top" AllowDrop ="True" MouseLeftButtonDown="ImgCloseUp3_MouseLeftButtonDown" MouseLeftButtonUp="ImgCloseUp3_MouseLeftButtonUp"/>
+                    </Border>
+                    <Label x:Name="lblCloseUpShot3" Width="160" FontWeight="Bold" >Close Up #3</Label>
+                    <TextBlock Name="tbkCloseUp3" Width="160" TextWrapping="Wrap"></TextBlock>
+
+                </StackPanel >
+
+                <Button x:Name="btnOrg" Grid.Row="2" Grid.Column="0" Height="90" Width="90" Content="Original"  Style="{StaticResource NavigationButtonStyle}" Visibility="Hidden" Click="btnOrg_Click"/>
+                <Button x:Name="btnMVisit" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Height="90" Width="90"  Style="{StaticResource NavigationButtonStyle}" Visibility="Hidden" Click="btnMVisit_Click"/>
+                <Button x:Name="btnLastVisit" Grid.Row="2" Grid.Column="1" Height="90" Width="90"  Style="{StaticResource NavigationButtonStyle}" Visibility="Hidden" Click="btnLastVisit_Click"/>
+            </Grid>
+
+            <!--======================-->
+            <!--Right Side Drop Images-->
+            <!--======================-->
+
+            <Grid Background="Transparent" Grid.Column="1" Grid.Row="1" Margin="0,13,10,15" VerticalAlignment="Top" HorizontalAlignment="Right" >
+                <!--<Grid x:Name="ImageGrid">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="150"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    
+                </Grid>-->
+
+                <!--Center Images for comparison-->
+                <Grid Grid.Row="2">
+                    <Grid>
+                        <Grid.RowDefinitions>
+
+                            <RowDefinition Height="400" />
+                            <RowDefinition Height="400" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+
+                        <!--<Label Name="lblTitle" Grid.Row="0" FontSize="24" FontWeight="Bold"></Label>-->
+
+                        <StackPanel Grid.Row="0">
+                            <Border Name="border1" Background="#CC98ACCF" Grid.Row="0" Width="500" ClipToBounds="True" BorderBrush="#FF5892F7" BorderThickness="2"   >
+                                <Image x:Name="Img1" Grid.Row="0"   VerticalAlignment="Top"  AllowDrop ="True" Drop="Img1_Drop" MouseLeftButtonUp="Img1_MouseLeftButtonUp" MouseLeftButtonDown="Img1_MouseLeftButtonDown" MouseMove="Img1_MouseMove" />
+                            </Border>
+                            <Label Name="lblPositionShot1" Width="500" FontWeight="Bold"></Label>
+                            <TextBlock  x:Name="tbkImg1"  TextWrapping="Wrap" Height="101"  VerticalAlignment="Top" Width="500"  Background="{x:Null}" >
+
+                            </TextBlock>
+                        </StackPanel>
+
+                        <StackPanel  Grid.Row="1">
+                            <Border Name="border2" Background="#CC98ACCF" Grid.Row="1" Width="500" ClipToBounds="True" BorderBrush="#FF5892F7" AllowDrop ="True"  BorderThickness="2"  >
+                                <Image x:Name="Img2"    AllowDrop ="True" Drop="Img2_Drop" MouseLeftButtonUp="Img2_MouseLeftButtonUp" MouseLeftButtonDown="Img2_MouseLeftButtonDown" MouseMove="Img2_MouseMove" />
+                            </Border>
+                            <Label Name="lblPositionShot2" Width="500" FontWeight="Bold"></Label>
+                            <TextBlock x:Name="tbkImg2"  TextWrapping="Wrap"  VerticalAlignment="Top" Height="97" Width="500" Background="{x:Null}"  />
+                        </StackPanel>
+                        <Grid Grid.Row="3">
+                            <!-- sww 2 buttons-->
+                            <!--<Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="200" />
+                            </Grid.ColumnDefinitions>
+                            <Button x:Name="Back" Width="100" Height="80" Grid.Column="0"  Style="{StaticResource NavigationButtonStyle}" >
+                                <Button.Content>
+                                    <TextBlock TextWrapping="Wrap" MaxWidth="85" TextAlignment="Center" FontSize="24">Back</TextBlock>
+                                </Button.Content>
+                            </Button>-->
+                        </Grid>
+
+                    </Grid>
+                </Grid>
+                <!--Center Images for comparison-->
+
+            </Grid>
+
+            <Label Name="lblTitle" Grid.Column="1" Grid.Row="0" HorizontalContentAlignment="Center" FontSize="24" FontWeight="Bold" Margin="161,0,54,0"/>
+
+            <Button Name="btnImg1_100" Content="100%" Grid.Column="2" Grid.Row="1" Style="{StaticResource NavigationButtonStyle}" HorizontalAlignment="Left" Margin="47,43,0,0" VerticalAlignment="Top" Width="75" Height="67" Click="btnImg1_100_Click"/>
+            <Button Name="btnImg1_Enlarge1" Content="150%" Grid.Column="2" Grid.Row="1" Style="{StaticResource NavigationButtonStyle}" HorizontalAlignment="Left" Margin="47,132,0,0" VerticalAlignment="Top" Width="75" Height="65" Click="btnImg1_Enlarge1_Click"/>
+            <Button Name="btnImg1_Enlarge2" Content="200%" Grid.Column="2" Grid.Row="1" Style="{StaticResource NavigationButtonStyle}" HorizontalAlignment="Left" Margin="47,224,0,0" VerticalAlignment="Top" Width="75" Height="69" Click="btnImg1_Enlarge2_Click"/>
+
+            <Button Name="btnImg2_100" Content="100%" Grid.Column="2" Grid.Row="1" Style="{StaticResource NavigationButtonStyle}" HorizontalAlignment="Left" Margin="47,445,0,0" VerticalAlignment="Top" Width="75" Height="70" Click="btnImg2_100_Click"/>
+            <Button Name="btnImg2_Enlarge1" Content="150%" Grid.Column="2" Grid.Row="1" Style="{StaticResource NavigationButtonStyle}" HorizontalAlignment="Left" Margin="47,536,0,0" VerticalAlignment="Top" Width="75" Height="73" Click="btnImg2_Enlarge1_Click"/>
+            <Button Name="btnImg2_Enlarge2" Content="200%" Grid.Column="2" Grid.Row="1" Style="{StaticResource NavigationButtonStyle}" HorizontalAlignment="Left" Margin="47,634,0,0" VerticalAlignment="Top" Width="75" Height="70" Click="btnImg2_Enlarge2_Click"/>
+
+        </Grid>
+        <!--root-->
+    </DockPanel>
+</Window>

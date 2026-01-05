@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="Edge.Tower2.UI.ChargeBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             x:Name="Me"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+    </UserControl.Resources>
+    <Grid>
+
+        <!--Charge Bar Background--><!-->FF08C5D8-->
+        <Border Background="#FFdddddd" CornerRadius="5" BorderBrush="#FFaaaaaa" Margin ="3" BorderThickness="3"></Border>
+        <Rectangle Margin="3" RadiusX="5" RadiusY="5" Visibility="{Binding IsCharging, ElementName=Me, Converter={StaticResource BooleanToVisibilityConverter}, Mode=OneWay}">
+            <Rectangle.Fill>
+                <LinearGradientBrush>
+                    <GradientStop Color="#FF08C5D8" Offset="0"/>
+                    <GradientStop Color="#FF08C5D8" Offset=".5"/>
+                    <GradientStop Color="#FF08C5D8" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding IsCharging, ElementName=Me, Converter={StaticResource BooleanToVisibilityConverter}}" Content="{Binding Path=Value, ElementName=Me, Mode=OneWay, StringFormat=\{0:D\}}"></Label>
+    </Grid>
+</UserControl>

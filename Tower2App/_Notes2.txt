@@ -1,0 +1,265 @@
+﻿
+// Does bottle change will update the xlsx file? no, only when mail need to send,
+// need add check box for password
+
+// SPA/MD mode switchs by editing the config file
+
+// 0106-08 fix bug cleanup vacuum pump value not updated 
+           fix popup cleanup vacuum pump value updated by config file 
+
+// Add key MD_SPA on config file
+
+// Add key operation on config file
+
+// Check required image files xml format
+
+// Remove some of not in use code
+
+// use Provider=Microsoft.ACE.OLEDB.12.0 for 32 bits(Microsoft.ACE.OLEDB.12.0 can be for 32 or 64)
+
+// Change nophoto.jpg to nophoto.png
+
+// Reposition navbar on home page
+
+// Keyboard use lebel instead of button
+
+// Keyboard not stable
+
+// take file read write with ASCII format
+
+// invalid key in keyboard
+
+// Language are you sure and restart the machine
+
+// Index was outside the bounds ... audio file issue
+
+// check DB drive exist
+
+// Make sure Access database 2007 driver loaded to support ACE.OLEDB.12.0-- TBD
+
+// Date version of 1.5 need take care DB driver issue and product.xml need update 
+
+// need check keyboard file existing
+
+// marketing folder multiple language support
+
+// Redesign popup.png image  0106-13
+
+// Check marketing files exist for multiple languages
+
+// Check all images preload
+
+// Set system multi language mode
+
+// Switch language 
+
+// "Load from USB" textblock not updated
+
+// Read bottles.dat file set limits
+
+// Read params.dat file set limits
+
+// add words to language.xml
+
+// Missing r typo on photo backup
+
+// Lockout time should be 1 hour instead of 24 hrs
+
+// MD version is 17774  and SPA version 17773
+
+// Audio volume file need auto generate
+
+// v00113 Set max vacuum for SPA and MD
+
+// delete all .bak folder before update
+
+// Check creditpictureSetting.xml handling      
+
+// Set all screen phote png format (nophoto.png)
+
+// Volume slider controller need takes care
+
+// sldVolume_PreviewMouseUp need check
+
+// Creditcode multiple language  => TBD
+
+// Update need delete all previous .bak folder
+
+// Set vortex max pump value MD for 50 / SPA for 35 
+
+// remove send mail information
+// remove unuse hotcold, leds pages
+
+// move language.dat to root directory
+
+// urgent required for version 115- no wpflanguage and wpfsystem 
+
+
+// ===============================
+// v115 and v115a difference
+// ===============================
+   Change top menu images
+   move version no. to update page with click to set visibility
+
+// ===============================
+// to be completed T1.5
+// ===============================
+
+// Loading splash screen will show blank page
+
+// 0106-06 creditcode date time changes
+
+// Add FocusVisualStyle ="{x:Null}" avoid dot line on border
+
+// creditcode -system time forwarding remaining days 
+
+// Change execute file name - how? - change assembly name , and change config file name
+
+// Check enter key
+
+// XmlReader UTF8
+// AppendAllText ASCII
+// Credit code file ASCII?
+
+// Imputsimulator.xml  for UTF-8
+// Data.xml
+
+State.bin  is ANSI format
+tmp.bin  is ANSI format
+
+democode. ? UTF?  not in use
+dml.dat
+dmcode.xml  - not in use
+dmcode.dat -
+
+deserialize
+usage
+
+backup.log is for datetime information ANSI format
+
+downloadcompleted.dat is not a append file
+
+// Style textbox fonts on DB search
+
+// utf-8 signature
+// remove language on config file
+
+// me_keydown
+// .Tag need use tostring()
+
+// CLR20r3 issue   > db driver issue
+
+// Getmessage issue ?  crash  > db driver issue
+
+// check DB.DBLibrary <new> usage
+
+// move missingfile.txt to current directory   0106-13
+
+// missing file also write  to error log
+
+// Virus scan
+
+// Check language image dir 
+
+// Button create memory leak
+
+// put ex.tosting error message to error.log file
+
+// multiple page for submenu 
+
+// ===============================
+// 2019 use 115a version for EU
+// ===============================
+// Change to new skin
+// 00115a1-0001
+// language switch back and forth us to jp need double check if have a virtual keyboard
+
+
+
+// 00115a1-0003
+// need check cvsWeb, network should not exist in this version
+//
+
+// 00115a1-0004
+// center the text
+
+// 00115a1-0005,00115a1-0006
+// Add fonts, change buttons on wpfHome, wpfSetting 
+// Disable Videos
+
+// Change 00115a1-0006 position messages on wpfUpload and fix vacuum power button issues
+// remove date, time box borders
+// wpfupdate- scrollbar reposision
+
+// ===============================
+// Languages
+// ===============================
+
+   System will searh the input language on windows OS first, 
+   then check 
+   1. the keyboard images file(for example: KB2-en-US.png) in Skin\\Images directory 
+   2. and Check Skin\\Language\\rsLanguage-en-US.xamlxml language text file ,
+   3. also check the language directory existed on the Skin\\images directory
+   4. and the language folder on marketing directory
+   
+   if all exist, it will show the language availability list on the Language page
+
+// ===============================
+// Testing T2
+// ===============================
+
+// Check with wrong email address & see what happen...
+// Wifi domain login test
+// Performance checking with wifi on / off + email
+// Double check the usage report
+// Check systemrestart on config file
+
+// Camera Capture 
+
+// ===============================
+// T2 Installation disk -- pending
+// ===============================
+// Target location
+// Including files
+// Icon on the desktop
+// Check update 
+
+// ===============================
+// For 64 bits requirement
+// ===============================
+// install -> Microsoft Access Database Engine 2010 Redistributable
+// and install -> 2007 Office System Driver: Data Connectivity Components
+// then change vs2013 build to anycpu or x64
+// The dongle key for demo features of driver is for 32 bits, for 64 bits need more attention
+
+// ===============================
+// to be completed for T2 -pending
+// ===============================
+
+// Change wifi status to ready / off 
+
+// Make sure engineers know the wifi password does not retrieved from windows
+
+// Video troubleshooting on the help page
+
+// Index is out side of the array - after download, manually power off shows
+
+// Usage report break down for each user
+
+// If has a new product, it need update the new product list for daily essential
+
+// update version control
+
+// update- if router connection is ok, but the wire is not connected, sometime it shows ( yes / no ) page
+
+// Table list touch scrolling
+
+// checkbutton.xaml reboot failed?
+
+// Handle the leak
+// Update doesn't need the Framework
+// Logo may need change
+
+// Win 8 insert USB may crash the app
+
+// Wifi list update not fast enough

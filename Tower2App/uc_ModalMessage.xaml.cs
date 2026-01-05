@@ -1,0 +1,92 @@
+﻿using System.Windows;
+using System.Windows.Controls;
+
+using System.Threading;
+using System.Windows.Threading;
+
+//namespace Technewlogic.Samples.WpfModalDialog
+namespace Edge.Tower2.UI
+{
+	/// <summary>
+	/// Interaction logic for ModalDialog.xaml
+	/// </summary>
+	public partial class uc_ModalMessage : UserControl
+	{
+		public uc_ModalMessage()
+		{
+			InitializeComponent();
+			Visibility = Visibility.Hidden;
+		}
+
+		private bool _hideRequest = false;
+		private bool _result = false;
+		private UIElement _parent;
+
+		public void SetParent(UIElement parent)
+		{
+			_parent = parent;
+		}
+
+		#region Message
+
+		public string Message
+		{
+			get { return (string)GetValue(MessageProperty); }
+			set { SetValue(MessageProperty, value); }
+		}
+
+		// Using a DependencyProperty as the backing store for Message.
+		// This enables animation, styling, binding, etc...
+		public static readonly DependencyProperty MessageProperty =
+			DependencyProperty.Register(
+				"Message", typeof(string), typeof(uc_ModalMessage), new UIPropertyMetadata(string.Empty));
+
+		#endregion
+
+		public bool ShowHandlerDialog(string message)
+		{
+			Message = message;
+			Visibility = Visibility.Visible;
+
+			_parent.IsEnabled = false;
+
+			_hideRequest = false;
+			while (!_hideRequest)
+			{
+				// HACK: Stop the thread if the application is about to close
+				if (this.Dispatcher.HasShutdownStarted ||
+					this.Dispatcher.HasShutdownFinished)
+				{
+					break;
+				}
+
+				// HACK: Simulate "DoEvents"
+				this.Dispatcher.Invoke(
+					DispatcherPriority.Background,
+					new ThreadStart(delegate { }));
+				Thread.Sleep(20);
+			}
+
+			return _result;
+		}
+		
+		private void HideHandlerDialog()
+		{
+			_hideRequest = true;
+			Visibility = Visibility.Hidden;
+			_parent.IsEnabled = true;
+		}
+
+		private void OkButton_Click(object sender, RoutedEventArgs e)
+		{
+			_result = true;
+			HideHandlerDialog();
+		}
+
+		private void CancelButton_Click(object sender, RoutedEventArgs e)
+		{
+			_result = false;
+			HideHandlerDialog();
+		}
+	}
+}

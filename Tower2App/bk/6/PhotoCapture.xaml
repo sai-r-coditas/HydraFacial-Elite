@@ -1,0 +1,173 @@
+﻿<Window x:Class="Edge.Tower2.UI.PhotoCapture.PhotoCapture"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ui="clr-namespace:Edge.Tower2.UI"
+        xmlns:dShow="clr-namespace:WPFMediaKit.DirectShow.Controls;assembly=WPFMediaKit"
+        xmlns:photoCapture="clr-namespace:Edge.Tower2.UI.PhotoCapture"
+        Title="PhotoCapture"
+        Height="1024" Width="1280" x:Name="Me" Style="{StaticResource Window}" Activated="Me_Activated">
+    <Window.Resources>
+        <photoCapture:ImageCacheConverter x:Key="imagePathConverter" />
+    </Window.Resources>
+    <DockPanel>
+        <!-- Top 3 Butons -->
+        <Grid DockPanel.Dock="Top">
+            <ui:NavBar />
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,10,0,0" >
+                <Button x:Name="DeleteButton" Margin="10,0,0,0" Width="90" Height="90" Style="{StaticResource NavigationButtonStyle}"
+                            Click="DeleteImageClick" IsEnabled="False" HorizontalContentAlignment="Center">
+                    <Button.Content>
+                        <TextBlock x:Name="DeleteTextBlock" TextAlignment="Center" TextWrapping="Wrap" FontSize="18">Delete Photo(s)</TextBlock>
+                    </Button.Content>
+                </Button>
+                <Button x:Name="SelectAllButton" Margin="10,0,0,0" Width="90" Height="90" Style="{StaticResource NavigationButtonStyle}"
+                            Click="SelectAllClick" IsEnabled="True" HorizontalContentAlignment="Center">
+                    <Button.Content>
+                        <TextBlock TextAlignment="Center" TextWrapping="Wrap" FontSize="18">Select all Photos</TextBlock>
+                    </Button.Content>
+                </Button>
+                <Button x:Name="CaptureButton" Margin="10,0,0,0" Width="90" Height="90" Style="{StaticResource NavigationButtonStyle}"
+                            Click="CaptureImageClick" HorizontalContentAlignment="Center">
+                    <Button.Content>
+                        <TextBlock TextAlignment="Center" TextWrapping="Wrap" FontSize="18">Take a Photo</TextBlock>
+                    </Button.Content>
+                </Button>
+            </StackPanel>
+        </Grid>
+
+        <!--Sidebar Slider Items-->
+        <Grid x:Name="root" Margin="0,0,0,0">
+            <Grid.Resources>
+                <ControlTemplate x:Key="ItemTemplate">
+                    <Grid Margin="3"  >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="50" />
+                        </Grid.RowDefinitions>
+
+                        <Border Grid.Row ="0" BorderBrush="#FF333333" BorderThickness="20" Padding="0" Margin="2">
+                            <Image Stretch="Uniform" MaxWidth="224" Source="{Binding Path, Mode=OneWay, Converter={StaticResource imagePathConverter}}" Margin="0" />
+                        </Border>
+                        <!--image list item-->
+                        <Label Grid.Row ="0" Background="#50A0A0A0" Width="130" Height="20" FontWeight="Bold" Padding="2" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="Black" Content="{Binding CreateDateTime, Mode=OneWay}"/>
+                        <Label Grid.Row ="0" Width="130" Height="20" FontWeight="Bold" Padding="2" VerticalAlignment="Top" HorizontalAlignment="left" Foreground="White" Margin="120,150,0,0" Content="{Binding Info, Mode=OneWay}"/>
+                        <Label Grid.Row ="1" Width="130" Height="20" FontWeight="Bold" Padding="2" VerticalAlignment="Top" HorizontalAlignment="left" Foreground="White" Margin="120,10,0,0" Content="{Binding Notes, Mode=OneWay}"/>
+                    </Grid>
+                </ControlTemplate>
+
+                <ControlTemplate x:Key="SelectedItemTemplate">
+                    <Grid Margin="3" Background="White">
+                        <!-- sww -->
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="50" />
+                        </Grid.RowDefinitions>
+                        <Border Grid.Row ="0" BorderBrush="LightBlue" BorderThickness="20" Padding="0" Margin="2">
+                            <Image Stretch="Uniform" MaxWidth="224" Source="{Binding Path, Mode=OneWay, Converter={StaticResource imagePathConverter}}" Margin="0" />
+                        </Border>
+                        <Label Grid.Row ="0" Background="#50A0A0A0" Width="130" Height="20" FontWeight="Bold" Padding="2" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="White" Content="{Binding CreateDateTime, Mode=OneWay}"/>
+                        <Label Grid.Row ="0" Width="130" Height="20" FontWeight="Bold" Padding="2" VerticalAlignment="Top" HorizontalAlignment="left" Foreground="Black" Margin="120,150,0,0" Content="{Binding Info, Mode=OneWay}"/>
+                        <Label Grid.Row ="1" Width="130" Height="20" FontWeight="Bold" Padding="2" VerticalAlignment="Top" HorizontalAlignment="left" Foreground="Black" Margin="120,150,0,0" Content="{Binding Notes, Mode=OneWay}"/>
+
+                    </Grid>
+                </ControlTemplate>
+
+                <Style TargetType="{x:Type ListViewItem}">
+                    <Setter Property="Template" Value="{StaticResource ItemTemplate}" />
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Template" Value="{StaticResource SelectedItemTemplate}" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Grid.Resources>
+            
+            <!--////Left Side Bar List Box //// --> 
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="340" />
+                <!--<ColumnDefinition Width="500" />-->
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="150" />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0" >  
+                <ListView x:Name="PhotoListView"  Background="Transparent"  Grid.Column="0" ItemsSource="{Binding Photos, Mode=OneWay}" SelectionChanged="PhotoListView_OnSelectionChanged" Margin="50,0,10,0" Height="900"/>
+            </Grid>
+            
+            <!--Inner Grid for Image, Center Column-->
+            
+            <!--<Grid Background="Transparent" Grid.Column="1" PreviewMouseDown="UIElement_OnPreviewMouseDown" >
+                <dShow:VideoCaptureElement x:Name="VideoCapturePanel"
+                                    LoadedBehavior="Play"
+                                    DesiredPixelWidth="1920" 
+                                    DesiredPixelHeight="1080"
+                                    Stretch="Uniform"
+                                    VideoCaptureDevice="{Binding Path=CameraDevice, ElementName=Me, Mode=OneTime}"
+                                    FPS="30" EnableSampleGrabbing="True" NewVideoSample="videoCapElement_NewVideoSample" Margin="0,0,312,277"/>-->
+            <Grid Grid.Column="1">
+                <!--Still Image-->
+                <Grid x:Name="ImageGrid">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"  />
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="200"/>
+                    </Grid.RowDefinitions>
+                    
+                    <Label x:Name="lblTitle" Grid.Row="0" Content="Image Capture" FontSize="16" FontWeight="Bold"  HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    
+                    <Grid  x:Name="G_LiveImage" Grid.Row="1" PreviewMouseDown="UIElement_OnPreviewMouseDown"  >
+                        <dShow:VideoCaptureElement x:Name="VideoCapturePanel"
+                                    LoadedBehavior="Play"
+                                    DesiredPixelWidth="1920" 
+                                    DesiredPixelHeight="1080"
+                                    Stretch="Uniform"
+                                    VideoCaptureDevice="{Binding Path=CameraDevice, ElementName=Me, Mode=OneTime}"
+                                    FPS="30" EnableSampleGrabbing="True" NewVideoSample="videoCapElement_NewVideoSample" />
+                    </Grid> 
+                    <Grid Grid.Row="1" x:Name="G_StillImage" >
+                        <Image x:Name="LargeSavedImage"  Stretch="Uniform" Source="{Binding LargeSelectedImage, Mode=OneWay}" Margin="0" Visibility="Visible" />
+                        <Image x:Name="LargeSavedImage2"  Stretch="Uniform" Source="{Binding LargeSelectedImage2, Mode=OneWay}" Margin="0" Visibility="Visible" />
+                    </Grid>
+                    
+                    
+                    <!--Innser Grid for buttons-->
+                    <Grid  Grid.Row="3" >
+                        <!-- sww -->
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <Button x:Name="btnCapture" Grid.Column ="1"  Grid.Row ="0" Style="{StaticResource NavigationButtonStyle}"  HorizontalAlignment="Center" Width="117" Height="71" Click="btnCapture_Click">
+                            <Button.Content>
+                                <TextBlock TextWrapping="Wrap" MaxWidth="85" TextAlignment="Center" FontSize="24">Capture</TextBlock>
+                            </Button.Content>
+                        </Button>
+                        <Button x:Name="btnEdit" Grid.Column ="0" Grid.Row ="1" Style="{StaticResource NavigationButtonStyle}"  Width="117" Height="71" Click="btnEdit_Click"    >
+                            <Button.Content>
+                                <TextBlock TextWrapping="Wrap" MaxWidth="85" TextAlignment="Center" FontSize="24">Edit</TextBlock>
+                            </Button.Content>
+                        </Button>
+                        <Button x:Name="btnReflash" Grid.Column ="1" Grid.Row ="1" Style="{StaticResource NavigationButtonStyle}"   Width="117" Height="71" Click="btnReflash_Click"    >
+                            <Button.Content>
+                                <TextBlock TextWrapping="Wrap" MaxWidth="85" TextAlignment="Center" FontSize="24">Reflash</TextBlock>
+                            </Button.Content>
+                        </Button>
+                        <Button x:Name="btnNext" Grid.Column ="2" Grid.Row ="1" Style="{StaticResource NavigationButtonStyle}"   Width="117" Height="71" Click="btnNext_Click"    >
+                            <Button.Content>
+                                <TextBlock TextWrapping="Wrap" MaxWidth="85" TextAlignment="Center" FontSize="24">Next</TextBlock>
+                            </Button.Content>
+                        </Button>
+
+                    </Grid>
+
+                </Grid>
+                <!--<GridSplitter Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Stretch" Width="5"/>-->
+            </Grid>
+        </Grid>
+    </DockPanel>
+</Window>

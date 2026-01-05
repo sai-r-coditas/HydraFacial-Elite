@@ -1,0 +1,13 @@
+Initial Account Setup:
+
+Please follow the instructions below to seutp this machine for credit code mode:
+
+1)Login to Edge's website
+2)Create a new account number
+3)A PIN will be generated for the account number
+4)Go to the next page and enter the account number and PIN
+
+After the setup, the device will prompt for a credit code because the default credit is empty.
+1)Generate a credit code for this account number on Edge's website
+2)Enter the credit code, or it can be entered at a later time.
+Please note credit codes can only be used once.

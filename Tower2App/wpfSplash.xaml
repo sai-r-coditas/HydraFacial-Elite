@@ -1,0 +1,34 @@
+﻿<Window x:Class="Edge.Tower2.UI.wpfSplash"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Style="{StaticResource Window}"
+        Title="wpfSplash" Height="1024" Width="1280" Closing="Window_Closing" Deactivated="Window_Deactivated" Background="{x:Null}">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources\rsStyle.xaml"/>
+                <ResourceDictionary Source="Resources\rsRoundButton.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+        <Viewbox Stretch="Fill" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="1024" Height="819">
+            <Grid>
+                <!--0102-39-->
+                <Image x:Name="imgBG" Source="Skin\\images\\edge_logo_1280.png" Width="1280" Height="1024"/>
+
+
+                <Canvas Width="1280" Height="1024">
+
+                    <ProgressBar x:Name="pgbLoading" Style="{StaticResource st_BlueProgress}"  HorizontalAlignment="Left" Height="18"  VerticalAlignment="Top" Width="499" Maximum="10"
+                     Value="{Binding Value, ElementName=Slider1, Mode=Default}" Foreground="{StaticResource st_mainblue}" Canvas.Left="400" Canvas.Top="811" >
+                    </ProgressBar>
+
+                    <Label x:Name="lblLoading" Content="Loading..." HorizontalAlignment="Left" Height="41"  VerticalAlignment="Top" Width="146" Style="{StaticResource st_Label}" FontSize="20" Canvas.Left="595" Canvas.Top="770"/>
+                </Canvas>
+            </Grid>
+        </Viewbox>
+    </Grid>
+</Window>

@@ -1,0 +1,169 @@
+﻿<Page x:Class="Edge.Tower2.UI.pg_LEDs"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:ui="clr-namespace:Edge.Tower2.UI"
+      xmlns:DesignInControl="clr-namespace:Edge.Tower2.UI"
+      x:Name="Me"
+      Height="500" Width="600"
+	  Title="pg_LEDs" Loaded="Me_Loaded" Unloaded="Me_Unloaded"  >
+
+    <Page.Resources>
+        <ResourceDictionary>
+            
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources\rsStyle.xaml"/>
+                <ResourceDictionary Source="Resources\rsRoundButton.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <ui:NumberIsChecked x:Key="NumberToCbConverter" />
+            <ui:TemperatureToString x:Key="TemperatureToStringConverter" />
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <Grid >
+        <DockPanel  DataContext="{Binding ElementName=Me}">
+            <!--<ui:PulseSelector Caption=""  Width="500" Height="200" Margin="0,0,0,0" />-->
+            <Canvas  Margin="0,10,0,14"  Background="#00FFFFFF">
+                <!--Background="#FFF5F0EB" 2014 10/31-->
+
+                <!--<Canvas  Width="300" Height="300" Canvas.Left="175" Canvas.Top="50"  >
+                    <DesignInControl:CircularProgressBar HorizontalAlignment="Left" VerticalAlignment="Top" SegmentColor="#ffdddddd" StrokeThickness="10" Width="270" Height="270" Radius="120" Canvas.Left="10" Canvas.Top="10" Percentage="100" />
+                    <DesignInControl:CircularProgressBar HorizontalAlignment="Left" VerticalAlignment="Top" SegmentColor="#ff08c5d8" StrokeThickness="10" Height="270" Width="270"  Radius="120" Background="{x:Null}" Canvas.Left="10" Canvas.Top="10" Percentage="{Binding Value, ElementName=slider}"  />
+                    <Slider x:Name="slider" Grid.Row="1" Maximum="100" Value="60" Width="300" Height="30" />
+                </Canvas>-->
+
+                <!--<ui:uc_CircularBar   Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Percentage="{Binding Value, ElementName=slider}" SegmentColor="#FFf5f0eb" StrokeThickness="50" Height="300" Width="300" Radius="100" Canvas.Left="117" Canvas.Top="187"/>-->
+
+                <Label x:Name="lblTimeString" Opacity="0.5" VerticalContentAlignment="Center" FontSize="30" Content="00:00" Canvas.Left="489" Canvas.Top="-3"/>
+                <Image x:Name="imgFace" Height="380" Canvas.Left="41" Width="523" Source="Skin/Images/face.png"/>
+                
+                <Canvas x:Name="cvsTL">
+                    <Image x:Name="imgTL" Width="106" Height="141" Canvas.Left="205" Canvas.Top="41"  />
+                    <Image x:Name="imgBodyTL"  Width="106" Height="141" Canvas.Left="200" Canvas.Top="41" />
+                </Canvas>
+                
+                <Canvas x:Name="cvsTR">
+                    <Image x:Name="imgTR" Width="94" Height="141" Canvas.Left="308" Canvas.Top="41"  />
+                    <Image x:Name="imgBodyTR" Width="94" Height="141" Canvas.Left="308" Canvas.Top="43"  />
+                </Canvas>
+                
+                <Canvas x:Name="cvsBL">
+                    <Image x:Name="imgBL" Width="106" Height="135" Canvas.Left="210" Canvas.Top="175"  />
+                    <Image x:Name="imgBodyBL" Width="106" Height="135" Canvas.Left="210" Canvas.Top="175"  />
+                </Canvas>
+                
+                <Canvas x:Name="cvsBR">
+                    <Image x:Name="imgBR"  Width="86" Height="135" Canvas.Left="308" Canvas.Top="176" />
+                    <Image x:Name="imgBodyBR" Width="86" Height="135" Canvas.Left="308" Canvas.Top="176"  />
+                </Canvas>
+                
+                <!--0100-->
+                <Image x:Name="imgBody" Width="263" Height="352" Canvas.Left="175"  Source="Skin/Images/led_body.png"/>
+
+                <Button x:Name="btn_LedStart"   Style="{StaticResource st_FlatButton1}" BorderBrush="Transparent" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="90" BorderThickness="0" Padding="0" Background="#00000000" Canvas.Left="483" Margin="0" Canvas.Top="40" Click="btn_LedStart_Click" >
+                    <Image x:Name="img_LEDStart" Source = "Skin/Images/led_start.png" Width="90" Height="90"/>
+                </Button>
+                <Button x:Name="btn_LedStop"  Style="{StaticResource st_FlatButton1}"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="90" BorderThickness="0" Padding="0" Background="#00000000" Canvas.Left="483" Margin="0" Canvas.Top="140" Click="btn_LedStop_Click">
+                     <Image x:Name="img_LEDStop" Source = "Skin/Images/led_pause.png" Width="90" Height="90"/>
+                </Button>
+                <Button x:Name="btn_LedReset"  Style="{StaticResource st_FlatButton1}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="90" BorderThickness="0" Padding="0" Background="#00000000" Canvas.Left="483" Margin="0" Canvas.Top="240" Click="btn_LedReset_Click" >
+                     <Image x:Name="img_LEDReset" Source = "Skin/Images/led_next.png" Width="90" Height="90"/>
+                </Button>
+
+                <Image x:Name="imgOneLight" Source="Skin/Images/1light_u.png" Width ="80" Canvas.Left="44" Canvas.Top="88" Tag="" PreviewMouseDown="imgOneLight_PreviewMouseDown"/>
+                <Image x:Name="imgTwoLights" Source="Skin/Images/2lights_u.png" Width ="80" Canvas.Left="43" Canvas.Top="185" Tag="" PreviewMouseDown="imgTwoLights_PreviewMouseDown"/>
+              
+                
+                <Label Content="TIMER CONTROL" Height="34" Canvas.Left="61" Canvas.Top="7" Width="161" FontSize="20" Foreground="#FFA8A8A8" Visibility="Hidden"/>
+              
+                <!--====================-->
+                <!--Draw divided line     -->
+                <!--====================-->
+                <Line x:Name="lneChargebar" Stretch="Fill" Stroke="#FF65666b"  X1="20" Y1="100" Y2="100" StrokeThickness="0.5" Width="565" Height="20" Margin="25,370,10,10"/>
+
+                <!--=======================-->
+                <!--For Charge Bar         -->
+                <!--=======================-->
+                <Canvas x:Name="cvsChargebar" Width="560" Height="100" Canvas.Left="30" Canvas.Top="380">
+                    <Grid  Width="560" Canvas.Top="0" Canvas.Left="-3"  >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <!--Background shape-->
+                        <ui:ChargeBar Width="20" Height ="70" IsCharging="{Binding Path=App.BoardManager.LedIsCharging[0]}" Value="{Binding Path=App.BoardManager.LedBatteryLevel[0]}" Grid.Column="0" RenderTransformOrigin="0.5,0.5">
+                            <DesignInControl:ChargeBar.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="90.653"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </DesignInControl:ChargeBar.RenderTransform>
+                        </ui:ChargeBar>
+
+                        <ui:ChargeBar Width="20" Height ="70" IsCharging="{Binding Path=App.BoardManager.LedIsCharging[1]}" Value="{Binding Path=App.BoardManager.LedBatteryLevel[1]}" Grid.Column="1" RenderTransformOrigin="0.5,0.5">
+                            <DesignInControl:ChargeBar.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="89.747"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </DesignInControl:ChargeBar.RenderTransform>
+                        </ui:ChargeBar>
+
+                        <ui:ChargeBar Width="20" Height ="70" IsCharging="{Binding Path=App.BoardManager.LedIsCharging[2]}" Value="{Binding Path=App.BoardManager.LedBatteryLevel[2]}" Grid.Column="2" RenderTransformOrigin="0.5,0.5">
+                            <DesignInControl:ChargeBar.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="91.041"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </DesignInControl:ChargeBar.RenderTransform>
+                        </ui:ChargeBar>
+
+                        <ui:ChargeBar Width="20" Height ="70" IsCharging="{Binding Path=App.BoardManager.LedIsCharging[3]}" Value="{Binding Path=App.BoardManager.LedBatteryLevel[3]}" Grid.Column="3" RenderTransformOrigin="0.5,0.5">
+                            <DesignInControl:ChargeBar.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="90"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </DesignInControl:ChargeBar.RenderTransform>
+                        </ui:ChargeBar>
+
+                        <!--=====================================================-->
+                        <!--=====================================================-->
+                        <!--<ProgressBar x:Name="pgbB0"  Grid.Column="0" Width="60" Height="22"  Value="{Binding Path=App.BoardManager.LedBatteryLevel[0]}" Style="{StaticResource st_SolidProgress}" HorizontalAlignment="Left"   VerticalAlignment="Top" Margin="40,25,0,0"/>-->
+
+                        <ProgressBar x:Name="pgbB0"  Grid.Column="0" Width="60" Height="22"  Style="{StaticResource st_SolidProgress}" HorizontalAlignment="Left"   VerticalAlignment="Top" Margin="40,25,0,0"/>
+                        <Label x:Name="lblBatteryLevel0" HorizontalAlignment="Center" Grid.Column="0" HorizontalContentAlignment="Center" Visibility="Visible"  ContentStringFormat="LED 1  {0}%" Margin="0,48,5,0" Width="100"  Foreground="#FFA8A8A8" Style="{StaticResource st_Label}"></Label>
+
+
+                        <ProgressBar x:Name="pgbB1"  Grid.Column="1" Width="60" Height="22"   Style="{StaticResource st_SolidProgress}" HorizontalAlignment="Left"   VerticalAlignment="Top" Margin="40,25,0,0"/>
+                        <Label x:Name="lblBatteryLevel1" HorizontalAlignment="Center" Grid.Column="1"  HorizontalContentAlignment="Center" Visibility="Visible"  ContentStringFormat="LED 2  {0}%" Margin="25,48,31,0" Width="100"  Foreground="#FFA8A8A8" Style="{StaticResource st_Label}"></Label>
+
+
+                        <ProgressBar x:Name="pgbB2"  Grid.Column="2" Width="60" Height="22"   Style="{StaticResource st_SolidProgress}" HorizontalAlignment="Left"   VerticalAlignment="Top" Margin="40,25,0,0"/>
+                        <Label x:Name="lblBatteryLevel2" HorizontalAlignment="Center" Grid.Column="2" HorizontalContentAlignment="Center"  Visibility="Visible"  ContentStringFormat="LED 3  {0}%" Margin="25,48,28,0" Width="100" Foreground="#FFA8A8A8" Style="{StaticResource st_Label}" Height="22" VerticalAlignment="Top"></Label>
+
+                        <ProgressBar x:Name="pgbB3"  Grid.Column="3" Width="60"   Style="{StaticResource st_SolidProgress}" HorizontalAlignment="Left" Margin="40,25,0,23"/>
+                        <Label x:Name="lblBatteryLevel3" HorizontalAlignment="Center" Grid.Column="3" HorizontalContentAlignment="Center" Visibility="Visible"  ContentStringFormat="LED 4  {0}%" Margin="26,48,30,0" Width="100" Foreground="#FFA8A8A8" Style="{StaticResource st_Label}" Height="22" VerticalAlignment="Top"></Label>
+
+                    </Grid>
+                </Canvas>
+
+                <!--Charge bar-->
+
+            </Canvas>
+
+        </DockPanel>
+
+    </Grid>
+</Page>

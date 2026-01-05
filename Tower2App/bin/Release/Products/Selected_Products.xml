@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<productlist>
+  <products>
+    <product>
+      <name>Activ™ Foaming Cleanser</name>
+      <price>0</price>
+      <photo>DailyEssentials_ActivFoam.jpg</photo>
+    </product>
+    <product>
+      <name>Antiox-6™ Daily</name>
+      <price>0</price>
+      <photo>DailyEssentials-Antiox6_03.jpg</photo>
+    </product>
+    <product>
+      <name>Antiox+™</name>
+      <price>0</price>
+      <photo>DailyEssentials_AntioxPlus_03.jpg</photo>
+    </product>
+    <product>
+      <name>Beta-HD™ Daily</name>
+      <price>0</price>
+      <photo>DailyEssentials_BetaHD_03.jpg</photo>
+    </product>
+    <product>
+      <name>Britenol® Spot Correction</name>
+      <price>0</price>
+      <photo>DailyEssentials_Britenol_03.jpg</photo>
+    </product>
+    <product>
+      <name>DermaBuilder™ Daily</name>
+      <price>0</price>
+      <photo>DailyEssentials_DermaBuilder_03.jpg</photo>
+    </product>
+    <product>
+      <name>Pur Moist™ Oil-Free</name>
+      <price>0</price>
+      <photo>DailyEssentials_PurMoist_03.jpg</photo>
+    </product>
+    <product>
+      <name>UV Smart® Daily SPF 40</name>
+      <price>0</price>
+      <photo>DailyEssentials_UV_03.jpg</photo>
+    </product>
+    <product>
+      <name>Pur Moist™</name>
+      <price>0</price>
+      <photo>PurMoist.jpg</photo>
+    </product>
+    <product>
+      <name>-</name>
+      <price>0</price>
+      <photo>B</photo>
+    </product>
+    <product>
+      <name>-</name>
+      <price>0</price>
+      <photo>C</photo>
+    </product>
+  </products>
+</productlist>

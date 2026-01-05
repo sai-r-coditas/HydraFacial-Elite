@@ -1,0 +1,10 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+    
+    <system:String x:Key="hydra-facial-UI-v15-enter">hydra-facial-UI-v15-enter</system:String>
+    <system:String x:Key="top_menu_bg">top_menu_bg</system:String>
+    <system:String x:Key="top_menu_bg_dim">top_menu_bg_dim</system:String>
+    <system:String x:Key="hydra-facial-UI-v17-home-1">hydra-facial-UI-v17-home-1</system:String>
+    <system:String x:Key="popup">popup</system:String>
+</ResourceDictionary>

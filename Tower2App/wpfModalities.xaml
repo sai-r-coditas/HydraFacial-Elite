@@ -1,0 +1,70 @@
+﻿<Window x:Class="Edge.Tower2.UI.wpfModalities"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Style="{StaticResource Window}"
+        xmlns:ui="clr-namespace:Edge.Tower2.UI"
+        Title="wpfModalities" Height="1024" Width="1280" x:Name="Me" Activated="Me_Activated" Deactivated="Me_Deactivated" ContentRendered="Me_ContentRendered"  >
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources\rsStyle.xaml"/>
+                <ResourceDictionary Source="Resources\rsRoundButton.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Window.Background>
+        <ImageBrush/>
+    </Window.Background>
+
+    <Grid>
+        <Viewbox Stretch="Fill" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="1024" Height="819">
+
+            <Grid Width="1280" Height="1024">
+                <Canvas x:Name="cvsRoot">
+
+                    <Canvas x:Name="cvsModalities" Width="1280" Height="1024" Visibility="Visible" >
+
+                        <Image x:Name="imgModalities" Width="1280" Height="1024" Stretch="Fill" />
+                        <Image x:Name="imgSubMenu1" Width="1280" Height="1024" Stretch="Fill" />
+
+                        <!--Style="{StaticResource st_Transparent}"-->
+                        <Button x:Name="btn1"  Style="{StaticResource st_Transparent}" Height="275" Width="340" Canvas.Left="24" Canvas.Top="100" Click="btn1_Click" />
+                        <Button x:Name="btn2"  Style="{StaticResource st_Transparent}" Height="275" Width="340" Canvas.Left="375" Canvas.Top="100" Click="btn2_Click" />
+                        <Button x:Name="btn3"  Style="{StaticResource st_Transparent}" Height="275" Width="340" Canvas.Left="725" Canvas.Top="100" Click="btn3_Click" />
+
+                        <Button x:Name="btn4"  Style="{StaticResource st_Transparent}" Height="275" Width="340" Canvas.Left="24" Canvas.Top="390" Click="btn4_Click" />
+                        <Button x:Name="btn5"  Style="{StaticResource st_Transparent}" Height="275" Width="340" Canvas.Left="375" Canvas.Top="390"  Click="btn5_Click" />
+                        <Button x:Name="btn6"  Style="{StaticResource st_Transparent}" Height="275" Width="340" Canvas.Left="725" Canvas.Top="390" Click="btn6_Click" />
+
+                        <Button x:Name="btn7"  Style="{StaticResource st_Transparent}" Height="275" Width="340" Canvas.Left="24" Canvas.Top="680"  Click="btn7_Click" />
+                        <Button x:Name="btn8"  Style="{StaticResource st_Transparent}" Height="275" Width="340" Canvas.Left="375" Canvas.Top="680" Click="btn8_Click" />
+                        <Button x:Name="btn9"  Style="{StaticResource st_Transparent}" Height="275" Width="340" Canvas.Left="725" Canvas.Top="680" Click="btn9_Click" />
+
+                    </Canvas>
+
+                    <ui:NavBar x:Name="NavBar" Canvas.Left="0" Canvas.Top="0" Height="77" />
+
+                    <ui:uc_User x:Name="ucUser" Canvas.Left="0" Canvas.Top="80" Height="80" />
+
+                    <!--<Label x:Name="lblLogin" Canvas.Left="50" Canvas.Top="95" Content="Logged in as User" HorizontalAlignment="Left"   Width="143" Foreground="#FF494848" FontFamily="Helvetica Neue LT Std"/>
+            
+                    <Button x:Name="btnLogin"  Canvas.Left="0" Canvas.Top="80" Width="50" Height="50" Click="btnLogin_Click">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source = "Skin/Images/t2/n_Login.png" Width="60" Height="60"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                    </Button>-->
+
+                </Canvas>
+
+                <Canvas x:Name="cvsPreClean">
+                    <!-- -->
+                    <Image x:Name="imgPreClean" Width="1280" Height="1024" Canvas.Left="-1" Stretch="Fill" />
+                    <Button x:Name="btnContinue" Style="{StaticResource st_Transparent}" Height="60" Width="230" Canvas.Left="525" Canvas.Top="550" Click="btnContinue_Click" />
+                </Canvas>
+            </Grid>
+        </Viewbox>
+    </Grid>
+</Window>

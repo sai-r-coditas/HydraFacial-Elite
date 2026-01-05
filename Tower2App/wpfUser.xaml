@@ -1,0 +1,165 @@
+﻿<Window x:Class="Edge.Tower2.UI.wpfUser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ui="clr-namespace:Edge.Tower2.UI"
+        x:Name="Me"
+        Style="{StaticResource Window}" 
+        Title="wpfUser" Height="1024" Width="1280" Deactivated="Me_Deactivated" Activated="Me_Activated" >
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources\rsStyle.xaml"/>
+                <ResourceDictionary Source="Resources\rsRoundButton.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+        <Viewbox Stretch="Fill" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="1024" Height="768">
+
+            <Grid x:Name="root" Width="1280" Height="1024">
+                <Canvas x:Name="cvsRoot">
+                    <Canvas x:Name="cvsDetail" Visibility="Hidden">
+
+                        <Label x:Name="lblHeader" Content="Member" Height="48" Canvas.Left="106" Canvas.Top="197" Width="296" FontSize="30" Style="{StaticResource st_Label}" Foreground="#FF08C5D8"/>
+
+                        <Label x:Name="lblUserID" Content="User ID" Canvas.Left="353" HorizontalAlignment="Left" VerticalAlignment="Top" Width="71" Height="40" FontSize="18" Foreground="#FF888282" Canvas.Top="258"/>
+                        <Label x:Name="lblPassword" Content="Password"  Canvas.Left="353" HorizontalAlignment="Left" VerticalAlignment="Top" Width="89" Height="40" FontSize="18" ClipToBounds="True" Foreground="#FF888282" Canvas.Top="322"/>
+                        <Label x:Name="lblConfirm" Content="Confirm"  Canvas.Left="353" HorizontalAlignment="Left" VerticalAlignment="Top" Width="83" Height="40" FontSize="18" ClipToBounds="True" Foreground="#FF888282" Canvas.Top="382"/>
+                        <Label x:Name="lblRole" Content="Role" Canvas.Left="784" Canvas.Top ="264" Width="49" Height="40" FontSize="18" ClipToBounds="True" Foreground="#FF888282"/>
+                        <Label x:Name="lblActive" Content="Active" Canvas.Left="784" Canvas.Top ="322" Width="64" Height="40" FontSize="18" RenderTransformOrigin="1.504,0.601" Foreground="#FF888282"/>
+
+                        <TextBox x:Name="txtUserID" HorizontalAlignment="Left" Height="47"  VerticalAlignment="Top" Width="247" FontSize="20" Background="#FFEDE4D5" PreviewMouseDown="txtUserID_PreviewMouseDown" Canvas.Left="103" Canvas.Top="259" BorderBrush="#FFB3AA9C" Foreground="#FF64676C" TextChanged="txtUserID_TextChanged"/>
+                        <PasswordBox x:Name="txtPassword" HorizontalAlignment="Left" VerticalAlignment="Top" Width="245" Height="45" RenderTransformOrigin="0.321,0.592" FontSize="20" Background="#FFEDE4D5" PreviewMouseDown="txtPassword_PreviewMouseDown" Canvas.Left="103" Canvas.Top="318" BorderBrush="#FFB3AA9C" Foreground="#FF64676C"/>
+                        <PasswordBox x:Name="txtConfirm" HorizontalAlignment="Left" VerticalAlignment="Top" Width="245" Height="45" RenderTransformOrigin="0.321,0.592" FontSize="20" Background="#FFEDE4D5" PreviewMouseDown="txtConfirm_PreviewMouseDown" Canvas.Left="103" Canvas.Top="381" BorderBrush="#FFB3AA9C" Foreground="#FF64676C"/>
+
+                        <ComboBox x:Name="cboRole" Style="{StaticResource st_ComboBox}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="245" Height="50" FontSize="20" Canvas.Left="534" Canvas.Top="261" Background="#FFEDE4D5" Foreground="#FF64676C" BorderBrush="#FFB3AA9C" SelectionChanged="cboRole_SelectionChanged">
+                            <ComboBox.Resources>
+                                <SolidColorBrush Color="#FFEDE4D5" x:Key="{x:Static SystemColors.HighlightBrushKey}"/>
+                                <SolidColorBrush x:Key="{x:Static SystemColors.ControlBrushKey}" Color="Yellow" />
+                            </ComboBox.Resources>
+
+                            <ListBoxItem Content="Administrator" Height="38"/>
+                            <ListBoxItem Content="User" Height="38"/>
+                        </ComboBox>
+                        <ComboBox x:Name="cboActive" Style="{StaticResource st_ComboBox}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="245" Height="50" FontSize="20" Canvas.Left="534" Canvas.Top="322" Background="#FFEDE4D5" Foreground="#FF64676C" BorderBrush="#FFB3AA9C" SelectionChanged="cboActive_SelectionChanged">
+                            <ComboBox.Resources>
+                                <SolidColorBrush Color="#FFEDE4D5" x:Key="{x:Static SystemColors.HighlightBrushKey}"/>
+                                <SolidColorBrush x:Key="{x:Static SystemColors.ControlBrushKey}" Color="Yellow" />
+                            </ComboBox.Resources>
+                            <ListBoxItem Content="True" Height="38"/>
+                            <ListBoxItem Content="False" Height="38"/>
+                        </ComboBox>
+                        <TextBox x:Name="txtID" HorizontalAlignment="Left" Height="23" Margin="651,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147"/>
+
+                        <Button x:Name="btnSaveNew" Content="Save" Style="{StaticResource st_BlueButton}" HorizontalAlignment="Left" Height="71" VerticalAlignment="Top" Width="191" FontSize="18"  Canvas.Left="989" Canvas.Top="384"  Click="btnSaveNew_Click" />
+                        <Button x:Name="btnEdit" Content="SUBMIT" Style="{StaticResource st_BlueButton}" HorizontalAlignment="Left" Height="71" VerticalAlignment="Top" Width="191" FontSize="18" Click="btnEdit_Click" Canvas.Left="989" Canvas.Top="383"  />
+                        <Button x:Name="btnBack" Content="Back" Style="{StaticResource st_GrayButton}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="191" Height="71" IsCancel="True" FontSize="18" Canvas.Left="989" Canvas.Top="295"  Click="btnBack_Click" />
+
+                        <ui:UC_Keyboard x:Name="UC_Keyboard1" Canvas.Left="100" Canvas.Top="532"  Visibility="Visible" Height="Auto" Width="Auto" />
+
+                        <Label x:Name="lblMessage" Content="Invalid Accound!" Height="40" Canvas.Left="104" Canvas.Top="448" Width="545" Style="{StaticResource st_Label}" FontSize="20" Foreground="#FFDC1212"/>
+
+                    </Canvas>
+
+
+                    <Canvas x:Name="cvsList" Visibility="Visible">
+
+                        <!--<DataGrid x:Name="DBGrid1" HorizontalAlignment="Left" Height="349" VerticalAlignment="Top" Width="504" 
+                  RowHeight="38" ColumnWidth="100" IsReadOnly="True" FrozenColumnCount="1" SelectionMode ="Single"
+                  BorderThickness="0,1"
+                  PreviewMouseDown="DBGrid1_PreviewMouseDown" SelectionChanged="DBGrid1_SelectionChanged"
+                  FontSize="20" Foreground="#FF7C7E81"  ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
+                  AutoGeneratingColumn="DBGrid1_AutoGeneratingColumn" Canvas.Left="56" Canvas.Top="184" 
+                  BorderBrush="#FFAEB1B4" GridLinesVisibility="Horizontal" HorizontalGridLinesBrush="#FFB6ADAD" 
+                  PreviewMouseDoubleClick="DBGrid1_PreviewMouseDoubleClick" AlternationCount="2" AlternatingRowBackground="#FFDCDADA"
+                  Visibility="Hidden">
+                    <DataGrid.Resources>
+                        <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="#FFEDE4D5"/>
+                        <SolidColorBrush x:Key="{x:Static SystemColors.ActiveBorderColorKey}" Color="#FFEDE4D5"/>
+                    </DataGrid.Resources>
+
+                </DataGrid>-->
+
+                        <Button x:Name="btnNew" Content="+ CREATE" Style="{StaticResource st_BlueButton}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="172" Height="71" Click="btnNew_Click" Canvas.Left="1042" Canvas.Top="212" FontSize="18"  />
+
+                        <Label Content="Users" Height="48" Canvas.Left="67" Canvas.Top="199" Width="120" FontSize="30" Style="{StaticResource st_Label}" Foreground="#FF08C5D8"/>
+                        <Label Content="Role" Height="43" Canvas.Left="261" Canvas.Top="199" Width="96"  FontSize="30" Style="{StaticResource st_Label}" Foreground="#FF08C5D8"/>
+                        <Label Content="Active" Height="43" Canvas.Left="469" Canvas.Top="199" Width="124"  FontSize="30" Style="{StaticResource st_Label}" Foreground="#FF08C5D8"/>
+
+                        <Label x:Name="lblMsg" Content="Invalid Accound!" Height="84" Canvas.Left="967" Canvas.Top="449" Width="274" Style="{StaticResource st_Label}" FontSize="20" Foreground="#FFDC1212" HorizontalContentAlignment="Right"/>
+
+                        <ScrollViewer x:Name="ScrollViewer" Height="611" Canvas.Left="65" Canvas.Top="259" Width="811" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Hidden" PanningMode="HorizontalOnly" PreviewMouseMove="ScrollViewer_PreviewMouseMove" PreviewMouseDown="ScrollViewer_PreviewMouseDown" MouseLeave="ScrollViewer_MouseLeave" PreviewMouseUp="ScrollViewer_PreviewMouseUp"  >
+
+                            <ListView x:Name="lvUser" Height="611" Canvas.Left="65" Canvas.Top="259" Width="811"  Foreground="#FF76777A" BorderThickness="0,1" BorderBrush="#FFB9BBBF" AlternationCount="2" Background="#FFFFFFFF" FontFamily="Gotham Light" TextElement.FontSize="20" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden" >
+                                <ListView.Resources>
+                                    <Style TargetType="GridViewColumnHeader">
+                                        <Setter Property="Visibility" Value="Collapsed" />
+                                    </Style>
+
+                                    <Style TargetType="{x:Type ListViewItem}">
+                                        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+                                        <Setter Property="BorderThickness" Value="0" />
+                                        <Setter Property="Foreground" Value="#FFaaaaaa" />
+                                        <Setter Property="Height" Value="50" />
+                                        <Setter Property="Template">
+                                            <Setter.Value>
+                                                <ControlTemplate TargetType="{x:Type ListViewItem}">
+                                                    <Border
+                         BorderThickness="0,0,0,1"
+                         Background="{TemplateBinding Background}">
+                                                        <GridViewRowPresenter HorizontalAlignment="Stretch" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Width="Auto" Margin="0" Content="{TemplateBinding Content}"/>
+                                                        <Border.BorderBrush>
+                                                            <SolidColorBrush Color="#FFaaaaaa"/>
+                                                        </Border.BorderBrush>
+                                                    </Border>
+                                                </ControlTemplate>
+                                            </Setter.Value>
+                                        </Setter>
+
+                                    </Style>
+                                </ListView.Resources>
+                                <ListView.View>
+                                    <GridView>
+
+                                        <GridViewColumn DisplayMemberBinding="{Binding Path=UserID}" Header="User ID" Width="200" />
+                                        <GridViewColumn DisplayMemberBinding="{Binding Path=Role}" Header="Role" Width="200" />
+                                        <GridViewColumn DisplayMemberBinding="{Binding Path=Active}" Header="Active" Width="150" />
+
+                                        <GridViewColumn Header="Edit" Width="120">
+                                            <GridViewColumn.CellTemplate>
+                                                <DataTemplate>
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <Image x:Name="y" Width="20" Height="20" Source="/Skin/Images/t2/edit.png" />
+                                                        <TextBlock x:Name="tbkEdit"  Text="Edit" PreviewMouseLeftButtonDown="tbkEdit_PreviewMouseLeftButtonDown" />
+                                                    </StackPanel>
+                                                </DataTemplate>
+                                            </GridViewColumn.CellTemplate>
+                                        </GridViewColumn>
+
+                                        <GridViewColumn Header="Delete" Width="120">
+                                            <GridViewColumn.CellTemplate>
+                                                <DataTemplate>
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <Image x:Name="x" Width="20" Height="20" Source="/Skin/Images/t2/delete.png" />
+                                                        <TextBlock x:Name="tbkDelete"  Text="Delete" PreviewMouseDown="tbkDelete_PreviewMouseDown" />
+                                                    </StackPanel>
+                                                </DataTemplate>
+                                            </GridViewColumn.CellTemplate>
+                                        </GridViewColumn>
+                                    </GridView>
+                                </ListView.View>
+                            </ListView>
+                        </ScrollViewer>
+                    </Canvas>
+                    <ui:uc_User x:Name="ucUser" Canvas.Left="0" Canvas.Top="80" Height="80" />
+
+                    <ui:NavBar x:Name="NavBar" Canvas.Left="520" Canvas.Top="0" Height="80" />
+
+                </Canvas>
+
+            </Grid>
+        </Viewbox>
+    </Grid>
+</Window>

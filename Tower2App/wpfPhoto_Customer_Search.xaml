@@ -1,0 +1,211 @@
+﻿<Window x:Name="Me" x:Class="Edge.Tower2.UI.Photo_Customer_Search"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ui="clr-namespace:Edge.Tower2.UI"
+        xmlns:wpfForm="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"  
+        Title="Photo_Customer_Search" 
+        Height="1024" Width="1280"
+        ResizeMode="NoResize"
+        Style="{StaticResource Window}" Loaded="Me_Loaded" Activated="Me_Activated" Deactivated="Me_Deactivated"
+        >
+
+    <Window.Resources>
+        <SolidColorBrush x:Key="VGridLine" Color="#FFb3aa9c" />
+        <SolidColorBrush x:Key="HGridLine" Color="#FFb3aa9c"/>
+
+        <SolidColorBrush x:Key="HighLightColor" Color="{StaticResource st_mainblue}"/>
+    </Window.Resources>
+    <Window.Background>
+        <ImageBrush />
+    </Window.Background>
+    <Grid>
+        <Viewbox Stretch="Fill" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="1024" Height="819">
+
+            <Grid Width="1280" Height="1024">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="899*"/>
+                    <RowDefinition Height="125*"/>
+                </Grid.RowDefinitions>
+
+                <!--0102-39-->
+                <Image x:Name="imgBG" Source="Skin\Images\WindowBackground_DB.png" Width="1280" Height="1024" Grid.RowSpan="2"/>
+
+                <Grid Grid.RowSpan="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="954"/>
+                    </Grid.RowDefinitions>
+
+                    <!--<ui:NavBar DockPanel.Dock="Top" Margin="0,0,0,0"/>-->
+                    <!--<Grid DockPanel.Dock="Top">
+                <ui:NavBar />
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="380,10,0,0" />
+            </Grid>-->
+
+                    <Grid x:Name="gridNext" Grid.Row="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="70"/>
+                            <RowDefinition Height="777"/>
+                            <!--403-->
+                            <RowDefinition Height="300"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="20"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="20"/>
+                        </Grid.ColumnDefinitions>
+
+
+                        <!--================-->
+                        <!--Add Shadow      -->
+                        <!--================-->
+                        <Border Margin="1"  Grid.Row="1" Grid.Column="1" BorderBrush="#ff880000" BorderThickness="0" CornerRadius="4"
+                     Background="#00ffffff">
+                            <Border.Effect>
+                                <DropShadowEffect Color="#ffeeeeee"/>
+                            </Border.Effect>
+                        </Border>
+
+                        <ui:uc_User x:Name="ucUser" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Width="300"  Margin="-2,10,990,849" Grid.RowSpan="2" Height="80" />
+
+                        <!--<Label x:Name="lblLogin" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Content="Logged in as User" HorizontalAlignment="Left" Margin="55,25,0,0" VerticalAlignment="Top" Width="143" Foreground="#FF494848" FontFamily="Helvetica Neue LT Std"/>
+                        <Button x:Name="btnLogout"   Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Width="50" Height="50" RenderTransformOrigin="-4.203,-3.744" Margin="-2,3,1202,849" Grid.RowSpan="2" Click="btnLogout_Click">
+                            <Button.Template>
+                                <ControlTemplate>
+                                    <Image Source = "Skin/Images/t2/n_Login.png" Width="60" Height="60" />
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>-->
+
+                        <Grid Grid.Column="1" Grid.Row="1" Background="#00F9F4EF"  >
+                            <GroupBox x:Name="G1" Header="" Margin="10,10,10,0" VerticalAlignment="Top" Height="350" BorderBrush="{x:Null}" BorderThickness="0">
+                                <Canvas x:Name="canInfo" Margin="0,-14,11,0.04">
+                                    <Label x:Name="lblTitle" Grid.Row="1" Width="282" Height="41" HorizontalAlignment="Center" Grid.Column="1" FontSize="26" Canvas.Left="22" Canvas.Top="30" Foreground="{StaticResource st_mainblue}" Style="{StaticResource st_Label}" VerticalAlignment="Center" VerticalContentAlignment="Center"  />
+
+                                    <TextBox x:Name="txtID" Height="34" Canvas.Left="398" TextWrapping="Wrap" Canvas.Top="13" Width="115" IsEnabled="False" BorderThickness="0" Background="#26FFFFFF"/>
+
+                                    <TextBox x:Name="txtDate"  Height="34" Canvas.Left="22" TextWrapping="Wrap" Canvas.Top="73" Width="304" Opacity="0.8" FontSize="18" PreviewMouseDown="txtName_PreviewMouseDown" BorderThickness="1" Background="#FFd1d0cf" Foreground="#FF64676C" BorderBrush="#FFB3AA9C" >
+                                    </TextBox>
+                                    <TextBox x:Name="txtName"  Height="34" Canvas.Left="21" TextWrapping="Wrap" Canvas.Top="118" Width="305" Opacity="0.8" FontSize="18" PreviewMouseDown="txtName_PreviewMouseDown" BorderThickness="1" Background="#FFd1d0cf"  TextChanged="txtName_TextChanged" Foreground="#FF64676C" BorderBrush="#FFB3AA9C" >
+                                    </TextBox>
+                                    <TextBox x:Name="txtBirthday" Height="38"  Canvas.Left="22" TextWrapping="Wrap" Canvas.Top="162" Width="304" Opacity="0.8" FontSize="18" PreviewMouseDown="txtBirthday_PreviewMouseDown" BorderThickness="1" Background="#FFd1d0cf" KeyDown="txtBirthday_KeyDown" TextChanged="txtBirthday_TextChanged" Foreground="#FF64676C" BorderBrush="#FFB3AA9C" >
+                                    </TextBox>
+                                    <TextBox x:Name="txtTelNo" Height="34" Canvas.Left="22" TextWrapping="Wrap" Canvas.Top="212" Width="304" Opacity="0.8" FontSize="18" PreviewMouseDown="txtTelNo_PreviewMouseDown" BorderThickness="1" Background="#FFd1d0cf" TextChanged="txtTelNo_TextChanged" Foreground="#FF64676C" BorderBrush="#FFB3AA9C" >
+                                    </TextBox>
+
+
+                                    <Label x:Name="lblDate" Content="Date" Canvas.Left="333" Canvas.Top="77" FontSize="16" Foreground="#FF64676C" Style="{StaticResource st_Label}"/>
+                                    <Label x:Name="lblName" Content="Name" Canvas.Left="333" Canvas.Top="121" FontSize="16" Foreground="#FF64676C" Style="{StaticResource st_Label}"/>
+                                    <Label x:Name="lblBirthday" Content="Date Of Birthday" Canvas.Left="333" Canvas.Top="158" FontSize="16" Foreground="#FF64676C" Style="{StaticResource st_Label}"/>
+                                    <Label x:Name="lblDateFormat" Content="(MM/DD/YY)" Canvas.Left="333" Canvas.Top="181" FontSize="16" Foreground="#FF64676C" Style="{StaticResource st_Label}"/>
+                                    <Label x:Name="lblPhoneNo" Content="TEL. NO" Canvas.Left="331" Canvas.Top="214" FontSize="16" Foreground="#FF64676C" Style="{StaticResource st_Label}"/>
+
+                                    <Button x:Name="btnClear" FontSize="18" Style="{StaticResource st_GrayGrayButton}"  Canvas.Left="20" Canvas.Top="262" Width="120" Height="57" Click="btnClear_Click" Background="#FFD1D2D4" >
+                                        <TextBlock  Name="tbkClear" TextAlignment="Center" FontSize="17" TextWrapping="Wrap" MaxWidth="110">Clear</TextBlock>
+                                    </Button>
+
+                                    <Button x:Name="btnSearch" FontSize="18" Style="{StaticResource st_GrayGrayButton}"  Canvas.Left="20" Canvas.Top="262" Width="120" Height="57" Click="btnSearch_Click" Background="#FFD1D2D4" >
+                                        <TextBlock Name="tbkSearch" TextAlignment="Center" FontSize="17" TextWrapping="Wrap" MaxWidth="110">Search</TextBlock>
+                                    </Button>
+                                    
+                                    <TextBox x:Name="txtNotes" Height="173" Canvas.Left="21" TextWrapping="Wrap" Canvas.Top="73" Width="459" Opacity="1" FontSize="18" PreviewMouseDown="txtNotes_PreviewMouseDown"  Background="#ffFFFFFF" TextChanged="txtNotes_TextChanged" Style="{StaticResource st_TextBox}" Visibility="Visible"/>
+                                    
+                                    <Label x:Name="lblNotes" Content="Notes" Canvas.Left="483" Canvas.Top="74" FontSize="16" Foreground="#FF64676C" Style="{StaticResource st_Label}" />
+
+                                    <Label x:Name="lblMsg" Canvas.Left="276" Canvas.Top="266" FontSize="16" Foreground="#FFDC1212" Style="{StaticResource st_Label}" Width="293" Height="45" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
+
+
+                                    <!--"#FFd1d2d4" "#FFede4d5"-->
+                                    <DataGrid x:Name="DBGrid1" Canvas.Left="574" Canvas.Top="71" HorizontalAlignment="Left" 
+                  VerticalAlignment="Top" Height="246" Width="404" RowHeight="38" ColumnWidth="134"
+                  Background="#26FFFFFF" RowBackground="#FFe0dfde"
+                  AlternatingRowBackground="#ffd1d0cf"               
+                  BorderBrush="#FFb3aa9c" BorderThickness="1"
+                  IsReadOnly="True"
+                  FrozenColumnCount="2"
+                  VerticalGridLinesBrush="{StaticResource VGridLine}"
+                  HorizontalGridLinesBrush="{StaticResource HGridLine}"
+                  SelectionMode ="Single" AutoGeneratingColumn="DBGrid1_AutoGeneratingColumn" SelectionChanged="DBGrid1_SelectionChanged" 
+                    FontSize="16" Foreground="#FF64676C"  
+                    ScrollViewer.HorizontalScrollBarVisibility="Disabled" PreviewMouseDown="DBGrid1_PreviewMouseDown"
+                    IsSynchronizedWithCurrentItem="False" 
+                  >
+                                        <DataGrid.Resources>
+                                            <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="{StaticResource db_selected}"/>
+                                            <!--FF00a5e2-->
+                                            <Style TargetType="{x:Type DataGridColumnHeader}">
+                                                <Setter Property="Background" Value="#FF888888" />
+                                                <!--"#FFede4d5"-->
+                                                <Setter Property="BorderBrush" Value="#FFb3aa9c" />
+                                                <Setter Property="Foreground" Value="#FFffffff" />
+                                                <Setter Property="Height" Value="38" />
+                                            </Style>
+                                        </DataGrid.Resources>
+                                    </DataGrid>
+
+                                    <Button x:Name="btnBack"  Width="160" Height="60" Style="{StaticResource st_NavigationButton}"  Background="#FFD1D2D4"
+                        	IsEnabled="True" HorizontalContentAlignment="Center" Click="btnBack_Click" Canvas.Left="1015" Canvas.Top="51" Foreground="#FF64676C"   >
+                                        <TextBlock x:Name="tbkBack" TextAlignment="Center" FontSize="18" Foreground="#FF64676C" TextWrapping="Wrap" MaxWidth="140"><Run Text="Back"/></TextBlock>
+                                    </Button>
+
+                                    <Button x:Name="btnEditBack"  Width="160" Height="60" Style="{StaticResource st_NavigationButton}"  Background="#FFD1D2D4"
+                        	IsEnabled="True" HorizontalContentAlignment="Center"  Canvas.Left="1015" Canvas.Top="51" Foreground="#FF64676C" Click="btnEditBack_Click"   >
+                                        <TextBlock x:Name="tbkEditBack" TextAlignment="Center" FontSize="17" Foreground="#FF64676C" TextWrapping="Wrap" MaxWidth="140"><Run Text="Back"/></TextBlock>
+                                    </Button>
+
+                                    <Button x:Name="btnDelete" Style="{StaticResource st_GrayGrayButton}" Canvas.Left="1015" Canvas.Top="121" Width="160" Height="60" Click="btnDelete_Click" Background="#FFD1D2D4"  >
+                                        <TextBlock x:Name="tbkDelete"   TextAlignment="Center" FontSize="17" TextWrapping="Wrap" MaxWidth="140">Delete</TextBlock>
+                                    </Button>
+                                   
+                                    <Button x:Name="btnNext" Style="{StaticResource st_GrayBlueButton}" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Top" Width="160" Height="60" RenderTransformOrigin="2.065,0.45" Canvas.Left="1015" Canvas.Top="191" Click="btnNext_Click" Background="#FFD1D2D4" >
+                                        <TextBlock Name="tbkNext"   TextAlignment="Center" FontSize="17" TextWrapping="Wrap" MaxWidth="140">Photo Capture</TextBlock>
+                                    </Button>
+                                    
+                                    <Button x:Name="btnPastSession" Style="{StaticResource st_GrayBlueButton}"  FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Top" Width="160" Height="60" RenderTransformOrigin="2.065,0.45" Canvas.Left="1015" Click="btnPastSession_Click" Canvas.Top="259" Background="#FFD1D2D4"  >
+                                        <TextBlock Name="tbkPastSession"  TextAlignment="Center" FontSize="17" TextWrapping="Wrap" MaxWidth="140">Past Photos</TextBlock>
+                                    </Button>
+
+                                    <Button x:Name="btnEdit" Style="{StaticResource st_NavigationButton}" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Top" Width="117" Height="57" RenderTransformOrigin="2.065,0.45" Canvas.Left="458" Canvas.Top="261" Click="btnEdit_Click" Background="#FFD1D2D4" >
+                                        <TextBlock  Name="tbkEdit" TextAlignment="Center" FontSize="17" TextWrapping="Wrap" MaxWidth="110">Edit</TextBlock>
+                                    </Button>
+                                
+                                    <Button x:Name="btnSave" Style="{StaticResource st_GrayGrayButton}" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Top" Width="117" Height="57" RenderTransformOrigin="2.065,0.45" Canvas.Left="152" Canvas.Top="262" Click="btnSave_Click" Background="#FFD1D2D4" >
+                                        <TextBlock  Name="tbkSave" TextAlignment="Center" FontSize="17" TextWrapping="Wrap" MaxWidth="110">Save</TextBlock>
+                                    </Button>
+
+                                    <Button x:Name="btnCreate" Style="{StaticResource st_GrayGrayButton}" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Top" Width="117" Height="57" RenderTransformOrigin="2.065,0.45" Canvas.Left="150" Canvas.Top="262" Click="btnCreate_Click" Background="#FFD1D2D4" >
+                                        <TextBlock Name="tbkCreate"  TextAlignment="Center" FontSize="17" TextWrapping="Wrap" MaxWidth="110">Create</TextBlock>
+                                    </Button>
+
+                                </Canvas>
+                            </GroupBox>
+
+                            <Canvas>
+                                <ui:UC_Keyboard x:Name="ucKeyboard" Canvas.Top ="370" Canvas.Left="41" Width="1155" Height="380" />
+                            </Canvas>
+
+                        </Grid>
+                    </Grid>
+
+                </Grid>
+
+                <Canvas Grid.Row="0" Grid.RowSpan="2">
+                    <ui:NavBar x:Name="NavBar" Canvas.Left="0" Canvas.Top="0" Height="77" />
+                </Canvas>
+
+                <!--Message Box-->
+                <Canvas x:Name="cvsMessage" Width="1280" Height="1024" Grid.Row="0" Grid.RowSpan="2" Visibility="Hidden" >
+                    <GroupBox Name="grpMessage1"  Height="303" Canvas.Left="124" Width="1031" Background="#FF85DFF9" FontSize="20" BorderThickness="0" Canvas.Top="363">
+                        <Canvas>
+                            <Label  Name="lblWarning" HorizontalAlignment="Left" Height="76" FontSize="30" Margin="150,62,0,0" VerticalAlignment="Top" Width="641"/>
+                            <Button Name="btnMessageOK" Style="{StaticResource NavigationButtonStyle}" Content="OK" Width ="140" Height="60" Click="btnMessageOK_Click" Canvas.Left="770" Canvas.Top="208"/>
+                            <Button Name="btn_OK" Style="{StaticResource NavigationButtonStyle}" Content="OK" Width ="140" Height="60"  Canvas.Left="770" Canvas.Top="208" Click="btn_OK_Click"/>
+                            <Button Name="btn_Cancel" Style="{StaticResource NavigationButtonStyle}" Content="Cancel" Width ="140" Height="60" Canvas.Left="600" Canvas.Top="208" Click="btn_Cancel_Click"/>
+                        </Canvas>
+                    </GroupBox>
+                </Canvas>
+            </Grid>
+        </Viewbox>
+    </Grid>
+
+</Window>

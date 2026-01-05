@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='us-ascii'?> 
+<treatmentSelection>
+<add key="mt_led"               value="LED Light Therapy"/>  
+
+<add key="mt_lymph_abs"         value="Abdomen Lymphatic"/>   
+<add key="mt_lymph_arms"        value="Arm Lymphatic"/>          
+<add key="mt_lymph_face"        value="Facial Lymphatic"/>
+<add key="mt_lymph_back"        value="Back Lymphatic"/>   
+<add key="mt_lymph_leg"         value="Leg Lymphatic"/> 
+         
+<add key="mt_aa"                value="Advanced Aggression"/>      
+<add key="mt_perk"              value="Perk"/>                     
+
+<add key="mt_perk_eye"          value="Perk Eye"/>                     
+<add key="mt_perk_face"         value="Perk Face"/>                     
+<add key="mt_perk_lip"          value="Perk Lip"/>                     
+
+<add key="mt_led_red"           value="LED Red"/>   
+<add key="mt_led_blue"          value="LED Blue"/>   
+<add key="mt_led_both"          value="LED Red &amp; Blue"/>   
+
+
+<add key="signature_deluxe"     value="Signature HydraFacial"/>            
+<add key="age_ctgf"             value="Restorative"/>                      
+<add key="age_db"               value="Age-Refinement DermaB."/>     
+<add key="radiance"             value="Radiance Britenol"/>                
+<add key="clarify"              value="Clarifying"/>                       
+<add key="sensitive"            value="Sensitive Skin"/>                   
+<add key="neck_signature"       value="Neck &amp; Decollete"/>                 
+<add key="back_signature"       value="Back Signature"/>                             
+<add key="hands_signature"      value="Hand Signature"/>                             
+
+<add key="mt_clean"             value="System Cleaning"/>                             
+
+</treatmentSelection>

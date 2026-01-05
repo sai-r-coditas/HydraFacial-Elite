@@ -1,0 +1,137 @@
+﻿<Window x:Class="Edge.Tower2.UI.wpfStatus"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ui="clr-namespace:Edge.Tower2.UI"
+        xmlns:DesignInControl="clr-namespace:Edge.Tower2.UI"
+        Style="{StaticResource Window}"
+        Title="wpfStatus" Height="1024" Width="1280">
+  
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources\rsStyle.xaml"/>
+                <ResourceDictionary Source="Resources\rsRoundButton.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <ui:NumberIsChecked x:Key="NumberToCbConverter" />
+            <ui:TemperatureToString x:Key="TemperatureToStringConverter" />
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+        <Viewbox Stretch="Fill" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="1024" Height="768">
+
+            <Grid Width="1280" Height="1024">
+                <Grid.Background>
+                    <ImageBrush ImageSource="Skin/Images/t2/status.png" />
+                </Grid.Background>
+                <Canvas>
+                    <Canvas Width="636" Height="100" Canvas.Left="330" Canvas.Top="376">
+                        <Grid  Width="614" Canvas.Top="0" Canvas.Left="1"  >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50*"></ColumnDefinition>
+                                <ColumnDefinition Width="50*"></ColumnDefinition>
+                                <ColumnDefinition Width="50*"></ColumnDefinition>
+                                <ColumnDefinition Width="50*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+
+                            <!--Background shape-->
+                            <ui:ChargeBar x:Name="ChargeBar0" IsCharging="{Binding Path=App.BoardManager.LedIsCharging[0]}" Value="{Binding Path=App.BoardManager.LedBatteryLevel[0]}" Grid.Column="0" RenderTransformOrigin="0.5,0.5" Margin="62,1,68,-1">
+                                <DesignInControl:ChargeBar.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="90"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </DesignInControl:ChargeBar.RenderTransform>
+                            </ui:ChargeBar>
+
+                            <ui:ChargeBar x:Name="ChargeBar1" IsCharging="{Binding Path=App.BoardManager.LedIsCharging[1]}" Value="{Binding Path=App.BoardManager.LedBatteryLevel[1]}" Grid.Column="1" RenderTransformOrigin="0.5,0.5" Margin="62,1,68,-1">
+                                <DesignInControl:ChargeBar.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="90"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </DesignInControl:ChargeBar.RenderTransform>
+                            </ui:ChargeBar>
+
+                            <ui:ChargeBar x:Name="ChargeBar2" IsCharging="{Binding Path=App.BoardManager.LedIsCharging[2]}" Value="{Binding Path=App.BoardManager.LedBatteryLevel[2]}" Grid.Column="2" RenderTransformOrigin="0.5,0.5" Margin="62,1,68,-1">
+                                <DesignInControl:ChargeBar.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="90"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </DesignInControl:ChargeBar.RenderTransform>
+                            </ui:ChargeBar>
+
+                            <ui:ChargeBar x:Name="ChargeBar3" IsCharging="{Binding Path=App.BoardManager.LedIsCharging[3]}" Value="{Binding Path=App.BoardManager.LedBatteryLevel[3]}" Grid.Column="3" RenderTransformOrigin="0.5,0.5" Margin="62,1,68,-1">
+                                <DesignInControl:ChargeBar.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="90"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </DesignInControl:ChargeBar.RenderTransform>
+                            </ui:ChargeBar>
+
+                            <!--=====================================================-->
+                            <!--=====================================================-->
+
+                            <ProgressBar x:Name="pgbB0"  Grid.Column="0" Width="62"  Style="{StaticResource st_SolidProgress}" HorizontalAlignment="Left"   Margin="41,26,0,22"/>
+                            <Label x:Name="lblBatteryLevel0" HorizontalAlignment="Center" Grid.Column="0" HorizontalContentAlignment="Center" Visibility="Visible"  ContentStringFormat=" {0}%" Margin="26,48,30,0" Width="84"  Foreground="#FFA8A8A8" Style="{StaticResource st_Label}"></Label>
+
+
+                            <ProgressBar x:Name="pgbB1"  Grid.Column="1" Width="62" Height="22"   Style="{StaticResource st_SolidProgress}" HorizontalAlignment="Left"   VerticalAlignment="Top" Margin="41,26,0,0"/>
+                            <Label x:Name="lblBatteryLevel1" HorizontalAlignment="Center" Grid.Column="1"  HorizontalContentAlignment="Center" Visibility="Visible"  ContentStringFormat=" {0}%" Margin="28,48,28,0" Width="84"  Foreground="#FFA8A8A8" Style="{StaticResource st_Label}"></Label>
+
+
+                            <ProgressBar x:Name="pgbB2"  Grid.Column="2" Width="62" Height="22"   Style="{StaticResource st_SolidProgress}" HorizontalAlignment="Left"   VerticalAlignment="Top" Margin="41,26,0,0"/>
+                            <Label x:Name="lblBatteryLevel2" HorizontalAlignment="Center" Grid.Column="2" HorizontalContentAlignment="Center"  Visibility="Visible"  ContentStringFormat=" {0}%" Margin="33,48,35,0" Width="84" Foreground="#FFA8A8A8" Style="{StaticResource st_Label}" Height="22" VerticalAlignment="Top"></Label>
+
+                            <ProgressBar x:Name="pgbB3"  Grid.Column="3" Width="62" Height="22"   Style="{StaticResource st_SolidProgress}" HorizontalAlignment="Left"   VerticalAlignment="Top" Margin="41,26,0,0"/>
+                            <Label x:Name="lblBatteryLevel3" HorizontalAlignment="Center" Grid.Column="3" HorizontalContentAlignment="Center" Visibility="Visible"  ContentStringFormat=" {0}%" Margin="35,48,34,1" Width="84" Foreground="#FFA8A8A8" Style="{StaticResource st_Label}"></Label>
+
+                        </Grid>
+                    </Canvas>
+
+                    <Button x:Name="btnClose" Style="{StaticResource st_FlatButton1}"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="88" Height="88" Click="btnClose_Click" Canvas.Left="861" Canvas.Top="214">
+                        <StackPanel>
+                            <Image x:Name="imgClose" Source="Skin/Images/Close.png" Width="84" Height="87" />
+                        </StackPanel>
+                    </Button>
+
+                    <Image x:Name="imgHot" Source="Skin/Images/t2/hot_u.png" Canvas.Left="365" Canvas.Top="500"  Height="100" Width="100" MouseDown="imgHot_MouseDown" Tag=""/>
+                    <Image x:Name="imgCold" Source="/Skin/Images/t2/cold_u.png" Canvas.Left="523" Canvas.Top="500" Height="100" Width="100" MouseDown="imgCold_MouseDown"  Tag=""/>
+
+                    <CheckBox  x:Name="B0" Style="{StaticResource st_ChkBottle}" Canvas.Left="351" Canvas.Top="682" Height="32" Width="132"  
+                       Checked="CheckBoxChecked" Unchecked="CheckBoxUnchecked">
+                        <TextBlock x:Name="tbkB0"  HorizontalAlignment="Center" TextAlignment="Center"  TextWrapping="Wrap" Text="{Binding BottleNames[0],Mode=OneWay, NotifyOnTargetUpdated=True}"  FontSize="18"></TextBlock>
+                    </CheckBox>
+
+                    <CheckBox  x:Name="B1" Style="{StaticResource st_ChkBottle}" Canvas.Left="493" Canvas.Top="682" Height="32" Width="132">
+                        <TextBlock x:Name="tbkB1"  HorizontalAlignment="Center" TextAlignment="Center"  TextWrapping="Wrap" Text="{Binding BottleNames[1],Mode=OneWay, NotifyOnTargetUpdated=True}" FontSize="18"></TextBlock>
+                    </CheckBox>
+
+                    <CheckBox  x:Name="B2" Style="{StaticResource st_ChkBottle}" Canvas.Left="631" Canvas.Top="682" Height="32" Width="132">
+                        <TextBlock x:Name="tbkB2"  HorizontalAlignment="Center" TextAlignment="Center"  TextWrapping="Wrap" Text="{Binding BottleNames[2],Mode=OneWay, NotifyOnTargetUpdated=True}" FontSize="18"></TextBlock>
+                    </CheckBox>
+
+                    <CheckBox  x:Name="B3" Style="{StaticResource st_ChkBottle}" Canvas.Left="773" Canvas.Top="682" Height="32" Width="132">
+                        <TextBlock x:Name="tbkB3"  HorizontalAlignment="Center" TextAlignment="Center"  TextWrapping="Wrap" Text="{Binding BottleNames[3],Mode=OneWay, NotifyOnTargetUpdated=True}" FontSize="18"></TextBlock>
+                    </CheckBox>
+
+                    <CheckBox  x:Name="B4" Style="{StaticResource st_ChkBottle}" Canvas.Left="773" Canvas.Top="720" Height="32" Width="132">
+                        <TextBlock x:Name="tbkB4"  HorizontalAlignment="Center" TextAlignment="Center"  TextWrapping="Wrap" Text="{Binding BottleNames[4],Mode=OneWay, NotifyOnTargetUpdated=True}" FontSize="18"></TextBlock>
+                    </CheckBox>
+
+                </Canvas>
+            </Grid>
+        </Viewbox>
+    </Grid>
+</Window>

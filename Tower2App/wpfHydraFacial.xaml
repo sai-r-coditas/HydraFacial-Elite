@@ -1,0 +1,647 @@
+﻿<Window x:Class="Edge.Tower2.UI.HydraFacial" 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ui="clr-namespace:Edge.Tower2.UI" Title="HydraFacial"
+        xmlns:DesignInControl="clr-namespace:Edge.Tower2.UI"
+        xmlns:local="clr-namespace:Edge.Tower2.UI" 
+        
+        Height="1024"
+        Width="1280"
+        ResizeMode="NoResize"
+        x:Name="Me"
+        Style="{StaticResource Window}" Activated="Me_Activated" Deactivated="Me_Deactivated" Closing="Me_Closing" Unloaded="Me_Unloaded" 
+        >
+
+    <Window.Resources>
+
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources\rsStyle.xaml"/>
+                <ResourceDictionary Source="Resources\rsRoundButton.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+            <ui:BooleanToInvertedVisibilityConverter x:Key="BooleanToInvertedVisibilityConverter"/>
+            <local:ProgressForegroundConverter x:Key="ProgressForegroundConverter"/>
+
+            <Storyboard x:Key="sbSlideR" Storyboard.TargetProperty="(Canvas.Left)">
+                <DoubleAnimation From="-600" To="0" Duration="0:0:0.3"/>
+            </Storyboard>
+            <Storyboard x:Key="sbSlideL" Storyboard.TargetProperty="(Canvas.Left)">
+                <DoubleAnimation From="600" To="0" Duration="0:0:0.5"/>
+            </Storyboard>
+        </ResourceDictionary>
+
+    </Window.Resources>
+
+    <Window.Background>
+        <ImageBrush />
+    </Window.Background>
+    
+    <Grid>
+        <Viewbox Stretch="Fill" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="1024" Height="819">
+
+            <Grid>
+                <!--0102-39-->
+                <Image x:Name="imgBG" Source="Skin\Images\WindowBackground_v3.png" Width="1280" Height="1024"/>
+                
+                <Grid Width="1280" Height="1024">
+                
+                    <!--Take care 2 pages-->
+                    <Grid x:Name="grd1" DataContext="{Binding ElementName=Me}">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="70" />
+                            <RowDefinition Height="954" />
+                            <!--bottles-->
+                        </Grid.RowDefinitions>
+
+
+                        <!--=================-->
+                        <!-- 4 Rows  Main    -->
+                        <!--=================-->
+                        <Grid x:Name="Bottom" Grid.Row="1">
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="0" />
+                                <RowDefinition Height="80" />
+                                <!--Login-->
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="90" />
+                                <!--bottles-->
+                            </Grid.RowDefinitions>
+
+                            <ui:uc_User x:Name="ucUser" Grid.Row="1"  Width="300" Height="50" Margin="0,-10,990,0" />
+                            
+                            <!--<Label x:Name="lblLogin" Content="Logged in as User" Grid.Row="1" HorizontalAlignment="Left" Margin="55,27,0,0" VerticalAlignment="Top" Width="143" Foreground="#FF494848" FontFamily="Helvetica Neue LT Std"/>
+                        <Button x:Name="btnExit"  Grid.Row="1"  Width="50" Height="50"  Click="btnExit_Click"  Margin="-10,-10,1219,0">
+                            <Button.Template>
+                                <ControlTemplate>
+                                    <Image Source = "Skin/Images/t2/n_Login.png" Width="60" Height="60" />
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>-->
+
+                            <!-- Center divid by 2 columns Left/Right -->
+                            <Grid Grid.Row="2">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="630" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <!--================-->
+                                <!--Add Shadow      -->
+                                <!--================-->
+                                <Border x:Name="bdrLeftPanel" Margin="0" Grid.Column="0" Grid.Row="2" BorderBrush="#FF880000" BorderThickness="0" CornerRadius="4"
+                     Background="#ffeeeeee"><!--FFf5f0eb-->
+                                    <Border.Effect>
+                                        <DropShadowEffect Color="#FFeeeeee"/>
+                                    </Border.Effect>
+                                </Border>
+
+
+                                <!--===============================-->
+                                <!--3x3  Inner Grid Left Center 1  -->
+                                <!--===============================-->
+                                <Grid x:Name="grdLeftPanel" Grid.Column="0" Grid.Row="2" Background="#00FFFFFF">
+                                    <!--Background="#FFF5F0EB"-->
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="200" />
+                                        <!--3 rows protocol-->
+                                        <RowDefinition Height="Auto" />
+                                        <!--Vacuum Pump-->
+                                        <RowDefinition Height="Auto" MinHeight="500" />
+                                        <!--HotCold Component /Frame-->
+                                        <!--<RowDefinition Height="80" />-->
+                                        <!--Charge bar-->
+                                    </Grid.RowDefinitions>
+
+                                    <!--VACUUMPUMP ================================================-->
+                                    <Canvas x:Name="cvsVacumPump"  Grid.Row="1" >
+
+                                        <ui:VacuumPumpControl x:Name="VacuumPumpControl" Grid.Row="3" Min="0"  MinYellow="25" MinOrange="37"  Width="600" Height="250"/>
+
+                                        <Line x:Name="lneH" Stretch="Fill" Stroke="#FF909fa1" StrokeThickness="1" X1="20" Y1="100" Y2="100" Width="470" Height="20" Margin="25,24,10,10"/>
+
+                                        <!--00115a1-0003, 00115a1-0006-->
+                                        <Label x:Name="lblControls" Content="VACUUM CONTROLS" Canvas.Left="72" Canvas.Top="55" Width="356" Style="{StaticResource st_Label}" Foreground="#FF65666B" FontSize="15"/>
+
+                                        <Image x:Name="imgIcon" Width="40" Height="40" Canvas.Left="32" Canvas.Top="48"/>
+
+                                    </Canvas>
+
+                                    <!--===============================================-->
+                                    <!--3 rows for protocol  Inner Grid Left Center 2  -->
+                                    <!--===============================================-->
+                                    <Canvas x:Name="cvsQT_Control" Grid.Row="0" Visibility ="Hidden">
+
+                                        <Label x:Name="lblTitle" Content="Thermal Therapy" FontSize="36"  HorizontalContentAlignment="Center" VerticalAlignment="Top" Canvas.Left="48" Canvas.Top="22" Foreground="#FF64666b" Style="{StaticResource st_Label}" Height="51" Width="519"/>
+
+                                        <Button x:Name="btnHideContent" Style="{StaticResource st_FlatButton1}"  VerticalAlignment="Top" Width="250" Canvas.Left="2" Canvas.Top="81" Height="62"  Background="{x:Null}" BorderBrush="{x:Null}" Click="btnHideContent_Click" >
+                                            <StackPanel>
+                                                <Image Source = "Skin/Images/t2/bg_button2.png" Height="73" Width="250"  />
+                                                <TextBlock x:Name="tbkHideContent"   Text="ABOUT THE TREATMENT" HorizontalAlignment="Center" Style="{StaticResource st_TextBlock}" FontSize="15" Foreground="#FFF9F1F1" Margin="0,-65,0,0" Height="22" />
+                                            </StackPanel>
+                                        </Button>
+
+                                        <Button x:Name="btnVideo" Style="{StaticResource st_FlatButton1}"   VerticalAlignment="Top" Width="250" Canvas.Left="281" Canvas.Top="81" Height="62" BorderBrush="{x:Null}" Background="{x:Null}" Click="btnVideo_Click">
+                                            <StackPanel>
+                                                <Image Source = "Skin/Images/t2/bg_button2.png" Height="73" Width="250" />
+                                                <TextBlock x:Name="tbkVideo"   Text="INFORMATION VIDEO" HorizontalAlignment="Center" Style="{StaticResource st_TextBlock}" FontSize="15" Foreground="#FFF9F1F1" Margin="0,-65,0,0" Height="22" RenderTransformOrigin="0.532,0.703"/>
+                                            </StackPanel>
+                                        </Button>
+
+                                        <!--End of Protocol Grid-->
+                                    </Canvas>
+
+                                    <!-- 
+                        ==============================
+                          Proto Controller  
+                        ============================= -->
+                                    <Canvas x:Name="cvsProto_Control" Grid.Row="0" Visibility="Visible" Width="630" >
+
+                                        <Image x:Name="imgProtoTitle" Width="323" Height="62" Canvas.Left="28" Canvas.Top="138" HorizontalAlignment="Left" />
+
+                                        <Button x:Name="btnViewAll"  Style="{StaticResource st_FlatButton1}"  Width="150" Height="90" Canvas.Left="-20" Canvas.Top="23"   Background="{x:Null}" BorderBrush="{x:Null}" Click="btnViewAll_Click" >
+                                            <Image x:Name="imgViewAll" Source = "Skin/Images/en-US/proto_view_all.png" Height="70" Width="140"  />
+                                        </Button>
+
+                                        <Canvas x:Name="cvsViewAll_mt">
+                                            <Button x:Name="btnViewAll_mt"  Style="{StaticResource st_FlatButton1}"  Width="150" Height="90" Canvas.Left="-20" Canvas.Top="23"   Background="{x:Null}" BorderBrush="{x:Null}" Click="btnViewAll_mt_Click"  >
+                                                <Image x:Name="imgViewAllmt" Source = "Skin/Images/en-US/modalities_view_all.png" Height="70" Width="140"  />
+                                            </Button>
+                                        </Canvas>
+                                        
+                                        <Button x:Name="btnProtoPrevious" Style="{StaticResource st_FlatButton1}" Background="{x:Null}" Width="80" Height="78" Canvas.Left="368" Canvas.Top="33"  BorderBrush="{x:Null}" Click="btnProtoPrevious_Click" Visibility="Hidden"  >
+                                            <Image x:Name="imgProtoPrevious" Source = "Skin/Images/proto_arrow_l.png" Height="78" Width="80" Margin ="-10,0,0,0" />
+                                        </Button>
+
+                                        <Button x:Name="btnProtoNext" Style="{StaticResource st_FlatButton1}" Background="{x:Null}"  VerticalAlignment="Top" Height="78" Width="80"  Canvas.Left="470" Canvas.Top="33"  BorderBrush="{x:Null}"  Click="btnProtoNext_Click" Visibility="Hidden"  >
+                                            <Image x:Name="imgProtoNext" Source = "Skin/Images/proto_Arrow_r.png" Height="78" Width="80" Margin ="0,0,0,0" />
+                                        </Button>
+
+                                         <!-- 00115a1-0005-->  
+                                        <Button x:Name="btnProtoAudio" Style="{StaticResource st_FlatButton1}"   VerticalAlignment="Top" Width="90" Height="90" Canvas.Left="455" Canvas.Top="123"  BorderBrush="{x:Null}" Background="{x:Null}" Click="btnProtoAudio_Click" Visibility="Hidden">
+                                            <Button.Content>
+                                                <Image x:Name="imgProtoAudio" Source = "Skin/Images/proto_audio.png" Height="90" Width="80" />
+                                            </Button.Content>
+                                        </Button>
+
+                                    </Canvas>
+
+                                    <!--=======================================-->
+                                    <!--HOT COLD Component                     -->
+                                    <!--=======================================-->
+                                    <Canvas x:Name="cvsComponent" Grid.Row="2" Margin="0,6,0,7">
+                                        <Frame x:Name="fmeComponent" FocusVisualStyle ="{x:Null}" NavigationUIVisibility="Hidden"  Visibility="Visible" Canvas.Top="100" Focusable="False" Navigating="fmeComponent_Navigating"  />
+                                        <!--<Frame x:Name="fmePulseSelect" Visibility="Visible" Canvas.Top="100">
+
+                                        </Frame>
+                                        <Frame x:Name="fmeLED" Visibility="Collapsed" Canvas.Top="100">
+
+                                        </Frame>
+                                        <Frame x:Name="fmeHotCold" Visibility="Collapsed" Canvas.Top="100">
+
+                                        </Frame>
+                                        <Frame x:Name="fmePulseFusion" Visibility="Collapsed" Canvas.Top="100">
+
+                                        </Frame>-->
+                                    </Canvas>
+
+                                    <!--==========================-->
+                                    <!--Charge Bars               -->
+                                    <!--==========================-->
+                                    <Canvas x:Name="cvsChargerBars" Grid.Row="2" VerticalAlignment="Bottom" Width="600" Height="80" Margin="10,0,-10,-83">
+
+                                    </Canvas>
+                                    <!--End of Charger Bar-->
+
+                                </Grid>
+                                <!--Center Left Grid-->
+
+                                <!--================================================-->
+                                <!--********* GRID Right Center 1 base 2x2 *********-->
+                                <!--================================================-->
+                                <Grid x:Name="grdRightPanel" Grid.Row="1" Grid.Column="1" Margin="0,0,1,0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="700" />
+
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <!-- right hand side center grid -->
+                                        <RowDefinition Height="380" />
+                                        <!-- Title -->
+                                        <RowDefinition Height="*" />
+                                        <!--Space-->
+                                    </Grid.RowDefinitions>
+
+                                    <!--=========== -->
+                                    <!--Divide Line-->
+                                    <!--=========== -->
+                                    <Line x:Name="lne_H" Grid.Row="0" Grid.Column="1" Stretch="Fill" StrokeThickness="0.5" Stroke="#FF65666b"  X1="20" Y1="200" Y2="200" Width="585" Height="20" Canvas.Top="507" Canvas.Left="645" Margin="28,342,0,26" HorizontalAlignment="Left"/>
+
+
+                                    <!--==================-->
+                                    <!--Slider            -->
+                                    <!--==================-->
+                                    <Grid x:Name="grd_Slider" Visibility="Visible" >
+                                        <Border Margin="0"  BorderBrush="#FF880000" BorderThickness="0" CornerRadius="4"
+                                    Background="#FFffffff">
+                                            <Border.Effect>
+                                                <DropShadowEffect Color="#FFeeeeee"/>
+                                            </Border.Effect>
+
+                                            <Canvas x:Name="cvsSlideShow" Grid.Column="1" Grid.Row="0" Width="630" Height="350" Margin="26,-10,34,0" VerticalAlignment="Top">
+                                                <Frame x:Name="fmeSlideShow" NavigationUIVisibility="Hidden"  Width="630" Height="340"  Canvas.Top="0" >
+                                                </Frame>
+                                            </Canvas>
+                                        </Border>
+                                    </Grid>
+
+                                    <!--========================-->
+                                    <!-- Control Mode Buttons   -->
+                                    <!--========================-->
+                                    <Canvas Grid.Column="1" Grid.Row="1" Visibility="Hidden" >
+                                        <ui:uc_Buttons x:Name="uc_Buttons" Canvas.Left="20" Canvas.Top="6" FontFamily="Helvetica Neue LT Std"/>
+                                    </Canvas>
+
+                                    <!--=====================-->
+                                    <!-- Video Player -->
+                                    <!--=====================-->
+                                    <Canvas x:Name="cvsVideo" Grid.Column="1" Grid.Row="0" Margin="246,0,-246,0" Visibility="hidden" >
+
+                                        <Button x:Name="btnLoad" Content="Load" HorizontalAlignment="Left" Height="37" Margin="10,0,0,0" Width="67" Click="btnLoad_Click"/>
+
+                                        <!--==========================-->
+                                        <!--   Component Video Grid   -->
+                                        <!--==========================-->
+                                        <Grid x:Name="grd_1" Grid.Column="1" Grid.Row="1" Height="900" Background="#FFF5F0EB" Width="638" >
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto" MinHeight="240" />
+                                                <!--Media Element-->
+                                                <RowDefinition Height="50" />
+                                                <!--Progress bar-->
+                                                <RowDefinition MinHeight="45" />
+                                                <!--Pause Button-->
+
+                                            </Grid.RowDefinitions>
+
+                                            <!-- To interactively stop, pause, and play the media, the LoadedBehavior property of the MediaElement must be set to "Manual". -->
+                                            <MediaElement x:Name="MediaElement1"  Grid.Row="0" Width="574" Height="300"
+                                                      LoadedBehavior="Manual" UnloadedBehavior="Stop" Stretch ="Fill"
+                                                      HorizontalAlignment="Center" Margin="26,35,38,0" MediaOpened="MediaElement1_MediaOpened" />
+
+                                            <Slider x:Name="VolumeSlider"  Style="{StaticResource stSlider}" VerticalAlignment="Center" HorizontalAlignment="Right"
+                                                    ValueChanged="VolumeSlider_ValueChanged" Minimum="0" Maximum="1"  Grid.Row="0"
+                                                    Value="0.5" Width="111" Canvas.Right="0" Canvas.Top="16" Canvas.Left="489" Margin="0,0,53,56" Height="30"  />
+
+                                            <!--<Slider x:Name="TimelineSlider" Margin="0,0,0,0" Grid.Row="2"
+                                          ValueChanged="TimelineSlider_ValueChanged" >
+                                            <Slider.LayoutTransform>
+                                                <ScaleTransform ScaleY="0.9" CenterX="15" CenterY="15"/>
+                                            </Slider.LayoutTransform>
+                                        </Slider>-->
+                                            <ProgressBar x:Name="pbrVideo" Style="{DynamicResource SimpleProgressBar}"  Height="50"  Width="470" VerticalAlignment="Top" HorizontalAlignment="Center"
+        	             Value="{Binding Value, ElementName=Slider1, Mode=Default}" Foreground="#FF08c5d8" Margin="76,1,92,0" Grid.RowSpan="2" Grid.Row="1"  >
+
+                                                <ProgressBar.Background>
+                                                    <LinearGradientBrush EndPoint="1,0" StartPoint="0,0">
+                                                        <GradientStop Color="#FF64666b" Offset="0"/>
+                                                        <GradientStop Color="#FF64666b" Offset="0.459"/>
+                                                        <GradientStop Color="#FF64666b" Offset="0.783"/>
+                                                    </LinearGradientBrush>
+                                                </ProgressBar.Background>
+                                            </ProgressBar>
+
+                                            <!--<Border Grid.Row="2"   CornerRadius="5,5,5,5" Background="WhiteSmoke" BorderBrush="Gray" BorderThickness="0,0,0,0" Margin="10,5,5,10">-->
+
+                                            <Button x:Name="btnPlay" Style="{StaticResource AddShadow}" Width="52"  Height="50" Click="btnPlay_Click" Canvas.Left="26" Margin="26,1,560,0" Canvas.Top="-51" Grid.RowSpan="2" VerticalAlignment="Top" Grid.Row="1">
+                                                <Button.Template>
+                                                    <ControlTemplate>
+                                                        <Image x:Name="imgPlay" Source = "Skin/Images/n_play.png" />
+                                                    </ControlTemplate>
+                                                </Button.Template>
+                                            </Button>
+
+                                            <Button x:Name="btnReplay" Style="{StaticResource AddShadow}"  Width="54" Height="50" Click="btnReplay_Click"  Grid.Row="1" Margin="546,0,38,0"  >
+                                                   <Image x:Name="imgReplay" Source = "Skin/Images/Video_restart.png" />
+                                            </Button>
+
+                                            <Canvas Grid.Row="2" Margin="0,0,0,43">
+
+                                                <Button x:Name="btnPause" Style="{StaticResource AddShadow}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="40" Click="btnPause_Click" Height="36" BorderThickness="0" Padding="0" Background="#00000000" Canvas.Left="154" Margin="0" Canvas.Top="10">
+                                                    <Button.Template>
+                                                        <ControlTemplate>
+                                                            <Image Source = "Skin/Images/Pause.png"/>
+                                                        </ControlTemplate>
+                                                    </Button.Template>
+                                                </Button>
+
+                                                <Button x:Name="btnStop" Style="{StaticResource AddShadow}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="37" Click="btnStop_Click" Height="36" BorderThickness="0" Padding="0" Background="#00000000" Canvas.Left="95">
+                                                    <Button.Template>
+                                                        <ControlTemplate>
+                                                            <Image Source = "Skin/Images/n_stop.png" />
+                                                        </ControlTemplate>
+                                                    </Button.Template>
+                                                </Button>
+
+                                                <!--<TextBlock FontSize="12" Foreground="White" VerticalAlignment="Center" Canvas.Right="25" Canvas.Top="0"><Run Text="Volume"/></TextBlock>-->
+                                                <!--<Slider x:Name="VolumeSlider"  Style="{StaticResource stSlider}" VerticalAlignment="Center" HorizontalAlignment="Right"
+                                                    ValueChanged="VolumeSlider_ValueChanged" Minimum="0" Maximum="1"
+                                                    Value="0.5" Width="86" Canvas.Right="0" Canvas.Top="16" Canvas.Left="489" />-->
+
+                                                <RepeatButton  x:Name="btnVolUp" Style="{StaticResource RoundRepeatButton}" Background="#FF6699FF" VerticalAlignment="Top" HorizontalAlignment="Right" 
+                                              Width="30" Height="30" Delay="500" Interval="100"    Canvas.Right="0" Canvas.Top="8" Click="btnVolUp_Click" Canvas.Left="440">
+                                                    <Image Width="18" Height="18" Source="Skin\Images\v001\Arrow_Right.png"/>
+                                                </RepeatButton>
+                                                <RepeatButton x:Name="btnVolDown"  Style="{StaticResource RoundRepeatButton}" Background="#FF6699FF" VerticalAlignment="Top" HorizontalAlignment="Right"  
+                                              Width="30" Height="30" Delay="500" Interval="100"  Canvas.Right="50" Canvas.Top="10" Click="btnVolDown_Click" Canvas.Left="384">
+                                                    <Image Width="18" Height="18" Source="Skin\Images\v001\Arrow_Left.png"/>
+                                                </RepeatButton>
+
+                                                <Button x:Name="btnHideVideo" Grid.Row="2" Style="{StaticResource st_FlatButton1}" HorizontalAlignment="Right"  VerticalAlignment="Top" Width="250" Canvas.Left="140" Canvas.Top="315" Height="62"  Background="{x:Null}" BorderBrush="{x:Null}" Click="btnHideVideo_Click" >
+                                                    <StackPanel>
+                                                        <Image Source = "Skin/Images/t2/bg_button2.png" Height="70" Width="245"  />
+                                                        <TextBlock x:Name="tbkHideVideo"   Text="HIDE CONTENT" HorizontalAlignment="Center" FontFamily="Arial" FontSize="17" Foreground="#FFF9F1F1" Margin="0,-70,0,0" Height="22" />
+                                                    </StackPanel>
+                                                </Button>
+
+                                            </Canvas>
+
+                                            <Label x:Name="lblProgressValue" Content="" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Height="26" Margin="107,14,0,0" Grid.Row="1" VerticalAlignment="Top" Width="57" FontSize="16" Foreground="#FFF7EDED" Style="{StaticResource st_Label}"/>
+                                            <Label x:Name="lblProgressValue1" Content="" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Height="26" Margin="169,14,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100" FontSize="16" Foreground="#FFF7EDED" Style="{StaticResource st_Label}" />
+                                            <Label x:Name="lblVideo" Content="ABCD" HorizontalAlignment="Left" Height="61" Margin="26,49,0,0" Grid.Row="2" FontSize="16" VerticalAlignment="Top" Width="574" Style="{StaticResource st_Label}" Foreground="#FF645353"/>
+
+                                            <!--</Border>-->
+
+                                        </Grid>
+                                        <!--</StackPanel>-->
+                                    </Canvas>
+
+                                    <!--==========================-->
+                                    <!--Slider LEFT/RIGHT Button  -->
+                                    <!--==========================-->
+                                    <Button x:Name="btnLeft" Content="&lt;" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" Height="49" VerticalAlignment="Top" Width="78" Click="btnLeft_Click" Canvas.Left="-49" Canvas.Top="168" Margin="50,140,0,0">
+                                        <Button.Template>
+                                            <ControlTemplate>
+                                                <Image x:Name="imgArrow_L" Source = "Skin/Images/t2/n_Arrow_Left.png" />
+                                            </ControlTemplate>
+                                        </Button.Template>
+                                    </Button>
+
+                                    <Button x:Name="btnRight" Content="&gt;" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" Height="49" VerticalAlignment="Top" Width="67" Click="btnRight_Click" Canvas.Left="571" Canvas.Top="165" Margin="585,140,0,0" RenderTransformOrigin="-0.662,0.229">
+                                        <Button.Template>
+                                            <ControlTemplate>
+                                                <Image x:Name="imgArrow_R" Source = "Skin/Images/t2/n_Arrow_Right.png" />
+                                            </ControlTemplate>
+                                        </Button.Template>
+                                    </Button>
+
+                                    <!--==================-->
+                                    <!--Protocol          -->
+                                    <!--==================-->
+                                    <Grid>
+                                        <Border Margin="0"  BorderBrush="#FF880000" BorderThickness="0" CornerRadius="4"
+                                    Background="#FFffffff">
+                                            <Border.Effect>
+                                                <DropShadowEffect Color="#FFeeeeee"/>
+                                            </Border.Effect>
+
+                                            <Canvas x:Name="cvsProtocol" Grid.Column="1" Grid.Row="0" Margin="20,0,0,0" Height ="900" Width="650" Visibility="Hidden" Background="#FFf5f0eb" >
+
+                                                <DockPanel x:Name="dp1"  Grid.Row="1" HorizontalAlignment="Left" Height ="660" Width="600" Margin="20,35,20,20" Background="#FFf5f0eb"  >
+
+                                                    <ScrollViewer x:Name="ScrollViewer1" VerticalScrollBarVisibility="Hidden"   PanningMode="HorizontalOnly" PreviewMouseMove="ScrollViewer1_PreviewMouseMove" 
+                                  PreviewMouseDown="ScrollViewer1_PreviewMouseDown" MouseLeave="ScrollViewer1_MouseLeave" PreviewMouseUp="ScrollViewer1_PreviewMouseUp" 
+                                        FontSize="9" FontFamily="Helvetica Neue" Foreground="#FF878484" >
+                                                        <!--Set doc egge width-->
+
+                                                        <!--<FlowDocumentScrollViewer x:Name="flowDocViewer" IsSelectionEnabled="False" Margin="30,0,30,0" VerticalScrollBarVisibility="Hidden"
+                                                      HorizontalScrollBarVisibility="Auto" FontFamily="Helvetica-Normal" >
+                                                            <FlowDocument FontSize="24" FontFamily="Arial" x:Name="Acne">
+                                                            </FlowDocument>
+                                                        </FlowDocumentScrollViewer>-->
+
+                                                        <Image x:Name="imgViewer"  Width="600"  />
+
+                                                    </ScrollViewer>
+
+                                                    <ScrollViewer x:Name="ScrollViewer2" Visibility="Hidden" VerticalScrollBarVisibility="Hidden" Height="480"  PanningMode="HorizontalOnly" PreviewMouseMove="ScrollViewer1_PreviewMouseMove" 
+                                  PreviewMouseDown="ScrollViewer1_PreviewMouseDown" MouseLeave="ScrollViewer1_MouseLeave" PreviewMouseUp="ScrollViewer1_PreviewMouseUp" 
+                                    FontSize="9" FontFamily="Gotham Light" Foreground="#FF878484" Margin="30,60,30,60"  >
+                                                        <!--Set doc edge, width-->
+                                                        <FlowDocumentScrollViewer x:Name="flowDocViewer" IsSelectionEnabled="False" Margin="30,0,30,0" VerticalScrollBarVisibility="Hidden"
+                                          HorizontalScrollBarVisibility="Auto" FontFamily="Gotham Light" >
+                                                            <FlowDocument FontSize="24" FontFamily="Arial" x:Name="Acne">
+
+                                                            </FlowDocument>
+                                                        </FlowDocumentScrollViewer>
+                                                    </ScrollViewer>
+                                                </DockPanel>
+
+                                                <!--<Label Content="Scroll down to read more" Foreground="#FF65666B" Canvas.Left="60" Canvas.Top="450" FontFamily="Helvetica Neue LT Std" ></Label>
+                                    <Line Stretch="Fill" Stroke="#FF65666b"  X1="20" Y1="100" Y2="100" Width="385" Height="20" Margin="215,455,10,10"/>-->
+
+                                                <Button x:Name="btnHideProtocol" Style="{StaticResource st_FlatButton1}" HorizontalAlignment="Right"  VerticalAlignment="Top" Width="250" Canvas.Left="150" Canvas.Top="700" Height="62"  Background="{x:Null}" BorderBrush="{x:Null}" Click="btnHideProtocol_Click" >
+                                                    <StackPanel>
+                                                        <Image Source = "Skin/Images/t2/bg_button2.png" Height="70" Width="245"  />
+                                                        <TextBlock x:Name="tbkHideProtocol"   Text="HIDE CONTENT" HorizontalAlignment="Center" FontFamily="Arial" FontSize="17" Foreground="#FFF9F1F1" Margin="0,-70,0,0" Height="22" />
+                                                    </StackPanel>
+                                                </Button>
+                                            </Canvas>
+                                        </Border>
+                                    </Grid>
+
+                                    <!--======================================-->
+                                    <!--Right side Panel of Proto             -->
+                                    <!--======================================-->
+
+                                    <Border x:Name="bdrProto"  Background="#FFf5f0eb" Margin="25,0,-674,-405" BorderBrush="#FF880000" BorderThickness="0" Visibility="Visible" CornerRadius="10,10,10,10">
+                                        <!--<Border.Effect>
+                                    <DropShadowEffect Color="#FFeeeeee"/>
+                                </Border.Effect>-->
+
+                                        <Canvas x:Name="cvsProto"  Visibility="visible" Background="Transparent" Margin="0,0,10,28"  >
+                                            <!--#FFf5f0eb-->
+
+                                            <!--<DockPanel x:Name="dpProto"   HorizontalAlignment="Left" Height ="158" Width="600" Background="#FFf5f0eb" Canvas.Left="20" Canvas.Top="313"  >
+
+                                        <ScrollViewer x:Name="svProto" VerticalScrollBarVisibility="Hidden"   PanningMode="HorizontalOnly" PreviewMouseMove="ScrollViewer1_PreviewMouseMove" 
+                                  PreviewMouseDown="ScrollViewer1_PreviewMouseDown" MouseLeave="ScrollViewer1_MouseLeave" PreviewMouseUp="ScrollViewer1_PreviewMouseUp" 
+                                        FontSize="9" FontFamily="Gotham Light" Foreground="#FF878484" Margin="0,0,0,145" >
+                                           
+                                            <Image x:Name="imgViewer1"  Width="600" Height="451"  />
+                                        </ScrollViewer>
+                                    </DockPanel>-->
+
+                                            <Image x:Name="imgBanner" Canvas.Top="-10" Canvas.Left="28" Visibility="Visible" Height="330" Width="567"  />
+
+                                            <Image x:Name="imgSignature" Canvas.Top="200" Canvas.Left="28" Visibility="Visible" Height="630" Width="567"  />
+                                            
+                                            <!--<Image x:Name="imgSignature" Canvas.Top="35" Canvas.Left="25" Visibility="Visible" Height="730" Width="567"  />-->
+                                            <!--<ui:uc_Proto x:Name="ucProto"  Canvas.Top="35" Canvas.Left="25" Height="730" Width="567" />-->
+
+                                            <Button x:Name="btnSuggestion" Style="{StaticResource st_Transparent}" Width="80" Height="80" Canvas.Left="510" Canvas.Top="680"  Click="btnSuggestion_Click"  >
+
+                                            </Button>
+                                        </Canvas>
+                                    </Border>
+
+                                </Grid>
+                            </Grid>
+                            <!--Center 2 Columns Left/ Right-->
+
+                            <!--==========================-->
+                            <!--         4 Bottles        -->
+                            <!--==========================-->
+                            <Grid x:Name="grdBottle" Margin="0,0,0,0"  Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+
+                                <CheckBox x:Name="B0" Grid.Column="0" VerticalAlignment="Bottom" FontSize="22" Width="155" Height="70"
+                          Style="{StaticResource st_CheckBottle}"  Margin="0,5,0,0"
+                          Checked="CheckBoxChecked"
+                          Unchecked="CheckBoxUnchecked" >
+                                    <TextBlock x:Name="tbkB0"  HorizontalAlignment="Center" TextAlignment="Center"  TextWrapping="Wrap" Text="{Binding BottleNames[0],Mode=OneWay, NotifyOnTargetUpdated=True}" TargetUpdated="OnTargetUpdated_B0" FontSize="22"></TextBlock>
+                                </CheckBox>
+
+                                <Label Name="lblBottle0" Grid.Column="0" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="140" VerticalAlignment="Center" Margin="97,59,81,2" Foreground="#FF64666b" Height="29" ></Label>
+
+                                <CheckBox x:Name="B1" Grid.Column="1" VerticalAlignment="Bottom" FontSize="22" Width="155" Height="70"
+                          Style="{StaticResource st_CheckBottle}" 
+                          Margin="10,5,0,0"
+                          Checked="CheckBoxChecked" Unchecked="CheckBoxUnchecked" >
+                                    <TextBlock x:Name="tbkB1" HorizontalAlignment="Center"  TextAlignment="Center" TextWrapping="Wrap" Text="{Binding BottleNames[1],Mode=OneWay, NotifyOnTargetUpdated=True}" TargetUpdated="OnTargetUpdated_B1" FontSize="22"></TextBlock>
+                                </CheckBox>
+
+                                <Label Name="lblBottle1" Grid.Column="1" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="140" VerticalAlignment="Center" Margin="94,62,85,2" Foreground="#FF64666b" Height="26"></Label>
+
+                                <CheckBox x:Name="B2" Grid.Column="2" VerticalAlignment="Bottom" FontSize="22" Width="155" Height="70"
+                          Style="{StaticResource st_CheckBottle}"
+                          Margin="0,5,10,0"
+                          Checked="CheckBoxChecked" Unchecked="CheckBoxUnchecked" >
+                                    <TextBlock x:Name="tbkB2" HorizontalAlignment="Center"  TextAlignment="Center" TextWrapping="Wrap" Text="{Binding BottleNames[2],Mode=OneWay, NotifyOnTargetUpdated=True}" TargetUpdated="OnTargetUpdated_B2" FontSize="22"></TextBlock>
+                                </CheckBox>
+                                <Label Name="lblBottle2" Grid.Column="2" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="140" VerticalAlignment="Center" Margin="84,62,94,5" Foreground="#FF64666b" Height="23"></Label>
+
+                                <CheckBox x:Name="B3" Grid.Column="3" VerticalAlignment="Bottom" FontSize="22" Width="155" Height="70"
+                          Style="{StaticResource st_CheckBottle}" 
+                          Margin="0,5,15,0"
+                          Checked="CheckBoxChecked" Unchecked="CheckBoxUnchecked" >
+                                    <TextBlock x:Name="tbkB3" HorizontalAlignment="Center"  TextAlignment="Center" TextWrapping="Wrap" Text="{Binding BottleNames[3],Mode=OneWay, NotifyOnTargetUpdated=True}" TargetUpdated="OnTargetUpdated_B3" FontSize="22"></TextBlock>
+                                </CheckBox>
+                                <Label Name="lblBottle3" Grid.Column="3" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="140" VerticalAlignment="Center" Margin="85,62,94,2" Foreground="#FF64666b" Height="26" ></Label>
+
+                                <TextBlock x:Name="tbkB4" HorizontalAlignment="Center"  TextAlignment="Center" TextWrapping="Wrap" Text="{Binding BottleNames[4],Mode=OneWay, NotifyOnTargetUpdated=True}" TargetUpdated="OnTargetUpdated_B4" Visibility="Hidden" FontSize="22"></TextBlock>
+
+                                <CheckBox x:Name="B4" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Right" Width="80"  Height="80"
+                          Margin="0,5,5,0" Style="{StaticResource st_CheckBottle}"
+                          Checked="RinseCheckBoxChecked"
+                          Unchecked="RinseCheckBoxUnchecked" Visibility="Hidden">
+                                    <!--Content="{Binding BottleNames[4]}"-->
+                                    <CheckBox.Content>
+                                        <Grid>
+                                            
+                                            <!--<Image x:Name="RinseOffImage" Stretch="None" Source="{StaticResource RinseOffIcon}"
+                                   Visibility="Visible" />
+                                            <Image x:Name="RinseOnImage" Stretch="None" Source="{StaticResource RinseOnIcon}"
+                                   Visibility="Collapsed" />-->
+                                            
+                                        </Grid>
+                                    </CheckBox.Content>
+                                </CheckBox>
+                            </Grid>
+
+                        </Grid>
+
+                        <!--==========================-->
+                        <!--       Top Menu           -->
+                        <!--==========================-->
+                        <Canvas Grid.Row="0" Grid.RowSpan="2" Margin="0,0,0,14">
+                            <ui:NavBar x:Name="NavBar" Canvas.Left="0" Canvas.Top="0" SelectedButton="HydraFacial" Height="77" />
+                            
+                            <Button x:Name="btnTest" Margin="10,0,0,0" Width="57" Height="44" Style="{StaticResource NavigationButtonStyle}"
+                             HorizontalContentAlignment="Center" Click="btnTest_Click">
+                                <Button.Content>
+                                    <TextBlock TextAlignment="Center" TextWrapping="Wrap" FontSize="18">Test</TextBlock>
+                                </Button.Content>
+                            </Button>
+
+                            <Label x:Name="lblDemo" Content="Demo Mode" Canvas.Left="1042" Canvas.Top="86" Width="197" Height="39" Style="{StaticResource st_Label_Bold}" FontSize="30" Foreground="#FFC9B5A7" VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalAlignment="Right" HorizontalContentAlignment="Right"/>
+                            <Label x:Name="lblDayRemain" Content="Day remain:" Canvas.Left="1012" Canvas.Top="120" HorizontalAlignment="Right" Height="24" VerticalAlignment="Top" Width="229" Foreground="#FFB9A597" Style="{StaticResource st_Label}"  FontSize="12" HorizontalContentAlignment="Right" />
+
+                        </Canvas>
+                    </Grid>
+                    <!--grd1-->
+
+                    <!--========================================-->
+                    <!--  Clean Up Message                      -->
+                    <!--========================================-->
+                    <Canvas x:Name="cvsCleanup" Width="1280" Height="1024" Background="#aa000000" Visibility="Hidden">
+
+                        <Image x:Name="imgCleanup" Width="1280" Height="1024" Canvas.Top="0" Canvas.Left="0"/>
+                        <!--<Image Width="1280" Height="77" Source="Skin/Images/top_menu_bg.png" />-->
+
+                        <Canvas  x:Name="cvsCleanup_Msg1" Width="700" Height="441" Canvas.Left="302" Canvas.Top="253" Visibility="Visible">
+                            <!--Exit Button-->
+                            <Button x:Name="btnDone" Style="{StaticResource st_FlatButton1}" FontSize="30" Width="99" Height="97"  Canvas.Left="520" Click="btnDone_Click" Canvas.Top="-30"  >
+                                <StackPanel>
+                                    <Image x:Name="imgClose" Source="Skin/Images/Close.png" Width="84" Height="87" />
+                                </StackPanel>
+                            </Button>
+
+                            <Button x:Name="btnStart" Style="{StaticResource st_FlatButton1}" FontSize="30" Width="140" Height="140" Canvas.Left="230" Canvas.Top="413" Click="btnStart_Click"   >
+                                <StackPanel>
+                                    <Image x:Name="imgStart" Source="Skin/Images/Start.png" Width="140" Height="140" Canvas.Top="0" Canvas.Left="0"/>
+                                </StackPanel>
+                            </Button>
+
+                            <Button x:Name="btnStart_PF" Style="{StaticResource st_FlatButton1}" FontSize="30" Width="140" Height="140" Canvas.Left="238" Canvas.Top="233" Click="btnStart_Click"   >
+                                <StackPanel>
+                                    <Image x:Name="imgStart_PF" Source="Skin/Images/Start.png" Width="142" Height="138" Canvas.Top="0" Canvas.Left="0"/>
+                                </StackPanel>
+                            </Button>
+
+                        </Canvas>
+                        <!--Exit Button-->
+
+                        <!--Clean Progress Bar-->
+                        <Canvas x:Name="cvsCleanup_Msg2" Width="700" Height="441" Canvas.Left="302" Canvas.Top="453" Visibility="Hidden">
+
+                            <ProgressBar x:Name="pbrClean" Style="{StaticResource st_BlueProgress}"  Height="15"  Width="300" VerticalAlignment="Top" HorizontalAlignment="Center"
+        	             Value="{Binding Value, ElementName=Slider1, Mode=Default}" Foreground="{StaticResource st_mainblue}" Canvas.Left="195" Canvas.Top="296"   >
+                                <ProgressBar.Background>
+                                    <LinearGradientBrush EndPoint="1,0" StartPoint="0,0">
+                                        <GradientStop Color="#FF64666b" Offset="0"/>
+                                        <GradientStop Color="#FF64666b" Offset="0.459"/>
+                                        <GradientStop Color="#FF64666b" Offset="0.783"/>
+                                    </LinearGradientBrush>
+                                </ProgressBar.Background>
+                            </ProgressBar>
+                        </Canvas>
+                        <Image x:Name="imgCleanupTopmenu" Width="1280" Height="77" Canvas.Top="0" Canvas.Left="0"/>
+                    </Canvas>
+
+                    <!--
+                    ========================================
+                      Suggest Message                      
+                    ========================================-->
+                    <Canvas x:Name="cvsSuggest" Width="1280" Height="1024" Background="#aa000000" Visibility="Hidden">
+                        <Image x:Name="imgSuggest" Width="1280" Height="1024"  />
+                        <Image x:Name="imgTopmenu" Width="1280" Height="77" Source="Skin/Images/top_menu_bg_dim.png" />
+                        <Button x:Name="btnSuggestClose" Style="{StaticResource st_Transparent}" FontSize="30" Width="99" Height="97"  Canvas.Left="850" Canvas.Top="200" Click="btnSuggestClose_Click"  > <!--Left 830-->
+                           
+                        </Button>
+                    </Canvas>
+
+                </Grid>
+            </Grid>
+        </Viewbox>
+    </Grid>
+
+</Window>

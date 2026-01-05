@@ -1,0 +1,72 @@
+﻿<Window x:Class="Edge.Tower2.UI.wpfSettings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Style="{StaticResource Window}"
+        xmlns:ui="clr-namespace:Edge.Tower2.UI"
+        Title="wpfSettings" Height="1024" Width="1280" x:Name="Me" Deactivated="Me_Deactivated" Activated="Me_Activated" Closing="Me_Closing" Unloaded="Me_Unloaded" 
+    >
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources\rsStyle.xaml"/>
+                <ResourceDictionary Source="Resources\rsRoundButton.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Window.Background>
+        <ImageBrush />
+    </Window.Background>
+
+    <Grid>
+        <Viewbox Stretch="Fill" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="1024" Height="819">
+
+            <Grid Width="1280" Height="1024">
+                <!--<Canvas x:Name="cvsRoot">-->
+                <Canvas x:Name="cvsSettings">
+
+                    <Image x:Name="imgSettings"  Source="/Skin/Images/en-US/HF-Settings.png" Width="1280" Height="1024" />
+
+                    <!--  Save those for reference of position
+                    <Button x:Name="btnMultipleUser" Style="{StaticResource st_Transparent}" Content="" HorizontalAlignment="Left" Height="274" Margin="23,136,0,0" VerticalAlignment="Top" Width="348" Click="btnMultipleUser_Click"/>
+                    <Button x:Name="btnCreditCode" Style="{StaticResource st_Transparent}" Content="" HorizontalAlignment="Left" Height="274" Margin="384,136,0,0" VerticalAlignment="Top" Width="348" Click="btnCreditCode_Click"/>
+                    <Button x:Name="btnUsageReport" Style="{StaticResource st_Transparent}" Content="" HorizontalAlignment="Left" Height="274" Margin="744,136,0,0" VerticalAlignment="Top" Width="348" Click="btnUsageReport_Click"/>
+                    <Button x:Name="btnDailyEssentials" Style="{StaticResource st_Transparent}" Content="" HorizontalAlignment="Left" Height="274" Margin="23,422,0,0" VerticalAlignment="Top" Width="348" Click="btnDailyEssentials_Click"/>
+                    <Button x:Name="btnDemoMode" Style="{StaticResource st_Transparent}" Content="" HorizontalAlignment="Left" Height="274" Margin="384,422,0,0" VerticalAlignment="Top" Width="348" IsCancel="True" Click="btnDemoMode_Click"/>
+
+                    <Button x:Name="btnUpdate" Style="{StaticResource st_Transparent}" Height="274" Width="348" Canvas.Left="744" Canvas.Top="422"  Click="btnUpdate_Click"/>
+                    <Button x:Name="btnWifi" Style="{StaticResource st_Transparent}"  Height="274" Width="348" Canvas.Left="23" Canvas.Top="720" Click="btnWifi_Click" />
+                    <Button x:Name="btnNetwork" Style="{StaticResource st_Transparent}"  Height="274" Width="348" Canvas.Left="384" Canvas.Top="720"  Click="btnNetwork_Click"  />
+                    <Button x:Name="btn1" Style="{StaticResource NavigationButtonStyle}" Content="Button" Canvas.Left="432" Canvas.Top="49" Width="75" Height="29" Click="btn1_Click"/>-->
+
+                    <Button x:Name="btnCreditCode"  Style="{StaticResource st_Transparent}" Content="" HorizontalAlignment="Left" Height="274" VerticalAlignment="Top" Width="338" Click="btnCreditCode_Click" Canvas.Left="23" Canvas.Top="93"/>
+                    <Button x:Name="btnDailyEssentials"  Style="{StaticResource st_Transparent}" Content="" HorizontalAlignment="Left" Height="274" VerticalAlignment="Top" Width="338" Click="btnDailyEssentials_Click" Canvas.Left="725" Canvas.Top="384"/>
+                    <Button x:Name="btnUpdate"  Style="{StaticResource st_Transparent}" Height="274" Width="337"  Click="btnUpdate_Click" Canvas.Left="723" Canvas.Top="93"/>
+                    <Button x:Name="btnBackup"  Style="{StaticResource st_Transparent}" Height="274" Width="338" Canvas.Left="23" Canvas.Top="384" Click="btnBackup_Click"  />
+                    <Button  x:Name="btnSystem"   Style="{StaticResource st_Transparent}" Height="274" Width="338" Canvas.Left="373" Canvas.Top="384" Click="btnSystem_Click"/>
+                    <Button  x:Name="btnLanguage"   Style="{StaticResource st_Transparent}" Height="274" Width="338" Canvas.Left="373" Canvas.Top="93" Click="btnLanguage_Click" />
+
+                    <ui:NavBar x:Name="NavBar" Canvas.Left="0" Canvas.Top="0" Height="77" />
+
+                    <ui:uc_User x:Name="ucUser" Canvas.Left="0" Canvas.Top="80" Height="80" />
+                    
+
+
+                    <!--<Label x:Name="lblLogin" Canvas.Left="50" Canvas.Top="95" Content="Logged in as User" HorizontalAlignment="Left"   Width="143" Foreground="#FF494848" FontFamily="Gotham Light"/>
+            <Button x:Name="btnLogin"  Canvas.Left="0" Canvas.Top="80" Width="50" Height="50" Click="btnLogin_Click">
+                <Button.Template>
+                    <ControlTemplate>
+                        <Image Source = "Skin/Images/t2/n_Login.png" Width="60" Height="60"/>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>-->
+                </Canvas>
+                <!--<Canvas x:Name="cvsDemoMode">
+            
+        </Canvas>-->
+
+                <!--</Canvas>-->
+            </Grid>
+        </Viewbox>
+    </Grid>
+</Window>

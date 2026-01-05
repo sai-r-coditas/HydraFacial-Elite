@@ -1,0 +1,167 @@
+﻿<Window x:Class="Edge.Tower2.UI.Videos.Videos"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ui="clr-namespace:Edge.Tower2.UI"
+        xmlns:svg="clr-namespace:SvgControl;assembly=SvgControl"
+        Title="Videos"
+        Height="1024" Width="1280" x:Name="Me" Style="{StaticResource Window}">
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+        <ui:BooleanToInvertedVisibilityConverter x:Key="BooleanToInvertedVisibilityConverter"/>
+    </Window.Resources>
+    <DockPanel>
+        <Grid DockPanel.Dock="Top">
+            <ui:NavBar />
+        </Grid>
+        <Grid x:Name="root" Margin="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            
+            <ListView x:Name="VideoListView" Background="Transparent" SelectionMode="Single" Grid.Row="0" ItemsSource="{Binding Videos, Mode=OneWay}" SelectionChanged="VideoListView_OnSelectionChanged" BorderBrush="{x:Null}" Margin="20,0,10,0">
+                <ListView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel  Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </ListView.ItemsPanel>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Margin="0">
+                            <Border BorderBrush="Black" BorderThickness="5" Padding="2" Margin="2">
+                                <MediaElement Stretch="Uniform" MaxWidth="224" Source="{Binding Path, Mode=OneWay}" LoadedBehavior="Pause" UnloadedBehavior="Close" ScrubbingEnabled="True" Margin="0" />
+                            </Border>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+            <Grid Background="Transparent" Grid.Row="1" Margin="0">
+                <Grid.Resources>
+                    <Style x:Key="FadeStyle">
+                        <Style.Triggers>
+                            <MultiDataTrigger>
+                                <MultiDataTrigger.Conditions>
+                                    <Condition Binding="{Binding IsPlaying}" Value="True" />
+                                </MultiDataTrigger.Conditions>
+
+                                <MultiDataTrigger.EnterActions>
+                                    <BeginStoryboard x:Name="BeginOpacityFade">
+                                        <Storyboard>
+                                            <DoubleAnimation Storyboard.TargetProperty="Opacity" From="1" To="1" 
+                                                             Duration="0:0:4">
+                                            </DoubleAnimation>
+                                            <DoubleAnimation BeginTime="0:0:4.0" 
+                                                             Storyboard.TargetProperty="Opacity" From="1" To="0" 
+                                                             Duration="0:0:1">
+                                            </DoubleAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </MultiDataTrigger.EnterActions>
+                                <MultiDataTrigger.ExitActions>
+                                    <StopStoryboard BeginStoryboardName="BeginOpacityFade"/>
+                                </MultiDataTrigger.ExitActions>
+                            </MultiDataTrigger>
+                            <MultiDataTrigger>
+                                <MultiDataTrigger.Conditions>
+                                    <Condition Binding="{Binding Opened}" Value="True" />
+                                    <Condition Binding="{Binding IsPlaying}" Value="False" />
+                                </MultiDataTrigger.Conditions>
+
+                                <MultiDataTrigger.Setters>
+                                    <Setter Property = "UIElement.Opacity" Value="1.0"/>
+                                </MultiDataTrigger.Setters>
+                            </MultiDataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Grid.Resources>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <MediaElement x:Name="MediaPlayer" Source="{Binding VideoSource, Mode=OneWay}" 
+                              LoadedBehavior="Manual" UnloadedBehavior="Close" Stretch="Uniform" Grid.ColumnSpan="3" 
+                              Loaded="MediaPlayer_Loaded" MediaOpened="MediaPlayer_MediaOpened"
+                              PreviewMouseUp="MediaPlayer_PreviewMouseUp" MediaEnded="MediaPlayer_OnMediaEnded" Margin="200,0,0,200"/>
+
+                <StackPanel Visibility="{Binding Opened, Converter={StaticResource BooleanToVisibilityConverter}, Mode=OneWay}"
+                            Orientation="Vertical" VerticalAlignment="Center" Grid.Column="1" Style="{StaticResource FadeStyle}" Opacity="1" Margin="150,600,0,0">
+
+                    <Viewbox>
+                        <StackPanel Orientation="Horizontal">
+                            <StackPanel.Resources>
+                                <Style TargetType="svg:SVGImage">
+                                    <Setter Property="Width" Value="1"/>
+                                    <Setter Property="Height" Value="1"/>
+                                    <Setter Property="Margin" Value=".25"/>
+                                    <Setter Property="Opacity" Value=".5"/>
+                                    <Setter Property="Background" Value="Transparent"/>
+                                </Style>
+                            </StackPanel.Resources>
+                            <Button Click="SeekBackButton_OnClick" BorderThickness="0" Margin="0" Padding="0" Background="#00000000">
+                                <Button.Template>
+                                    <ControlTemplate>
+                                        <svg:SVGImage SvgFile=".\Skin\Images\Player\media-seek-backward-8.svg" />
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                            <Button Click="SkipBackButton_OnClick" BorderThickness="0" Margin="0" Padding="0" Background="#00000000">
+                                <Button.Template>
+                                    <ControlTemplate>
+                                        <svg:SVGImage SvgFile=".\Skin\Images\Player\media-skip-backward-8.svg" />
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                            <Button x:Name="PauseButton" 
+                                    Visibility="{Binding IsPlaying, Converter={StaticResource BooleanToVisibilityConverter}, Mode=OneWay}"
+                                    Click="PauseButton_OnClick" BorderThickness="0" Margin="0" Padding="0" Background="#00000000">
+                                <Button.Template>
+                                    <ControlTemplate>
+                                        <svg:SVGImage SvgFile=".\Skin\Images\Player\media-playback-pause-8.svg" />
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                            <Button x:Name="PlayButton" 
+                                    Visibility="{Binding IsPlaying, Converter={StaticResource BooleanToInvertedVisibilityConverter}, Mode=OneWay}"
+                                    Click="PlayButton_OnClick" BorderThickness="0" Margin="0" Padding="0" Background="#00000000">
+                                <Button.Template>
+                                    <ControlTemplate>
+                                        <svg:SVGImage SvgFile=".\Skin\Images\Player\media-playback-start-8.svg"/>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                            <Button Click="SkipForwardButton_OnClick" BorderThickness="0" Margin="0" Padding="0" Background="#00000000">
+                                <Button.Template>
+                                    <ControlTemplate>
+                                        <svg:SVGImage SvgFile=".\Skin\Images\Player\media-skip-forward-8.svg"/>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                            <Button Click="SeekForwardButton_OnClick" BorderThickness="0" Margin="0" Padding="0" Background="#00000000">
+                                <Button.Template>
+                                    <ControlTemplate>
+                                        <svg:SVGImage SvgFile=".\Skin\Images\Player\media-seek-forward-8.svg"/>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                        </StackPanel>
+                    </Viewbox>
+                </StackPanel>
+
+                <Grid x:Name="ProgressBarWithText" Height="15" Grid.Column="0" Grid.ColumnSpan="3" VerticalAlignment="Bottom" Style="{StaticResource FadeStyle}"
+                            Visibility="{Binding Opened, Converter={StaticResource BooleanToVisibilityConverter}, Mode=OneWay}">
+                    <ProgressBar x:Name="ProgressBar" Background="White" Foreground="#FF00FF00" Opacity="1" Minimum="0" 
+                                 Value="{Binding ElementName=MediaPlayer, Path=Position.TotalMilliseconds, Mode=OneWay}" />
+                    <TextBlock HorizontalAlignment="Left" Margin="2,0,2,0" Background="#30777777" Text="0:00"/>
+                    <TextBlock HorizontalAlignment="Center" Margin="2,0,2,0" Background="#30777777" Text="{Binding Position, StringFormat=\{0:m\\:ss\}, Mode=OneWay}"/>
+                    <TextBlock HorizontalAlignment="Right" Margin="2,0,2,0" Background="#30777777" Text="{Binding Duration, StringFormat=\{0:m\\:ss\}, Mode=OneWay}"/>
+                </Grid>
+            </Grid>
+        </Grid>
+    </DockPanel>
+</Window>
+
+

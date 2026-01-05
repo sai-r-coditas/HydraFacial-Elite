@@ -1,0 +1,182 @@
+﻿<Window x:Class="Edge.Tower2.UI.Photo_Customer_Info"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ui="clr-namespace:Edge.Tower2.UI"
+        Title="Photo_Customer_Info" 
+        Height="1024"
+        Width="1280"
+        ResizeMode="NoResize"
+        x:Name="Me"
+        Style="{StaticResource Window}" Activated="Me_Activated" Deactivated="Me_Deactivated"
+        >
+    <Window.Background>
+        <ImageBrush />
+    </Window.Background>
+    <Grid>
+        <Viewbox Stretch="Fill" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="1024" Height="819">
+
+            <Grid>
+                <!--0102-39-->
+                <Image x:Name="imgBG" Source="Skin\Images\WindowBackground_DB.png" Width="1280" Height="1024"/>
+
+                <Grid Width="1280" Height="1024" DataContext="{Binding ElementName=Me}">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="70" />
+                        <RowDefinition Height="954" />
+                    </Grid.RowDefinitions>
+
+                    <Grid x:Name="grdOutside" Grid.Row="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="70" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="100" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="10" />
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="10"/>
+                        </Grid.ColumnDefinitions>
+
+                        <!--================-->
+                        <!--Add Shadow      -->
+                        <!--================-->
+                        <Border Margin="1" Grid.Column="1" Grid.Row="1" BorderBrush="#FF880000" BorderThickness="0" CornerRadius="4"
+                     Background="#FFffffff" Visibility="Hidden">
+                            <Border.Effect>
+                                <DropShadowEffect Color="#FFeeeeee"/>
+                            </Border.Effect>
+                        </Border>
+
+                        <ui:uc_User x:Name="ucUser" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"   Width="300" Height="50"  Margin="0,10,990,10" />
+
+                        <!--<Label x:Name="lblLogin" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Content="Logged in as User" HorizontalAlignment="Left" Margin="55,19,0,0" VerticalAlignment="Top" Width="143" Foreground="#FF494848" FontFamily="Helvetica Neue LT Std"/>
+            <Button x:Name="btnLogout"   Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Width="50" Height="50" RenderTransformOrigin="-4.203,-3.744" Margin="0,10,1204,10" Click="btnLogout_Click">
+                <Button.Template>
+                    <ControlTemplate>
+                        <Image Source = "Skin/Images/t2/n_Login.png" Width="60" Height="60"/>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>-->
+
+                        <Grid x:Name="root" Grid.Column="1" Grid.Row="1"  >
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="148" />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0" />
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="0"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid Grid.Row="1" HorizontalAlignment="Center" Margin="-2,5,0,0" Width="1200" Grid.ColumnSpan="3">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="300" />
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="300"/>
+                                </Grid.ColumnDefinitions>
+                                <!--<Label x:Name="lblDate_Profile" Grid.Row="0" Grid.Column="0" Content="Label" HorizontalAlignment="Left" Margin="52,10,0,0" VerticalAlignment="Top" Width="153"/>-->
+                                <StackPanel Grid.Row="0" Grid.Column="0">
+                                    <Border Width="256" Background="#CC98ACCF" Grid.Row="1" Grid.Column="0"   VerticalAlignment="Top" BorderBrush="#FFb3aa9c" BorderThickness="2"  >
+                                        <Image x:Name="img_Profile" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left"   VerticalAlignment="Top" Width="256" PreviewMouseDown="img_Profile_PreviewMouseDown"  />
+                                    </Border>
+                                    <Label x:Name="lblProfileShot" FontWeight="Bold"  Width="256" HorizontalAlignment="Center" Foreground="#FF64676C" Style="{StaticResource st_Label}" Padding="0">Profile</Label>
+                                    <TextBlock x:Name="tbkNotes_Profile"  Text="Text" TextWrapping="Wrap" HorizontalAlignment="Center"  VerticalAlignment="Top" Width="256" Height="105" Foreground="#FF64676C" Style="{StaticResource st_TextBlock}" />
+                                </StackPanel>
+                                <StackPanel Grid.Row="0" Grid.Column="1">
+                                    <!--<Label x:Name="lblDate_Left" Grid.Row="0" Grid.Column="1" Content="Label" HorizontalAlignment="Left" Margin="52,10,0,0" VerticalAlignment="Top" Width="153"/>-->
+                                    <Border Width="256" Background="#CC98ACCF" Grid.Row="0" Grid.Column="1"   VerticalAlignment="Top" BorderBrush="#FFb3aa9c" BorderThickness="2"  >
+                                        <Image x:Name="img_Left" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="256" Grid.ColumnSpan="2" PreviewMouseDown="img_Left_PreviewMouseDown" />
+                                    </Border>
+                                    <Label x:Name="lblLeftShot" FontWeight="Bold" Width="256" HorizontalAlignment="Center" Foreground="#FF64676C" Style="{StaticResource st_Label}" Padding="0">Left</Label>
+                                    <TextBlock x:Name="tbkNotes_Left" Text="Text"  TextWrapping="Wrap" HorizontalAlignment="Center"  VerticalAlignment="Top" Width="256" Height="105" Foreground="#FF64676C" Style="{StaticResource st_TextBlock}"/>
+                                </StackPanel>
+
+                                <StackPanel  Grid.Row="0" Grid.Column="2">
+                                    <!--<Label x:Name="lblDate_Right" Grid.Row="0" Grid.Column="2" Content="Label" HorizontalAlignment="Left" Margin="52,10,0,0" VerticalAlignment="Top" Width="153"/>-->
+                                    <Border Width="256" Background="#CC98ACCF" Grid.Row="0" Grid.Column="2"   VerticalAlignment="Top" BorderBrush="#FFb3aa9c" BorderThickness="2"  >
+                                        <Image x:Name="img_Right" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Left"   VerticalAlignment="Top" Width="256" Grid.ColumnSpan="2" PreviewMouseDown="img_Right_PreviewMouseDown" />
+                                    </Border>
+                                    <Label x:Name="lblRightShot" FontWeight="Bold" Width="256" HorizontalAlignment="Center" Foreground="#FF64676C" Style="{StaticResource st_Label}" Padding="0">Right</Label>
+                                    <TextBlock x:Name="tbkNotes_Right"  Text="Text"  TextWrapping="Wrap" HorizontalAlignment="Center"  VerticalAlignment="Top" Width="256" Height="105" Foreground="#FF64676C" Style="{StaticResource st_TextBlock}"/>
+                                </StackPanel>
+                                <StackPanel Grid.Row="2" Grid.Column="0">
+                                    <!--<Label x:Name="lblDate_CloseUp1" Grid.Row="2" Grid.Column="0" Content="Label" HorizontalAlignment="Left" Margin="52,10,0,0" VerticalAlignment="Top" Width="153"/>-->
+                                    <Border Width="256" Background="#CC98ACCF" Grid.Row="2" Grid.Column="0"   VerticalAlignment="Top" BorderBrush="#FFb3aa9c" BorderThickness="2"  >
+                                        <Image x:Name="img_CloseUp1" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="256" PreviewMouseDown="img_CloseUp1_PreviewMouseDown" />
+                                    </Border>
+                                    <Label x:Name="lblCloseUpShot1" FontWeight="Bold"  Width="256" HorizontalAlignment="Center" Foreground="#FF64676C" Style="{StaticResource st_Label}" Padding="0">Close Up #1</Label>
+                                    <TextBlock x:Name="tbkNotes_CloseUp1"  Text="Text"  TextWrapping="Wrap"  HorizontalAlignment="Center"  VerticalAlignment="Top" Width="256" Height="109" Foreground="#FF64676C" Style="{StaticResource st_TextBlock}" />
+                                </StackPanel>
+                                <StackPanel  Grid.Row="2" Grid.Column="1">
+                                    <!--<Label x:Name="lblDate_CloseUp2" Grid.Row="2" Grid.Column="1" Content="Label" HorizontalAlignment="Left" Margin="52,10,0,0" VerticalAlignment="Top" Width="153"/>-->
+                                    <Border Width="256" Background="#CC98ACCF" Grid.Row="2" Grid.Column="1"   VerticalAlignment="Top" BorderBrush="#FFb3aa9c" BorderThickness="2"  >
+                                        <Image x:Name="img_CloseUp2" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left"   VerticalAlignment="Top" Width="256" PreviewMouseDown="img_CloseUp2_PreviewMouseDown"  />
+                                    </Border>
+                                    <Label x:Name="lblCloseUpShot2" FontWeight="Bold" Width="256" HorizontalAlignment="Center" Foreground="#FF64676C" Style="{StaticResource st_Label}" Padding="0">Close Up #2</Label>
+                                    <TextBlock x:Name="tbkNotes_CloseUp2"  Text="Text"  TextWrapping="Wrap" HorizontalAlignment="Center"  VerticalAlignment="Top" Width="256" Height="109" Foreground="#FF64676C" Style="{StaticResource st_TextBlock}"/>
+                                </StackPanel>
+                                <StackPanel  Grid.Row="2" Grid.Column="2">
+                                    <!--<Label x:Name="lblDate_CloseUp3" Grid.Row="2" Grid.Column="2" Content="Label" HorizontalAlignment="Left" Margin="52,10,0,0" VerticalAlignment="Top" Width="153"/>-->
+                                    <Border Width="256" Background="#CC98ACCF" Grid.Row="2" Grid.Column="2"   VerticalAlignment="Top" BorderBrush="#FFb3aa9c" BorderThickness="2"  >
+                                        <Image x:Name="img_CloseUp3" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Left"   VerticalAlignment="Top" Width="256" PreviewMouseDown="img_CloseUp3_PreviewMouseDown"  />
+                                    </Border>
+                                    <Label x:Name="lblCloseUpShot3" FontWeight="Bold" Width="256" HorizontalAlignment="Center" Foreground="#FF64676C" Style="{StaticResource st_Label}" Padding="0">Close Up #3</Label>
+                                    <TextBlock x:Name="tbkNotes_CloseUp3"  Text="Text"  TextWrapping="Wrap" HorizontalAlignment="Center"  VerticalAlignment="Top" Width="256" Height="109" Foreground="#FF64676C" Style="{StaticResource st_TextBlock}" />
+                                </StackPanel>
+
+                            </Grid>
+                            <!--====================================================-->
+                            <!--====================================================-->
+
+
+                            <Button Style="{StaticResource st_NavigationButton}" 
+            	             Click="EditClick"  Grid.Column="1"  HorizontalContentAlignment="Center"  Background="#FFD1D2D4"  Width="160" Height="60" Margin="853,64,207,24" Foreground="#FF64676C"     >
+                                <TextBlock x:Name="tbkPastPhotos"  TextAlignment="Center" FontSize="18" Height="23" TextWrapping="Wrap" MaxWidth="140" ><Run Text="Past Photos"/></TextBlock>
+                            </Button>
+
+                            <Button x:Name="btnBack" Grid.Column="1" Style="{StaticResource st_NavigationButton}"
+            	            IsEnabled="True" HorizontalContentAlignment="Center" Click="btnBack_Click"  Background="#FFD1D2D4"  Width="160" Height="60" Margin="1025,64,35,24" Foreground="#FF64676C"  >
+                                <TextBlock x:Name="tbkBack" TextAlignment="Center" FontSize="18" Height="23" TextWrapping="Wrap" MaxWidth="140" ><Run Text="Back"/></TextBlock>
+                            </Button>
+
+                            <Label x:Name="lblHeader" Content="Profile:" HorizontalAlignment="Left" Height="40" Margin="46,51,0,0" VerticalAlignment="Top" Width="243" Foreground="{StaticResource st_mainblue}" FontSize="26" Style="{StaticResource st_Label}" Grid.ColumnSpan="2"/>
+                            <Label x:Name="lblName" Content="" FontSize="24" HorizontalAlignment="Left" Height="40" Margin="46,92,0,16" HorizontalContentAlignment="Left" VerticalAlignment="Center" Width="436"   Foreground="{StaticResource st_mainblue}" Style="{StaticResource st_Label}" Grid.ColumnSpan="2" />
+
+                        </Grid>
+
+                    </Grid>
+
+                    <Canvas Grid.Row="0" Grid.RowSpan="2">
+                        <ui:NavBar x:Name="NavBar" Canvas.Left="0" Canvas.Top="0" Height="77" />
+                    </Canvas>
+
+                    <!--grdOutside-->
+
+                    <!--<Canvas>
+            <Button Width="180" Height="170" Style="{StaticResource NavigationButtonStyle}" Grid.Row="0"
+                        Grid.Column="2" Click="NextClick" Margin="600,250,0,0">
+                <Button.Content>
+                    <TextBlock TextWrapping="Wrap" MaxWidth="85" TextAlignment="Center" FontSize="24">Promo</TextBlock>
+                </Button.Content>
+            </Button>
+            <Button Width="180" Height="170" Style="{StaticResource NavigationButtonStyle}" Grid.Row="0"
+                        Grid.Column="2" Click="EditClick" Margin="1000,250,0,0" >
+                <Button.Content>
+                    <TextBlock  MaxWidth="85" TextAlignment="Center" FontSize="24">Training</TextBlock>
+                </Button.Content>
+            </Button>
+        </Canvas>-->
+                </Grid>
+            </Grid>
+        </Viewbox>
+    </Grid>
+</Window>
+

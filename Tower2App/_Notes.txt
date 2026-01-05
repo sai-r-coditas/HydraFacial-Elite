@@ -1,0 +1,889 @@
+﻿
+// ===========================
+// Old layout design done 
+// ===========================
+
+// SWW continue to work on this project Tower2UI 3/10/14
+// Disable Comport
+// Drag & Drop photo for comparision
+// Video Player, control
+
+// ListView add Date/ left/right/profile/Name ...
+// show docx word content
+
+// Windows Audio Control 
+// Add indicate light on charge
+// Add Keyboard
+// Because of the Access Database version, change to Win32 32bits 
+// Rename jpg extension name
+// Video Management
+// Horizontal scroll bar for video
+// Add Database for store customer information
+// XML reading for flowdocument
+// photo need generate ID
+// Flowdoc control
+// Keyboard need add filter for time field
+// Hardware hydrofacial bottle infor not updated
+// H Scroll Bar Back Color/Fonts warp
+// Flowdocment scroll
+// Incorrect Bottle counter from startup
+// Increase border thickness on hydrafacial bottle section buttons
+// V Scroll bar on hydrafacial right hand side bar
+// Default of Hydrafacial doc
+// Add Top Menu Button
+// Usage Report, description on part no.
+// Check Key Date Length
+// Usage report not updated, unless booting up again
+// Add oz on Product Items
+
+// Change =>>ViewModel.Counts.Keys to product ID not Productname for usage report
+// Add grid line on usage report
+// Tax need be changeable in setting
+// Database List View
+// Put Total on usage
+// Product List dragable
+// Hydrafacial Right Side button highlight disabled
+// Enable delete button when selected
+// Photo Capture home/capture page swap issue
+// Delete Customer Info 
+// Bug - on video capture page -- by disable write to log file
+// Photo Capture Bugs, slow, hang ...,
+// Add "default" to photos directory
+// Rename image jpg
+// Backup (done)
+// Change button isenabled color for photo capture purpose
+// Add a button to Pulse Fusion
+// In video, when select others, the older video need clear up!
+// 2014 06/10 Add printing usage 
+// 2014 06/13 Add default photo images on profile/left,right .....
+// UsageReport limited to display 21 items, because the screen layout
+
+// 2014 06/16 Add Creditcode 
+// 6/23 Reinitialize CameraDevice -- done need test 
+
+// 2014 06/26 add doevent on function UpdateGrid ??
+// 2014 06/27 Disable UpdateGrid in UsageReport() 
+// 2014 07/01 Add flag for button new or exist member ver ntimer 3-8
+// 2014 07/01 MDB Modified ntimer3-8-1
+// 2014 07/02 disable uc_keyboard -one line
+// Operator on product page, need to be changeable and for printing
+// useage Report need add total by month
+// Employer Name, Customer Name?? 
+// Volumn spin buttons
+// Button style on spliter/close/volumn - 20-14 07/10 changed 
+
+// 2014 07/11 add baud rate 57600 in config file
+// 2014 07/14 add DC_Motor control on j24, j25
+// 2014 07/14 Add ch(13) to fix comm issue
+// 2014 07/17 1.User Login Management
+// useage report print date
+// 2014 07/18 disable auto set the date on photocapture
+// 2014 07/21 set Link to login operator parameters
+// 2014 07/21 IO changes Add j17, j24, j25 control
+// 2014 07/21 Add products.xml and product_bundle.xml
+// 2014 09/02
+
+// Camera
+// LEDs  J6 J7 J8 J9 on of affectness checking  
+// copy Bobs-T2-Source-Code-Folder1-2-6-3-9-5-ntimer3-8-2-usage-2+baud+login2+IO1 for new layout design
+
+// 2014 08/07 Modified
+// 2014 08/08 modified for crc 
+// 2014 8/8 Add checksum
+
+// 2014 08/15
+// 2014 08/19
+// 2014 08/21
+// 2014 08/26
+// 2014 08/28 Add send command during the bottle communications
+// 2014 08/29
+// 2014 09/12
+
+// 2014 09/15 home page click button require do clean up
+// 2014 09/16
+// 2014 09/17
+// 2014 09/23 fix bug for button of L M H
+// 2014 10/02 Add
+// 2014 10/03
+// 2014 10/14
+// 2014 10/22
+// 2014 10/22 add credit code new layout 
+// 2014 10/22 filter out invalid UID, sometime RFID return invalid UID
+// 2014 10/24 creditcode expired display
+// 2014 10/27 add delay on video player
+// 2014 10/29 add product name and bottle size to RFID
+
+// 2014 10/31 new layout V3 changing
+// 2014 11/03 Add DB for usagereport
+// 2014 11/04 set limited file size on diagnostic.txt 
+// 2014 11/05 Save bottle UId to file 
+// 2014 11/07
+// 2014 11/17
+// 2014 11/18
+// 2014 11/23
+// 2014 11/24 RFID productname in DB, add Verify_RFID_Tag
+// 2014 11/26
+
+// 2014 11/28
+// 2014 12/01 camera
+// 2014 12/02 GC test
+// 2014 12/03
+
+// 2014 12/08 Add splash screen
+// 2014 12/10 Save bottle UID
+// 2014 12/11 Clean up "using" reference
+// 2014 12/12 for camera, 
+
+// 2014 12/15 splash screen improvement  -- not done yet
+// **** Notes: in order to make pulse to work, then App.Outputs.TargetTemperature must NOT set to 0, --- fixed by hardware
+
+// 2015 03/25 remove turn on Hot/Cold message 
+
+// ===================================
+// To be completed (older layout)
+// ===================================
+
+// Hot and Cold main button doesn't show feedback in Hot/Cold Mode 
+
+// USB Dongle 
+// Add project from xml file
+
+// How to install screen saver
+// Secuirity Key
+
+// Installation deploy
+
+// Bug- For each need buffer
+// Save parameter to files
+
+// Add "default" to usageLog directory??? 
+// Content Document Reformat for hydrafacil, pulse, led, ......
+// Directory format for protocol document or images
+
+// Garbage collection
+// disable bottles if expired
+// Disable cursor
+
+// difficult set window "ontop" level, because too many pup up message
+
+// it may need call the setRinseawayCheckBox after clean up
+
+// ==================================
+// Meeting Note 2
+// ==================================
+
+// User set the date and time for photo capture
+// 2. Session 1,2,3 no same date limited, 3 columns
+
+// Send Email who use, serial no, how long, customer name
+// LED Light, pictures display treatment of locations
+
+// ==================================
+// Meeting Notes 
+// ==================================
+
+// Color on LED Bars ,green, yellow, orange, red --done
+// Rinseaway never get test? - done
+
+// Product List page need save in file?? TBD, Create excel
+// Credit Code keycode for UI ?? lock after invalid answer 3-5 times  // Credit code
+// Need prevent invalid no of bottle usage
+
+// Bottle Counting - need test
+// Bottle need expire date info
+// Keep last months of records ???
+
+// System may dead, if unreadable code from bottle ??
+
+// Check any Hang issues ????
+// Digital Micro Cam?? TBD
+
+// ==================================
+// Coding management
+// ==================================
+
+// DB DateTime (Pending)
+// page_init of management
+// page refresh
+
+// OutputLog.txt
+
+// ==============================================================================================
+// Lib need update, if IOBoard changed
+// ver 2.6.3.9.5 ntimer 3.2 , Compiler, change VPlayer, timer data_receiver, button fonts color,
+// Error- system hang when bottle information updating, 
+// ==============================================================================================
+  
+// version ntimer 3-7-5 button, slider...
+
+// string topLine = "....";
+// System.IO.File.WriteAllText("filename.blah",
+//                             topLine + System.Environment.NewLine + 
+//                             System.IO.File.ReadAllText("filename.blah") );
+
+
+// 2.6.3.9.5-ntimer 3.7.5.3 -add default to photos directory
+
+// TowerII_API_sww_2-3-5-3-3-3btn3pulse3-1_Hclean3-2-8-2 source code cleaning
+
+// =================
+// Testing Notes
+// =================
+
+// Keyboard Space bar need appear
+// Set false to log in config file
+// copy Video / docx /jpg contents
+// "LoadProductUsages" will write data to file, need check error message (when bottle changes)
+//  UpdateCount in useageReportVM may have err, when startup,  need test
+
+// =====================================================================================
+// New Layout, done
+// =====================================================================================
+
+// Exit out clean message 
+// bottle size message
+// Button press background color
+// Progress bar display value
+// Bottle button press , color need changed
+// Set default value 16 for Vortex
+// set default parameter on vortex, facial, body
+// Pulse Fusion button
+// LED Count down
+// Charge bar
+// Shadow
+// Thermal/Body/Face - when HIGH button click the power button need enabled
+// Hide content button need dynamic changes
+// Hot/Cold off need link to power on/off button ??
+// Pulse fusion not working
+// Vacuumpump ring direction need change
+// Ring -keep setting when power on /off
+// J24 need turn off
+// PulseFusion- when H button click the Power button need enabled
+// When system loaded, it need set default to Vortex, button need highlight
+// Align Timer Control H line
+// Pulse fusion double click for turn off
+// Pg_HotCold page init
+// Set hot / cold link to parameter file  --- not need it is fix temperature
+// Hot Cold/ default off
+// Initialize for each page in quick start
+// Change color of charge bar
+// Change to single click to stop pulse and hot cold
+
+// From ED
+// 1. Allow only 1 serum station to be selected. The current version allows user to select 2 serum stations at the same time.
+// 2. Pulse OFF for face lymphatic, Body Lymphatic and Hot and Cold – can you make it a single tap instead of a double tap.
+// 4. LED mode – The timer does not stop/reset when you leave the page
+
+// deactive on wpf_hydrafacil close all process 
+// Hot Cold On/OFF
+// LED Counter does not do continuing ....
+// doc_image display missing some portion on top and bottom
+
+// what is the setting for body/face on the Hot/Cold page -- need test
+// Load docs and video for each mode, vortex, pulsefusion ...
+// Vortex hang too long --> was hardware issue
+
+// Pulse Fusion doesn't need single click turn off
+// Pulse Fusion Default on med pulse and keep the last user setting for power on 
+// Volume control on top menu
+// Usagereport change header 1...18 to month format (2014 Jan ......2014 July)  
+// Disable bottle when insertion over limitation
+// Cleaning Progress Time need save to config file
+// Bottle insertion after userage cleared, the counting is incorrect
+// Usagereport clear, after clear, need application reload
+// bottle need disabled if it is not in the vortex mode- ??
+// Save Volume to params.dat
+// Volume control slider button graph
+// set limited file size on diagnostic.txt
+// System sometime running slow -> log file issue
+
+// RFID need verify to stop bottle access 
+// "LogUsage" in usagereportmodel.cs ->> count bottle usage
+// Need improve the performance on bottle inseration
+// usage report count reading & display incorrect
+
+// If credit code expired, turn off all the hardware
+// Bottle insertion count need init first for system power up 
+// disable bottle control on other mode except vortex fusion??? 
+// Credit Code Expiration Display
+// Make sure when hardware power off "PowerPressed", it will turn off all hardware
+// write current bottles' UID to file
+// Verify RFID checkcode
+// Cleaning Vortex and Pulse fusion are different, vial or rinseaway
+// Clean up need base on the last enter mode to do system cleaning 
+// Home Button for Cleanup message 
+// Hot/Cold Select and the default temparture
+// Add password for RFID crc32
+// Set Hot/Cold Temp when Hot/Cold is selected
+// Delay boardmanager timer start up
+// 2014 12/08 Save bottle UID to file
+// Change of LED reading for % display
+// RFID Tag with product name need a <dictionary> to handle the information, database?  
+// Camera init/ refresh abuse use may hang
+// video display -- sometime hang
+// Reentering to creditcode page
+// OutPutlog.txt need reduce size
+// When leave Body/Facial need check if HOTCOLD is not selected, it needs turn off the Temp, firmware has fixed this issue
+// Vacuum pump ring background need fix
+
+// overwrite creditcode crash when code was 9999 and add one more day of code
+// state.bin => null issue -  fixed
+
+// credit code once set, it need update the label as well
+// Credit Code header ABC- or ...
+
+// 0020-11 Add WaitForGroupParams for updateing the setNeeded
+// 0020-11 Fix DB on insert product name with "'"
+
+// 0100 protocol
+// 0101 remove hotcold off button 
+
+// 0020-10 need make hot/cold temp selection fake -> set the config file temperature all same as HotColdTemperatureWarmest and HotColdTemperatureCoolest
+// 0020-10 take care the com port not exist message
+// 0020-08 change dongle method, not use activex
+
+// Add patient video params on config file  // 0101-03
+// Pretreatment Popup Message
+// Camera-> direct to camera capturing
+// Rearrange button position on home page and ....
+// Daily essential editing
+// 0101-07 Fix LED timer on second, and third session...( it was wrong count down)
+// 0101-07 Daily Essentials default page does not set to product list
+
+// 0101-08 using LED charge station sleep state (current 0) to display 100% full charged bar
+// Bugs in LED fixed
+
+//// 0101-09
+
+//// 0102-01. 0102-02
+// bug J18 need turn off when lymphaic on 
+// Show wifi global indicater
+// Logout button
+// "Are you sure" window need set default to No
+
+// 0020-09 remove hot/cold turn on pop-up page,
+// 0020-09 add default hot/cold parameter to config setting
+
+// 2015 07/29
+// Democode need init when system load
+// DemoCode Test
+// creditcode page blinks   0102-08
+// Demo mode need one day access for any date
+// Demo Mode, display time remain
+// Start up -> Settings -> user settings-> Home-> then it didn't back to home ? bug
+// Start up -> Settings -> Home -> didn't back to home
+
+// yes, no page need takes care
+// ->pump->settings-> should go to clean
+// modility->volumn-> LED ... -> the Volumn is still on
+// when loading up to home page, it has "days" message blink
+
+// User DB
+// must keep user account Name Admin exist all time, not allow to be deleted 
+// Account Admin must be Activated and must be Administrator role
+// User Name need All Capital
+// ComboBox mouse over color not set
+// password need capital ??
+// in user setup page, listing highlight color need change, border color need change as well
+// No duplication on user name
+// DB table need be able to touch scrolling 
+
+// mail need takes care of dispose
+
+// Change the username textbox to combobox in login page
+
+// Login icon and user name location are not consistency
+
+// ========================================
+//  New layout to be completed
+// ========================================
+
+// Check --???
+// What is the vacuumpump value for pulsefusion 
+
+// Usage report
+// Keep setting for each user
+// Table 2 on useage report
+
+// Usagereport, "clear message please wait" need remove
+// usagereport - change to 24 months log instead of 18 months
+// need check usagereport print
+
+// ProductUsages error
+
+// if the creditcode has been updated, it need update the timer interval as well
+// Need test shut down 
+
+// Find rinseaway keyword may not good for RFID tag, need change to product ID
+// When application loading, credit code has brinking issue 
+
+// HotCold need test actually state in the hardware
+
+// Creditcode 3 digits account no. ABC- ??? TBD
+
+// Close/ dispose streamwrite-ok,
+// thickness
+
+// Camera member search, hightlight the found button 
+
+// Dispatcher.BeginInvoke
+// Log file open, afterward it need closed
+// Clean up timimg incorrect, power off
+
+// Set Creditcode Top Most ???
+
+// 0100 need check to turn off timer on led 
+// hidden button need takes care
+// Audio
+
+// wpfPrinter need add audio sync, // Volumn sync on multiple page ???
+// video training
+
+// pulse, duration data may vary on protocol
+
+// protocol mode with home button click .....all conditions for clean up page
+
+// Daily essential printout alignment for customer name 
+
+// Wifi access
+// If wifi power off, click list will crash
+// If wifi has been disconnected, it will take a while to show the wilfi list 
+// Wifi list incorrect for status on RP wireless, when wifi is disconnect.
+// Wifi need test login as domain and others
+// Wifi incorrect password is still show connected
+// Add timer to Wifi
+// Wifi table need be able to touch scrolling
+// Wifi need auto load/login 
+// wifi need load system default password
+// Volumn bar need go off will leave the wifi page
+// Clean up the code
+
+// Send mail, stop send mail if no wifi
+// Send mail need use different thread  ?? still fail when wifi not exist
+// Need docs the FTDChipID
+
+// DemoCode need save to xml
+// Democode can add remaining days to new democode
+
+// CreditCode in SaveState_new1 need clean up and test if the power down kill the state.bin file
+// CreditCode Need test master rescue
+// Unlock creditcode wait for one hour hasn't been tested 
+// Code Locked, after one hour, it will unlock, but need test the screen should go to credit code
+
+// Master unlock -- ok
+// Master Rescue 
+// LockedOutDeviceRescue need check
+
+// Democode character capital
+// User list view need scroll up/down by drag & drop
+
+// CreditCode need check again
+// LED charging improvement
+// Auto detect demo USB?
+
+// Remote installation, update
+// Release version
+
+// Photo member database need scrolling (drag & drop)
+// isvisiblechanged not all work
+
+// Flicker when goto setting->democode
+
+// Combobox background need change on wpfuser
+// SQL ' '' filter
+// Add note to user db
+
+// update need check Framework version and existing
+// update error, when downloading the port is close...
+// Update is incompleted
+
+// PC connect to domain issues, wifi, ethernet
+
+// multi touch screen on wifi listview has whole image drag issue
+
+// all sleep may affect the performance
+
+// Convert to Excel file
+
+// 0102-11 Multiple user login control
+// 0102-12 Updating
+// 0102-21 wifi, updating
+// 0102-22 Wifi
+// 0102-23 Wifi
+// 0102-25 Sending xlsx file
+// 0102-26 Updating process
+// 0102-27 Send mail
+// 0102-28 Wifi improvement
+// 0102-29 bring up windows network pages
+
+// 0102-30
+// 0102-31 Master reset,master unlock issues, savestate
+
+// 0102-32 Change method on load images in creditcode
+// 0102-33 Change creditcode loacation, usagefolder, DB, photos-not done
+           usagereport.xlsx
+		   params.dat
+		   update.log
+		   bottles.dat
+
+// 0102-35 Clean up image files
+
+// 0102-36 Scaling 
+
+// ===================================
+// Camera
+// ===================================
+
+// With Bottles information show on Master page or ...???
+// Session 1,2,3 - not done
+
+// TowerII_API_sww_3_Hclean3-2-8-3-1-7-3-creditcode-show3h-6-8 fix camera capture issue, need load driver
+// ver 0020-06 show bottleinsertion pop-up message when reach the max number
+
+// ===================================
+// Other Features
+// ===================================
+
+// Set default hot to hotest, cold to coldest
+// It may need database to keep UID for usage report
+// need check Hot/COLD turn off when exit page
+// Application realtime update
+
+// button.Clicked += (sender, args) => MessageBox.Show(“Button was clicked”);
+
+//====================================
+// Pending notes
+//====================================
+
+// Splash window need improve
+// Charge of LED performance need improve
+// Insertion message need improve
+
+// Camera name may be different if driver is different
+
+// ===================================
+// more for improvement
+// ===================================
+
+// Popup window top disabled menu bar need darker
+// Usagereport  alignment Top
+// Top right logo offset on home and main page
+// usage repoprt  login button
+
+// Suggest video file in the config file 
+
+// ver 0020-02 , Ring visible,
+//               Clean up start button not done yet
+//               After clean up, it need set back vacuum pump value
+//				 Add Settings. Add display cursor on
+
+// 0020-03, wpfVideo need disable timer when leave
+// 0020-05 RFID, credit code
+// 0020-08 change dongle format to 40 bytes
+// 0020-08 getDataAgain
+
+// 0020-10 Add proto audio, fix bug on proto platinum 3 option page does not back to default when click home
+// 0020-11 Add waitforgroupparams
+
+// bottle UID need save to file
+// splash screen need improve
+
+// backup??
+
+// Credit Code confirm page not clear, cancel button not shown
+
+// Bottle may count one when dongle remove
+// Com port availiable message 
+// Customer info for photo capture, remove personal information of birthday
+
+// =====================
+// Testing
+// =====================
+
+// usage report
+// video files,
+// pump value
+// performance lag
+
+// 002639-08-03 Add for Dongle
+
+//====================================
+// Finalize notes
+//====================================
+
+// disable "exit" button
+// confirm release version
+// remove usage report clear button
+// set config max bottle insertion no and rinse away
+// display cursor off
+
+// TowerII_API_sww_3_Hclean3-2-8-3-1-7-3-creditcode-show3h-6-2 => disable creditcode savestate
+// remove state--.bin
+// credit code start with ABC-xxxxxx or ....
+
+// ==================================
+// Application update notes (testing version) for tower II
+// ==================================
+
+// Create Debug_update directory and zip all required files for update
+// make a Debug_update.zip zip file and move to server under directory t2_update  root directory
+
+// Create thumb drive
+// rename debug -> Debug_update
+// Zip Debug_update
+// put it (zip file) to the folder Debug_update   
+
+//  1. it will check d:/debug/debug.zip exist
+//  2. Copy to c:\webdownload 
+//  3. unzip file
+//
+//  usb update is call from  
+       string curFile = @"d:\Debug_update\Debug_update.zip";
+       string targetFile = "c:\\webdownload\\debug_update.zip";
+ 
+    webdownload is from 
+	   WebDownloading("Http://192.168.5.140//t2_update//debug_update.zip");
+
+// Zip file doesn't content its own directory, for example all files should be under the debug directory after unzip.
+
+// after download completed success, it will create "c:\\webdownload\\download_completed.dat"
+
+// T2_starter is checking downloadcompleted.dat exist
+// and then checking directory \debug_\debug_update and \debug
+// if yes, backup current directory debug to debugyyyyMMdd_HHmmss
+// and change the update directory \debug_\debug_update to \debug
+  
+// ====================
+// wifi   3106225136
+// Disabled on T1.5
+// ====================
+
+// Test domain -- not done
+// Test username  -- not done
+// The status on list may not accurate
+// After password accept, it may need click connect again
+// Enter password doesn't need disconnect
+
+// ==================================
+// Production Notes 
+// ==================================
+
+// usagereport max product item display is 20
+// disable windows splash
+// disable windows task bar
+// disable windows usb message pop up
+// disable mouse cursor
+
+// set top most
+// Check state.bin with powercycle
+
+// Master reset, it will modifiy the state file
+
+// for some reason application will close by itself
+// Yes/No need scaling
+
+// make sure mdb 64bit ready for system
+
+// =======================================
+// Tower 1.5
+// =======================================
+
+// Blue LED
+// LN
+// LF
+
+// Ln
+// LF
+// Ln
+
+// LN   Blue on
+// LF   Blue off
+
+// Ln   Red ON
+// Lf   Red off
+
+// Facial
+// X4095
+
+// HydraFacial
+// X0000
+// v1218  setting
+  
+// VN  Pump On
+// VF  Pump Off
+
+// S + vbCr   // Shutdown
+
+// Call SendSerialData("LF")       'blue off
+// Call SendSerialData("Lf")       'red off
+
+// "OK" + vbCr  // Shut down
+
+
+// 50 x 64.62 +55.38
+
+// ============================================
+
+// LED- suggest pattern no image
+
+// Sound file handling will cause issue on update ??
+
+// Pump value need check the sending value  & set range
+
+// Left /right next button blinks
+
+// what is the max value for pump?
+
+// check hardware shut down button
+
+// Modality menu has issue
+
+// Protocol menu has issue
+
+// DB allow telephone duplicate???
+
+// Videos file handle issues   MediaElement1.Source 
+// All graphic can be replaced
+// Language support
+// Load image from file
+
+// Creditcode expired turn off led charge
+// Check shutdown with credit code - turn off motor, LEDs
+
+// Photos directory has not been changed yet , create, delete....
+// Update files without sub directory 
+
+// Do we need update video file only?
+// DB field size limitation 65,536 for memo
+
+// photos- duplicate phone no and duplicate name what happen....
+
+// Error log files
+
+// productinfo DB may need separate with photos
+// 0102-39 - load image method
+
+// If bios changed, check credit code
+
+// UsageReportVM - updatecounts disabled
+
+// Sytem cleanup vacuum value setting in shut down or hydrafacial 
+
+// Before shut down, turn off all hardware except chargers
+
+// Backup file add try{}
+
+// Master unlock, the masterunlock file in usb drive should contain the account no. otherwise it will not work  
+
+// if MasterReset key exist it will call masterUnlockreset and save file
+
+// Fix turn off pump when move to next/previous step on protocol
+
+// Bottles.dat need auto create
+
+// Disable Tower II zip file update method
+
+// Touch screen disable windows text input
+
+// Add Languages.xaml
+
+// update folder locked issue
+
+// update - check hidden file
+
+// Check if camera capture generate file handle issue 
+
+// DB- does delete customer also delete the photos?
+
+// 64 bits compiled will not work on 32 bits OS (including the video captures)
+
+// update process need skip the file name start with "." 
+
+// Check USB LED power on on start up ( no more contrl on T1.5 )
+
+// Multilanguage- the date time format will be different
+
+// Search / Save buttons are not clear on db search window 
+
+// Change update.log directory to root
+
+// Delete read only directory
+
+// Change LED Next sound file name
+
+// It needs skip the hidden file when doing the update 
+
+// Add languge support
+
+// Error.log need watching
+
+// Add CleanupRequired
+
+// 0103-09 change Language method
+
+// =================
+// Done
+// =================
+
+// Directory use
+//    if ((_dir.Attributes & FileAttributes.Hidden) == FileAttributes.Hidden)
+// File use
+//    if (info.Attributes == FileAttributes.Hidden)  
+
+// multitouch screen issue fixed by function DisableWPFTabletSupport and framework version updated
+
+// Master reset call savestate
+// hardware power blue button call cleaning
+ 
+// Keyboard need transparent for multiple language purpose
+// capture and comparison window scaling issues
+// 102-37 add top menu background to uc_navbar
+          change camera mode clear button visibility
+		  Add VPlayer back button
+
+// Double check X0000 commands 
+// SetVolume
+// modalities has bug 0.txt 
+// 0102-36 remove background wrong scaled image -done
+// Full screen moves when drag-set single touch on software
+// 0102-38 change photo comparison original, previous, current 3 button
+           update, page_init, modalities, backup
+
+// === Update ===
+
+// if usb root directory has a  Debug_update\Debug_update.zip file, it will do the zip file of updating process
+// if no .zip file found, it will copy all files and sub directory if sub directory exist 
+// File handling issue need take care
+
+// all zip file will be skipped when doing the copying, eventhough Debug_update\Debug_update.zip
+// backup directory need skipped 
+
+//===============
+
+// ---- Tower 1.5 Gray color  ----
+//  #65686d  Dark gray
+//  #0805d8  ??
+
+// ===============================
+// Multiple language support
+// ===============================
+
+// menubar no language support
+
+// ===============================
+// Log files
+// ===============================
+
+// credit.log
+// Diagnostics.txt
+// Error.log
+// OutputLog.txt
+// Update.log
+
+// \usagelogs\filecopy.txt
+// \usagelogs\fileread.txt
+
+
+// Demo.dat file need remove from current directory of disk folder
+
+// 0106-09

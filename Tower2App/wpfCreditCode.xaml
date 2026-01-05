@@ -1,0 +1,72 @@
+﻿<Window x:Class="Edge.Tower2.UI.wpfCreditCode"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ui="clr-namespace:Edge.Tower2.UI"
+        Title="wpfCreditCode" Height="1024" Width="1280"
+        Style="{StaticResource Window}" Visibility="Collapsed" Loaded="Window_Loaded"
+       >
+    <!--Style="{StaticResource Window}"-->
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources\rsStyle.xaml"/>
+                <ResourceDictionary Source="Resources\rsRoundButton.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Window.Background>
+        <ImageBrush />
+    </Window.Background>
+    
+    <Grid>
+        <Viewbox Stretch="Fill" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="1024" Height="768">
+
+            <Grid Width="1280" Height="1024" >
+                <Canvas>
+
+                    <!--<Image x:Name="imgCreditCode" Width="1280" Height="1024" Canvas.Top="0" Canvas.Left="0"/>-->
+                    <Image x:Name="pictureBoxNumericEntry" Height="1024" Width="1280" Canvas.Top="0" Canvas.Left="0" Stretch="Fill"   />
+                    <Image x:Name="imgTopMenu" Height="77" Width="1280" Canvas.Top="0" Canvas.Left="0" Stretch="Fill"   />
+
+                    <!--Dynamic Content ==================================================-->
+                    <Canvas x:Name="cvsKeyBoard"  Visibility="Visible" Width="761" Height="880" Canvas.Left="253" Canvas.Top="144">
+                        <!--Style="{StaticResource st_Transparent}"-->
+                        <Button x:Name="btn0"  Style="{StaticResource st_Transparent}"   Width="137" Height="131"  FontSize="38" Click="btn_Click" Canvas.Left="323" Canvas.Top="737" Background="#FFF16464" />
+                        <Button x:Name="btn1"  Style="{StaticResource st_Transparent}"   Width="137" Height="131"  FontSize="38" Click="btn_Click" Canvas.Left="95" Canvas.Top="197"  Background="#FFF16464"/>
+                        <Button x:Name="btn2"  Style="{StaticResource st_Transparent}"   Width="137" Height="131"  FontSize="38" Click="btn_Click" Canvas.Left="323" Canvas.Top="192" />
+                        <Button x:Name="btn3"  Style="{StaticResource st_Transparent}"   Width="137" Height="131"  FontSize="38" Click="btn_Click" Canvas.Left="552" Canvas.Top="192" />
+                        <Button x:Name="btn4"  Style="{StaticResource st_Transparent}"   Width="137" Height="131"  FontSize="38" Click="btn_Click" Canvas.Left="95" Canvas.Top="381" />
+                        <Button x:Name="btn5"  Style="{StaticResource st_Transparent}"   Width="137" Height="131"  FontSize="38" Click="btn_Click" Canvas.Left="323" Canvas.Top="381" />
+                        <Button x:Name="btn6"  Style="{StaticResource st_Transparent}"   Width="137" Height="131"  FontSize="38" Click="btn_Click" Canvas.Left="552" Canvas.Top="381" />
+                        <Button x:Name="btn7"  Style="{StaticResource st_Transparent}"   Width="137" Height="131"  FontSize="38" Click="btn_Click" Canvas.Left="95" Canvas.Top="565" />
+                        <Button x:Name="btn8"  Style="{StaticResource st_Transparent}"   Width="137" Height="131"  FontSize="38" Click="btn_Click" Canvas.Left="323" Canvas.Top="565" />
+                        <Button x:Name="btn9"  Style="{StaticResource st_Transparent}"   Width="137" Height="131"  FontSize="38" Click="btn_Click" Canvas.Left="552" Canvas.Top="565" Background="#FFEE7474" />
+                        <Button x:Name="btnDash"  Style="{StaticResource st_Transparent}"  Width="137" Height="131"  FontSize="38" Click="btn_Click" Canvas.Left="95" Canvas.Top="737" />
+
+                        <TextBox x:Name="textBoxAccountNumber"  HorizontalAlignment="Left" Height="52"  TextWrapping="Wrap" VerticalAlignment="Top" Width="353" FontSize="28" Canvas.Left="401" Canvas.Top="22" Foreground="#FF383737"/>
+                        <TextBox x:Name="textBoxEntry" Grid.Column="1" HorizontalAlignment="Left" Height="59" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="709" FontSize="28" Canvas.Left="45" Canvas.Top="101" Foreground="#FF383737"/>
+
+                    </Canvas>
+
+                    <!--<Grid x:Name="grdCenterMessage"   Visibility="Hidden">
+                <Label x:Name="lblCenterMessage" Content="" HorizontalAlignment="Left" Margin="10,43,0,0" VerticalAlignment="Top" Width="628" FontSize="28" Height="605"/>
+            </Grid>-->
+
+                    <Button x:Name="btnCancel" Width="214" Style="{StaticResource st_Transparent}" Click="btnCancel_Click" Height="115" Canvas.Left="1019" Canvas.Top="520" >
+                        <!--<Button.Content>
+                    <TextBlock TextWrapping="Wrap" MaxWidth="85" TextAlignment="Center" FontSize="24"></TextBlock>
+                </Button.Content>-->
+                    </Button>
+                    <Button x:Name="btnNext" Width="214"  Style="{StaticResource st_Transparent}" Click="btnNext_Click" Height="112" Canvas.Left="1019" Canvas.Top="728" >
+                        <!--<Button.Content>
+                    <TextBlock TextWrapping="Wrap" MaxWidth="85" TextAlignment="Center" FontSize="24"></TextBlock>
+                </Button.Content>-->
+                    </Button>
+
+                    <Button x:Name="btnExit" Content="Exit" Canvas.Left="1063" Canvas.Top="144" Width="170" Height="108" Click="btnExit_Click"/>
+                </Canvas>
+            </Grid>
+        </Viewbox>
+    </Grid>
+</Window>

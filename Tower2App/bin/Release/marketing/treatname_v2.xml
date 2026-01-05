@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='us-ascii'?> 
+<treatmentSelection>
+<key value="mt_led">              <name>LED Light Therapy</name>     <name>false</name> </key>  
+
+<key value="mt_lymph_abs">        <name>Abdomen Lymphatic</name>     <name>false</name> </key>   
+<key value="mt_lymph_arms">       <name>"Arm Lymphatic</name>        <name>false</name> </key>          
+<key value="mt_lymph_face">       <name>"Facial Lymphatic</name>     <name>false</name> </key> 
+<key value="mt_lymph_back">       <name>Back Lymphatic</name>        <name>false</name> </key>   
+<key value="mt_lymph_leg">        <name>Leg Lymphatic</name>         <name>false</name> </key>  
+    
+
+<key value="mt_da">               <name>Diamond Abrasion</name>      <name>false</name> </key>           
+<key value="mt_aa">               <name>Advanced Aggression</name>   <name>true</name> </key>      
+<key value="mt_perk">             <name>Perk</name>                  <name>false</name> </key>                      
+
+<key value="mt_perk_eye">         <name>Perk Eye</name>              <name>false</name> </key>                      
+<key value="mt_perk_face">        <name>Perk Face</name>             <name>false</name> </key>                      
+<key value="mt_perk_lip">         <name>Perk Lip</name>              <name>false</name> </key>                      
+
+<key value="mt_led_red">          <name>LED Red</name>               <name>false</name> </key>    
+<key value="mt_led_blue">         <name>LED Blue</name>              <name>false</name> </key>    
+<key value="mt_led_both">         <name>LED Red &amp; Blue</name>    <name>false</name> </key>    
+
+
+<key value="signature_deluxe">    <name>Deluxe HydraFacial</name>    <name>true</name> </key>             
+<key value="age_ctgf">            <name>Restorative</name>           <name>true</name> </key>                       
+<key value="age_db">              <name>Age-Refinement DermaB.</name><name>true</name> </key>      
+<key value="radiance">            <name>Radiance Britenol</name>     <name>true</name> </key>                 
+<key value="clarify">             <name>Clarifying</name>            <name>true</name> </key>                        
+<key value="sensitive">           <name>Sensitive Skin</name>        <name>true</name> </key>                    
+<key value="neck_signature">      <name>Neck &amp; Decollete</name>  <name>true</name> </key>                  
+<key value="back_signature">      <name>Back Signature</name>        <name>true</name> </key>                              
+<key value="hands_signature">     <name>Hand Signature</name>        <name>true</name> </key>                              
+
+<key value="clean_hp" >           <name>Clean Handpiece</name>       <name>true</name> </key> 
+<key value="clean_manifold" >     <name>Clean Manifold</name>        <name>true</name> </key>     
+<key value="cleanperk" >          <name>Clean Manifold</name>        <name>true</name> </key> 
+<key value="clean_perk" >         <name>Clean Perk</name>            <name>true</name> </key>                                  
+
+<key value="signature_platinum">  <name>Platinum HydraFacial</name>  <name>true</name> </key>       
+<key value="signature_signature"> <name>Signature HydraFacial</name> <name>true</name> </key>  
+
+</treatmentSelection>

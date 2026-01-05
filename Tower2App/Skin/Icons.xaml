@@ -1,0 +1,13 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <BitmapImage x:Key="st_HomeIcon" CacheOption="OnLoad" UriSource="Images/v001/Home.png" />
+    
+    <BitmapImage x:Key="st_Logo" CacheOption="OnLoad" UriSource="Images/t2/Logo.png" />  <!--for printing receipt-->
+    
+    <BitmapImage x:Key="st_HydraFacialHeaderImage" CacheOption="OnLoad" UriSource="Images/v001/HydraFacial Header.png" />
+    
+    <BitmapImage x:Key="OffIcon" CacheOption="OnLoad" UriSource="Images/t2/Off.png" />
+  
+    
+</ResourceDictionary>

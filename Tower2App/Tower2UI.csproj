@@ -1,0 +1,974 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C8B27D15-5577-49EC-B459-D03A7D227957}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Edge.Tower2.UI</RootNamespace>
+    <AssemblyName>Edge.Tower2.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ExpressionBlendVersion>5.0.40218.0</ExpressionBlendVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>C:\My_Projects\_publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Edge.Tower2.UI.App</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>0D8E528A49537E3B6BAD5C0CFA306160C2A592C1</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Tower2UI_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Skin\Images\logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DirectShowLib-2005">
+      <HintPath>..\Dependencies\DirectShowLib-2005.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus, Version=2.7.0.1, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\My_.net_vs2012\WPF\excel\epplus1\epplus1\bin\Debug\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="FTChipIDNet">
+      <HintPath>C:\My_Projects\Edge_Company\DLP-D-G\ChipID_c#_wpf\WpfApplication1\WpfApplication1\bin\Debug\FTChipIDNet.dll</HintPath>
+    </Reference>
+    <Reference Include="FTD2XX_NET">
+      <HintPath>C:\My_Projects\Edge_Company\DLP-D-G\ChipID_c#_wpf\WpfApplication1\WpfApplication1\bin\Debug\FTD2XX_NET.dll</HintPath>
+    </Reference>
+    <Reference Include="InputSimulator, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\My_.net_vs2012\WPF\language\WpfKb.0.1.0.0-src_ok_2\WpfKb.0.1.0.0-src\References\InputSimulator\InputSimulator.dll</HintPath>
+    </Reference>
+    <Reference Include="JetBrains.Annotations, Version=8.0.14.856, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dependencies\JetBrains.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="ReachFramework" />
+    <Reference Include="SimpleWifi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\wifi\simplewifi-master_work3-3-2\simplewifi-master\SimpleWifi\bin\Debug\SimpleWifi.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="USBClassLibrary">
+      <HintPath>..\..\..\..\My_test\usb\USBClassLibrary_demo\USBClassLibraryWPFDemo\bin\Debug\USBClassLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="cs_Converter.cs" />
+    <Compile Include="cs_Events.cs" />
+    <Compile Include="cs_DB_product.cs" />
+    <Compile Include="c_DemoCode.cs" />
+    <Compile Include="c_Dongle.cs" />
+    <Compile Include="FTD2XX_NET.cs" />
+    <Compile Include="ListViewItem.cs" />
+    <Compile Include="ListViewData.cs" />
+    <Compile Include="pg_Purchase.xaml.cs" />
+    <Compile Include="Printing\wpfProductMenu.xaml.cs">
+      <DependentUpon>wpfProductMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="uc_User.xaml.cs">
+      <DependentUpon>uc_User.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\c_Volume.cs" />
+    <Compile Include="uc_ChargeBar.xaml.cs">
+      <DependentUpon>uc_ChargeBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="uc_CircularProgressBar.xaml.cs">
+      <DependentUpon>uc_CircularProgressBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Client\Model\Client.cs" />
+    <Compile Include="Client\Model\ClientModel.cs" />
+    <Compile Include="Client\ViewModel\ClientViewModel.cs" />
+    <Compile Include="ControlParams\Params.cs" />
+    <Compile Include="CreditCode\cc_CreditCodeState.cs" />
+    <Compile Include="CreditCode\cc_New_PictureSetting.cs" />
+    <Compile Include="DB\DBLibrary.cs" />
+    <Compile Include="DB\DB_Commend.cs" />
+    <Compile Include="DB\Model\Fields.cs" />
+    <Compile Include="EquipmentItem.cs" />
+    <Compile Include="pg_HotCold.xaml.cs">
+      <DependentUpon>pg_HotCold.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pg_LEDs.xaml.cs">
+      <DependentUpon>pg_LEDs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pg_PulseSelect.xaml.cs">
+      <DependentUpon>pg_PulseSelect.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="uc_Buttons.xaml.cs">
+      <DependentUpon>uc_Buttons.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VM\ViewModel.cs" />
+    <Compile Include="wpfDemo.xaml.cs">
+      <DependentUpon>wpfDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="wpfInfo.xaml.cs">
+      <DependentUpon>wpfInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="wpfLanguage.xaml.cs">
+      <DependentUpon>wpfLanguage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="wpfModalities.xaml.cs">
+      <DependentUpon>wpfModalities.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="wpfPort.xaml.cs">
+      <DependentUpon>wpfPort.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="wpfProto.xaml.cs">
+      <DependentUpon>wpfProto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="wpfSettings.xaml.cs">
+      <DependentUpon>wpfSettings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="wpfShutdown.xaml.cs">
+      <DependentUpon>wpfShutdown.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="wpfSplash.xaml.cs">
+      <DependentUpon>wpfSplash.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="wpfStatus.xaml.cs">
+      <DependentUpon>wpfStatus.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="wpfSystem.xaml.cs">
+      <DependentUpon>wpfSystem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="wpfUpdate.xaml.cs">
+      <DependentUpon>wpfUpdate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="wpfVideo.xaml.cs">
+      <DependentUpon>wpfVideo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="wpfWifiData.cs" />
+    <Compile Include="wpfWifiVM.cs" />
+    <Compile Include="wpfYesNo.xaml.cs">
+      <DependentUpon>wpfYesNo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Keyboard\TouchScreenKeyboard.cs" />
+    <Compile Include="CreditCode\cc_MachineAlgorithm.cs" />
+    <Compile Include="CreditCode\cc_ParsedCode.cs" />
+    <Compile Include="cc_NumericEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cc_NumericEntry.designer.cs">
+      <DependentUpon>cc_NumericEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pg_Page1.xaml.cs">
+      <DependentUpon>pg_Page1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pg_Page2.xaml.cs">
+      <DependentUpon>pg_Page2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pg_PulseFusion.xaml.cs">
+      <DependentUpon>pg_PulseFusion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pg_SlideShow.xaml.cs">
+      <DependentUpon>pg_SlideShow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xPhoto_List.xaml.cs">
+      <DependentUpon>xPhoto_List.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CreditCode\cc_PictureSetting.cs" />
+    <Compile Include="Printing\cls_ProductList.cs" />
+    <Compile Include="uc_Bar.xaml.cs">
+      <DependentUpon>uc_Bar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="uc_Keyboard.xaml.cs">
+      <DependentUpon>uc_Keyboard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="uc_MenuBar.xaml.cs">
+      <DependentUpon>uc_MenuBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="uc_ModalMessage.xaml.cs">
+      <DependentUpon>uc_ModalMessage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="uc_CircularBar.xaml.cs">
+      <DependentUpon>uc_CircularBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pg_Home.xaml.cs">
+      <DependentUpon>pg_Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="wpfLogin.xaml.cs">
+      <DependentUpon>wpfLogin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\Lib.cs" />
+    <Compile Include="wpfPhoto_Comparison.xaml.cs">
+      <DependentUpon>wpfPhoto_Comparison.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="wpfPhoto_Customer_Info.xaml.cs">
+      <DependentUpon>wpfPhoto_Customer_Info.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="wpfPhoto_Customer_Search.xaml.cs">
+      <DependentUpon>wpfPhoto_Customer_Search.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="wpfPhoto_Customer_Type_no_protocol.xaml.cs">
+      <DependentUpon>wpfPhoto_Customer_Type_no_protocol.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="cs_Products.cs" />
+    <Compile Include="UsageReport\UsageReport.xaml.cs">
+      <DependentUpon>UsageReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UsageReport\Model\UsageReportModel.cs" />
+    <Compile Include="UsageReport\ViewModel\UsageReportVm.cs" />
+    <Compile Include="cs_Utilities.cs" />
+    <Compile Include="Videos\VideosModel.cs" />
+    <Compile Include="Videos\Videos.xaml.cs">
+      <DependentUpon>Videos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PhotoCapture\PhotoCapture.xaml.cs">
+      <DependentUpon>PhotoCapture.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="uc_NavBar.xaml.cs">
+      <DependentUpon>uc_NavBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PhotoCapture\PhotoCaptureModel.cs" />
+    <Compile Include="Printing\Printer.xaml.cs">
+      <DependentUpon>Printer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NumberIsChecked.cs" />
+    <Compile Include="Printing\PrinterViewModel.cs" />
+    <Compile Include="Printing\Product.cs" />
+    <Compile Include="uc_PulseSelector.xaml.cs">
+      <DependentUpon>uc_PulseSelector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="cs_Settings.cs" />
+    <Compile Include="cs_TemperatureToString.cs" />
+    <Compile Include="wpfHome.xaml.cs">
+      <DependentUpon>wpfHome.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="uc_HotColdNavButton.xaml.cs">
+      <DependentUpon>uc_HotColdNavButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Outputs.cs" />
+    <Compile Include="wpfHydraFacial.xaml.cs">
+      <DependentUpon>wpfHydraFacial.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="uc_VacuumPumpControl.xaml.cs">
+      <DependentUpon>uc_VacuumPumpControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="wpfVPlayer.xaml.cs">
+      <DependentUpon>wpfVPlayer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="wpfCreditCode.xaml.cs">
+      <DependentUpon>wpfCreditCode.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="wpfUser.xaml.cs">
+      <DependentUpon>wpfUser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="wpfBackup.xaml.cs">
+      <DependentUpon>wpfBackup.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="cc_NumericEntry.resx">
+      <DependentUpon>cc_NumericEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <None Include="Tower2UI_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Edge.Tower2.UI.exe.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Skin\Icons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <None Include="Skin\Window.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Skin\ControlButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Skin\NavigationButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </None>
+    <Page Include="pg_Purchase.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Printing\wpfProductMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\rsLanguage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Skin\Changecolor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Skin\Style_Lib.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="uc_ChargeBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="uc_CircularProgressBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="pg_HotCold.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="pg_LEDs.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="pg_PulseSelect.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Skin\CheckButton2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Skin\StyleButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="uc_Buttons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="uc_User.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wpfDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wpfInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wpfLanguage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wpfModalities.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="wpfPort.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wpfProto.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="wpfSettings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wpfShutdown.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wpfSplash.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wpfStatus.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wpfSystem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wpfUpdate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wpfVideo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wpfYesNo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pg_Page1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pg_Page2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pg_PulseFusion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pg_SlideShow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Skin\CheckButton1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\H_Scroll.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Keyboard_Themes\Keyboard_Theme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="xPhoto_List.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="wpfPhoto_Comparison.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wpfPhoto_Customer_Info.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wpfPhoto_Customer_Search.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wpfPhoto_Customer_Type_no_protocol.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\rsStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\rsRoundButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="uc_Bar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="uc_Keyboard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="uc_MenuBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="uc_ModalMessage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UsageReport\UsageReport.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="uc_CircularBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pg_Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wpfLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Videos\Videos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PhotoCapture\PhotoCapture.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="uc_NavBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Printing\Printer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Properties\DesignTimeResources1.xaml" Condition="'$(DesignTime)'=='true' OR ('$(SolutionPath)'!='' AND Exists('$(SolutionPath)') AND '$(BuildingInsideVisualStudio)'!='true' AND '$(BuildingInsideExpressionBlend)'!='true')">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <ContainsDesignTimeResources>true</ContainsDesignTimeResources>
+    </Page>
+    <Page Include="uc_PulseSelector.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="wpfHome.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="uc_HotColdNavButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wpfHydraFacial.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <None Include="Skin\CheckButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </None>
+    <Page Include="uc_VacuumPumpControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wpfVPlayer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wpfCreditCode.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wpfUser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wpfBackup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Skin\Images\v001\hydrafacial Header.png" />
+    <None Include="Skin\Images\T2\logo.png" />
+    <None Include="Skin\Images\T2\off.png" />
+    <None Include="Skin\Images\T2\on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EdgeObject\EdgeObject.csproj">
+      <Project>{11aaa0f1-3b9e-4594-86b9-aaddc849f67d}</Project>
+      <Name>EdgeObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IOBoard\IOBoard.csproj">
+      <Project>{d1dcb55d-7430-49dc-94bc-99e752ca4cc7}</Project>
+      <Name>IOBoard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SvgControl\SvgControl.csproj">
+      <Project>{16d74531-7f85-4384-bf5a-3c0a9a5d4f3e}</Project>
+      <Name>SvgControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WPFMediaKit\WPFMediaKit.csproj">
+      <Project>{6030628d-ee93-4d61-b6be-8b6ae99f3935}</Project>
+      <Name>WPFMediaKit</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="_Notes.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\T2\bg_button1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\n_play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\n_speaker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\T2\led_reset.png" />
+    <Resource Include="Skin\Images\led_start.png" />
+    <Resource Include="Skin\Images\T2\led_stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\T2\n_Login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\T2\n_Arrow_Left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\T2\n_Arrow_Right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\n_stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\T2\HotCold_ring_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\T2\Vacuum_ring_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\hydra-facial-UI-v15-enter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\close.png" />
+    <Resource Include="Skin\Images\start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\T2\pulse1L.png" />
+    <Resource Include="Skin\Images\T2\pulse2M.png" />
+    <Resource Include="Skin\Images\T2\pulse3H.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\ring_my2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\T2\Pulse-graph_B_01.png" />
+    <Resource Include="Skin\Images\T2\Pulse-graph_B_02.png" />
+    <Resource Include="Skin\Images\T2\Pulse-graph_B_03.png" />
+    <Resource Include="Skin\Images\T2\Pulse-graph_G_01.png" />
+    <Resource Include="Skin\Images\T2\Pulse-graph_G_02.png" />
+    <Resource Include="Skin\Images\T2\Pulse-graph_G_03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\T2\Temp-graph0_01.png" />
+    <Resource Include="Skin\Images\T2\Temp-graph0_02.png" />
+    <Resource Include="Skin\Images\T2\Temp-graph0_03.png" />
+    <Resource Include="Skin\Images\T2\Temp-graph1_01.png" />
+    <Resource Include="Skin\Images\T2\Temp-graph1_02.png" />
+    <Resource Include="Skin\Images\T2\Temp-graph1_03.png" />
+    <Resource Include="Skin\Images\T2\Temp-graph2_01.png" />
+    <Resource Include="Skin\Images\T2\Temp-graph2_02.png" />
+    <Resource Include="Skin\Images\T2\Temp-graph2_03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\T2\body_d.png" />
+    <Resource Include="Skin\Images\T2\body_u.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\Volume_bg1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\Video_restart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\T2\bg_button2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\en-US\creditRemain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\Player\body_therapy_off.png" />
+    <Resource Include="Skin\Images\Player\facial_therapy_off.png" />
+    <Resource Include="Skin\Images\Player\light_therapy_off.png" />
+    <Resource Include="Skin\Images\Player\pulse_fusion_off.png" />
+    <Resource Include="Skin\Images\Player\thermal_off.png" />
+    <Resource Include="Skin\Images\Player\vortex_fusion_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\T2\ss_Content11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\T2\pulse_high_d.png" />
+    <Resource Include="Skin\Images\T2\pulse_high_u.png" />
+    <Resource Include="Skin\Images\T2\pulse_low_d.png" />
+    <Resource Include="Skin\Images\T2\pulse_low_u.png" />
+    <Resource Include="Skin\Images\T2\pulse_med_d.png" />
+    <Resource Include="Skin\Images\T2\pulse_med_u.png" />
+    <Resource Include="Skin\Images\T2\pulse_off_d.png" />
+    <Resource Include="Skin\Images\T2\pulse_off_u.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\led_next.png" />
+    <Resource Include="Skin\Images\led_pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\face.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\1light_u.png" />
+    <Resource Include="Skin\Images\2lights_u.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\T2\cold_d.png" />
+    <Resource Include="Skin\Images\T2\cold_u.png" />
+    <Resource Include="Skin\Images\T2\hotcold_off_d.png" />
+    <Resource Include="Skin\Images\T2\hotcold_off_u.png" />
+    <Resource Include="Skin\Images\T2\hot_d.png" />
+    <Resource Include="Skin\Images\T2\hot_u.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\T2\n_help.png" />
+    <Resource Include="Skin\Images\T2\n_internet.png" />
+    <Resource Include="Skin\Images\T2\n_status.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\T2\status.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\T2\popup_cold.png" />
+    <Resource Include="Skin\Images\T2\popup_hot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\ring_my2_bg2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\minus1.png" />
+    <Resource Include="Skin\Images\plus1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\HF-QuickStart-v18-pop-up-video1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\en-US\member1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\proto_arrow_l.png" />
+    <Resource Include="Skin\Images\proto_arrow_r.png" />
+    <Resource Include="Skin\Images\proto_audio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\en-US\proto_view_all.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\en-US\de_purchase.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\en-US\hydra-facial-UI-v17-home-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\en-US\DailyEssentials_mod3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\T2\Daily-Essential-Form_mod1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\WindowBackground_v3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\en-US\HF-Settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\LED_body.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\en-US\modalities_view_all.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\en-US\Protocol_Main_Menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\T2\n_internet_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\Wifi\Wifi_Bar0.png" />
+    <Resource Include="Skin\Images\Wifi\Wifi_Bar1.png" />
+    <Resource Include="Skin\Images\Wifi\Wifi_Bar2.png" />
+    <Resource Include="Skin\Images\Wifi\Wifi_Bar3.png" />
+    <Resource Include="Skin\Images\Wifi\Wifi_Bar4.png" />
+    <Resource Include="Skin\Images\Wifi\Wifi_Bar5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\WindowBackground_DB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\T2\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\T2\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="_Notes2.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\en-US\DailyEssentials_config.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\top_menu_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\v001\Arrow_Left.png" />
+    <Resource Include="Skin\Images\v001\Arrow_Right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Skin\Images\en-US\WindowBackground_update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Skin\Images\en-US\WindowBackground_datetimechanges.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>echo on
+
+
+
+mkdir $(TargetDir)Skin
+mkdir $(TargetDir)Skin\Images
+xcopy /S  /Y $(ProjectDir)Skin\*.* $(TargetDir)Skin\*.*
+
+mkdir $(TargetDir)Videos
+xcopy /S  /Y $(ProjectDir)Videos\Videos\*.* $(TargetDir)Videos\*.*
+
+xcopy /Y $(ProjectDir)*.config $(TargetDir)*.*
+pause
+</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,26 @@
+﻿<Page x:Class="Edge.Tower2.UI.pg_Purchase"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      x:Name="Me"
+      Height="500" Width="600"
+	  Title="pg_Purchase">
+
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources\rsStyle.xaml"/>
+                <ResourceDictionary Source="Resources\rsRoundButton.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+         </ResourceDictionary>
+    </Page.Resources>
+        
+     <Grid>
+        <Canvas>
+            <Image x:Name="imgDe_purchase" Source="Skin/Images/de_purchase.png" Width="306" Height="112" Canvas.Left="29" Canvas.Top="10"  />
+            <Button x:Name="btnLink" Style="{StaticResource st_Transparent}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="211" Height="80" Click="btnLink_Click" Canvas.Left="29" Canvas.Top="42"/>
+        </Canvas>
+    </Grid>
+</Page>

@@ -1,0 +1,180 @@
+<?xml version='1.0' encoding='us-ascii'?> 
+<treatmentlist>
+
+<add key="11-1"  value="Daily Essentials"/> 
+<add key="9-1"   value="Vortex-Fusion"/> 
+<add key="5-1"   value="Extractions"/> 
+<add key="4-1"   value="Acid Peel"/> 
+<add key="3-1"   value="Exfoliation"/> 
+
+<add key="9-4"   value="Vortex-Fusion"/> 
+<add key="3-4"   value="Exfoliation"/> 
+<add key="4-4"   value="Acid Peel"/> 
+<add key="5-4"   value="Extractions"/> 
+<add key="7-4a"  value="Vortex-Boost"/> 
+<add key="7-4"   value="Pulse-Fusion"/> 
+<add key="8-4"   value="LED Light Therapy"/> 
+<add key="11-4"  value="Daily Essentials"/>
+ 
+<add key="9-5"   value="Vortex-Fusion"/> 
+<add key="7-5a"  value="Vortex-Boost"/> 
+<add key="3-5"   value="Exfoliation"/> 
+<add key="4-5"   value="Acid Peel"/> 
+<add key="5-5"   value="Extractions"/> 
+<add key="7-5"   value="Pulse-Fusion"/> 
+<add key="8-5"   value="LED Light Therapy"/> 
+<add key="11-5"  value="Daily Essentials"/>
+ 
+<add key="m6-6"  value="Hot Thermal Therapy"/> 
+<add key="9-8"   value="Vortex-Fusion"/> 
+<add key="7-8a"  value="Vortex-Boost"/> 
+<add key="3-8"   value="Exfoliation"/> 
+<add key="4-8"   value="Acid Peel"/> 
+<add key="5-8"   value="Extractions"/> 
+<add key="7-8"   value="Pulse-Fusion"/> 
+<add key="8-8"   value="LED Light Therapy"/> 
+<add key="11-8"  value="Daily Essentials"/>
+ 
+<add key="9-9"   value="Vortex-Fusion"/> 
+<add key="3-9"   value="Exfoliation"/> 
+<add key="4-9"   value="Acid Peel"/> 
+<add key="11-9"  value="Daily Essentials"/> 
+<add key="9-10"  value="Vortex-Fusion"/> 
+<add key="3-10"  value="Exfoliation"/> 
+<add key="4-10"  value="Acid Peel"/> 
+<add key="5-10"  value="Extractions"/> 
+<add key="11-10" value="Daily Essentials"/> 
+
+<add key="9-11"  value="Vortex-Fusion"/> 
+<add key="3-11"  value="Exfoliation"/> 
+<add key="7-11"  value="DermaBuilder"/> 
+<add key="11-11" value="Daily Essentials"/> 
+<add key="m12"   value="Step 5/5"/> 
+<add key="m3" 	 value="Step 4/5"/> 
+<add key="m13"   value="Step 3/5"/> 
+<add key="m11"   value="Step 2/5"/> 
+<add key="m4"    value="Step 1/5"/> 
+
+<add key="7d"    value="Britenol"/> 
+<add key="7b"    value="DermaBuilder"/> 
+<add key="7f"    value="CTGF"/> 
+<add key="7D"    value="Britenol"/> 
+<add key="7B"    value="DermaBuilder"/> 
+<add key="7F"    value="CTGF"/> 
+
+
+
+<add key="m5"    value="Back"/> 
+<add key="m1"    value="Face"/> 
+<add key="m14"   value="Back"/> 
+<add key="m6"    value="Face"/> 
+
+<add key="m15-3" value="Red and Blue LED"/> 
+<add key="m15-2" value="Blue LED"/> 
+<add key="m15-1" value="Red LED"/> 
+<add key="m9-1"  value="Abdomen"/> 
+<add key="m8-2"  value="Arm"/> 
+<add key="m9-2"  value="Legs"/> 
+<add key="m8-1"  value="Back"/>
+ 
+<add key="8-6"   value="LED Light Therapy"/> 
+<add key="9-6"   value="Vortex-Fusion"/> 
+<add key="3-6"   value="Exfoliation"/> 
+<add key="4-6"   value="Acid Peel"/> 
+<add key="5-6"   value="Extractions"/> 
+<add key="11-6"  value="Daily Essentials"/> 
+<add key="11-7"  value="Daily Essentials"/> 
+<add key="8-7"   value="LED Light Therapy"/> 
+<add key="5-7"   value="Extractions"/> 
+<add key="4-7"   value="Acid Peel"/> 
+<add key="3-7"   value="Exfoliation"/> 
+<add key="9-7"   value="Vortex-Fusion"/> 
+<add key="32"    value="Exfoliation"/> 
+<add key="31"    value="Exfoliation"/> 
+<add key="2b-1"  value="Mechanical Lymph Draina."/> 
+<add key="m17"   value="Face"/> 
+<add key="8-1"   value="LED Light Therapy"/> 
+<add key="Pk_01" value="Perk Face Exfoliation"/> 
+<add key="Pk_02" value="Perk Face Antioxidant"/> 
+<add key="Pk_03" value="Perk Face Take-Home"/> 
+<add key="Pk_04" value="Perk Lip Exfoliation"/> 
+<add key="Pk_05" value="Perk Lip Take-Home"/> 
+<add key="Pk_06" value="Perk Lip Follow-Up"/> 
+<add key="Pk_07" value="Perk Eye Exfoliation"/> 
+<add key="Pk_08" value="Perk Eye Take-Home"/> 
+<add key="Pk_09" value="Perk Eye Follow-Up"/> 
+<add key="r9-4"  value="Restorative Vortex"/> 
+<add key="r5-4"  value="Restorative Extractions"/> 
+<add key="r7-4a" value="Restorative Vortex-Boost"/> 
+<add key="r4-4"  value="Restorative Acid Peel"/> 
+<add key="r3-4"  value="Restorative Exfoliation"/> 
+<add key="r11-4" value="Restorative Daily Essen."/> 
+<add key="r8-4"  value="Restorative LED Light"/> 
+
+
+
+
+
+<add key="1b"    value="Body-Back Exfoliation"/> 
+<add key="1d"    value="Deluxe-Exfoliation"/>
+<add key="_1ES"   value="Essent.Protect SPF 40"/>
+<add key="1h"    value="Body-Hands-Exfoliation"/>
+<add key="_1LDA"  value="Lymphatic Drainage Arms"/>
+
+<add key="1LDAB"  value="Lymph. Drainage Abdomen"/>
+<add key="1LDB"   value="Lymph. Drainage Back"/>
+<add key="1LDF"   value="Lymph. Drainage Face"/>
+<add key="1LDL"   value="Lymph. Drainage Legs"/>
+<add key="1LEDB"  value="Led Light Therapy-Blue"/>
+
+<add key="1LEDR"  value="Led Light Therapy-Red"/>
+<add key="1nd"    value="Body-Neck-Exfoliation"/>
+
+<add key="1PSE"   value="Perk-Eyes"/>
+<add key="1PSL"   value="Perk-Lip"/>
+<add key="1SCH"   value="Clean-Handpiece"/>
+
+<add key="1SCM"   value="Clean-Manifold "/>
+<add key="1SCP"   value="Clean-Perk Tubing"/>
+<add key="1WD"    value="Wet Diamond"/>
+<add key="2b"     value="Body-Back-Glysol"/>
+<add key="2d"     value="Deluxe-Glysol"/>
+
+<add key="2ES"    value="Essent. Clean Cleanser"/>
+<add key="2h"     value="Body-Hands-Glysol"/>
+<add key="2nd"    value="Body-Neck-Glysol"/>
+<add key="2PSE"   value="Perk-Eye Take Home"/>
+<add key="2PSL"   value="Perk-Lip Revitalizing"/>
+
+<add key="3b"     value="Body-Back Exfoliation"/>
+<add key="3d"     value="Deluxe-Extractions"/>
+<add key="3ES"    value="Essent. Resto. Ni. Cream"/>
+<add key="3h"     value="Body-Hands-Vortex Fusion"/>
+<add key="3nd"    value="Body-Neck-Vortex Fusion"/>
+
+<add key="4b"     value="Body-Back-Vortex Fusion"/>
+<add key="4d"     value="Deluxe-Booster"/>
+<add key="4ES"    value="Essent. Day Cream SPF 40"/>
+<add key="5d"     value="Deluxe-Led Lights"/>
+<add key="5ES"    value="Essent. Tinted SPF 40"/>
+
+<add key="6d"     value="Deluxe-Vortex Fusion"/>
+
+<add key="p1"     value="Platinum-Lymph-Drainage"/>
+<add key="p2"     value="Platinum-Exfoliation"/>
+<add key="p3"     value="Platinum-Glysol"/>
+<add key="p4"     value="Platinum-Extractions"/>
+
+<add key="p5"     value="Platinum-Booster"/>
+<add key="p6"     value="Platinum-Vortex Fusion"/>
+<add key="p7"     value="Platinum-LED Lights"/>
+
+<add key="s1"     value="Signature-Exfoliation"/>
+<add key="s2"     value="Signature-GlySol"/>
+
+<add key="s3"     value="Signature-Extractions"/>
+<add key="s4"     value="Signature-Vortex Fusion"/>
+
+
+
+</treatmentlist>

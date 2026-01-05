@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="Edge.Tower2.UI.uc_User"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" Height="59.74" Width="377.922" Unloaded="UserControl_Unloaded">
+
+    <Canvas>
+        <Label x:Name="lblLogin" Canvas.Left="50" Canvas.Top="15" Content="Logged in as User" HorizontalAlignment="Left"   Width="143" Foreground="#FF494848" Style="{StaticResource st_Label}" FontSize="12"/>
+        <Button x:Name="btnLogin"  Canvas.Left="0" Canvas.Top="0" Width="50" Height="50" Click="btnLogin_Click">
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source = "Skin/Images/t2/n_Login.png" Width="60" Height="60"/>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+    </Canvas>
+</UserControl>

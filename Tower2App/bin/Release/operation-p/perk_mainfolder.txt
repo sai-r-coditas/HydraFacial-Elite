@@ -1,0 +1,1 @@
+2,Perk_eye ,Perk_lip  ,0,0,0,0,0,0,0,0,0,0,0,Perk1  ; main menu

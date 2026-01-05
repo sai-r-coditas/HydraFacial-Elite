@@ -1,0 +1,492 @@
+﻿1>------ Rebuild All started: Project: EdgeSecurity, Configuration: Debug Any CPU ------
+2>------ Rebuild All started: Project: Utility, Configuration: Debug Any CPU ------
+3>------ Rebuild All started: Project: WPFMediaKit, Configuration: Debug Any CPU ------
+4>------ Rebuild All started: Project: SvgControl, Configuration: Debug Any CPU ------
+2>  Utility -> C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Utility\bin\Debug\Utility.dll
+1>  EdgeSecurity -> C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\EdgeSecurity\bin\Debug\EdgeSecurity.dll
+5>------ Rebuild All started: Project: EdgeObject, Configuration: Debug Any CPU ------
+5>  EdgeObject -> C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\EdgeObject\bin\Debug\Edge.EdgeObject.dll
+6>------ Rebuild All started: Project: IOBoard, Configuration: Debug Any CPU ------
+4>  SvgControl -> C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\SvgControl\bin\Debug\SvgControl.dll
+6>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\IOBoard\BoardManager.cs(325,30,325,32): warning CS0168: The variable 'ex' is declared but never used
+6>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\IOBoard\BoardManager.cs(360,30,360,32): warning CS0168: The variable 'ex' is declared but never used
+6>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\IOBoard\BoardManager.cs(38,22,38,41): warning CS0649: Field 'Edge.IOBoard.BoardManager._WaitForGroupParams' is never assigned to, and will always have its default value false
+6>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\IOBoard\BoardManager.cs(67,22,67,27): warning CS0414: The field 'Edge.IOBoard.BoardManager.doing' is assigned but its value is never used
+6>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\IOBoard\BoardManager.cs(68,22,68,34): warning CS0169: The field 'Edge.IOBoard.BoardManager.getAllNeeded' is never used
+6>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\IOBoard\BoardManager.cs(78,32,78,51): warning CS0649: Field 'Edge.IOBoard.BoardManager._communicationTimer' is never assigned to, and will always have its default value null
+6>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\IOBoard\BoardManager.cs(162,35,162,56): warning CS0649: Field 'Edge.IOBoard.BoardManager._communicationTimeout' is never assigned to, and will always have its default value
+6>  IOBoard -> C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\IOBoard\bin\Debug\Edge.IOBoard.dll
+3>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\WPFMediaKit\DirectShow\MediaPlayers\BaseClasses.cs(216,22,216,32): warning CS0414: The field 'WPFMediaKit.DirectShow.MediaPlayers.MediaPlayerBase.m_disposed' is assigned but its value is never used
+3>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\WPFMediaKit\DirectShow\MediaPlayers\Vmr9Allocator.cs(59,22,59,32): warning CS0414: The field 'WPFMediaKit.DirectShow.MediaPlayers.Vmr9Allocator.m_disposed' is assigned but its value is never used
+3>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\WPFMediaKit\DirectShow\MediaPlayers\BaseClasses.cs(216,22,216,32): warning CS0414: The field 'WPFMediaKit.DirectShow.MediaPlayers.MediaPlayerBase.m_disposed' is assigned but its value is never used
+3>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\WPFMediaKit\DirectShow\MediaPlayers\Vmr9Allocator.cs(59,22,59,32): warning CS0414: The field 'WPFMediaKit.DirectShow.MediaPlayers.Vmr9Allocator.m_disposed' is assigned but its value is never used
+3>  WPFMediaKit -> C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\WPFMediaKit\bin\Debug\WPFMediaKit.dll
+7>------ Rebuild All started: Project: Tower2UI, Configuration: Debug Any CPU ------
+7>C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets(4319,5): warning MSB3061: Unable to delete file "C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\bin\Debug\Edge.Tower2.UI.exe". Access to the path 'C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\bin\Debug\Edge.Tower2.UI.exe' is denied.
+7>C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets(4319,5): warning MSB3061: Unable to delete file "C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\bin\Debug\DirectShowLib-2005.dll". Access to the path 'C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\bin\Debug\DirectShowLib-2005.dll' is denied.
+7>C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets(4319,5): warning MSB3061: Unable to delete file "C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\bin\Debug\Edge.EdgeObject.dll". Access to the path 'C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\bin\Debug\Edge.EdgeObject.dll' is denied.
+7>C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets(4319,5): warning MSB3061: Unable to delete file "C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\bin\Debug\Edge.IOBoard.dll". Access to the path 'C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\bin\Debug\Edge.IOBoard.dll' is denied.
+7>C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets(4319,5): warning MSB3061: Unable to delete file "C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\bin\Debug\SimpleWifi.dll". Access to the path 'C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\bin\Debug\SimpleWifi.dll' is denied.
+7>C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets(4319,5): warning MSB3061: Unable to delete file "C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\bin\Debug\SvgControl.dll". Access to the path 'C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\bin\Debug\SvgControl.dll' is denied.
+7>C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets(4319,5): warning MSB3061: Unable to delete file "C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\bin\Debug\WPFMediaKit.dll". Access to the path 'C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\bin\Debug\WPFMediaKit.dll' is denied.
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\DB\DB_Commend.cs(9,7,9,18): warning CS0105: The using directive for 'System.Data' appeared previously in this namespace
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfWifi.xaml.cs(15,7,15,18): warning CS0105: The using directive for 'System.Linq' appeared previously in this namespace
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\PhotoCapture\PhotoCapture.xaml.cs(17,7,17,28): warning CS0105: The using directive for 'System.ComponentModel' appeared previously in this namespace
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\App.xaml.cs(507,30,507,32): warning CS0168: The variable 'ex' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\c_DemoCode.cs(122,42,122,43): warning CS0168: The variable 'e' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\c_DemoCode.cs(142,42,142,43): warning CS0168: The variable 'e' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Printing\wpfProductMenu.xaml.cs(186,17,186,37): warning CS0252: Possible unintended reference comparison; to get a value comparison, cast the left hand side to type 'string'
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Utility\c_Volume.cs(29,13,29,16): warning CS0162: Unreachable code detected
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\CreditCode\cc_CreditCodeState.cs(673,30,673,32): warning CS0168: The variable 'ex' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\CreditCode\cc_CreditCodeState.cs(721,29,721,34): warning CS0168: The variable 'state' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfDemo.xaml.cs(174,30,174,31): warning CS0168: The variable 'e' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfDemo.xaml.cs(194,30,194,32): warning CS0168: The variable 'ex' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfDemo.xaml.cs(210,30,210,32): warning CS0168: The variable 'ex' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfDemo.xaml.cs(234,30,234,31): warning CS0168: The variable 'e' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfStatus.xaml.cs(56,30,56,31): warning CS0168: The variable 'e' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfUpdate.xaml.cs(165,33,165,45): warning CS0168: The variable 'webException' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfVideo.xaml.cs(126,17,126,38): warning CS0252: Possible unintended reference comparison; to get a value comparison, cast the left hand side to type 'string'
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfVideo.xaml.cs(182,17,182,38): warning CS0252: Possible unintended reference comparison; to get a value comparison, cast the left hand side to type 'string'
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfWifi.xaml.cs(161,30,161,32): warning CS0168: The variable 'ex' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\CreditCode\cc_MachineAlgorithm.cs(73,42,73,43): warning CS0168: The variable 'e' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\CreditCode\cc_MachineAlgorithm.cs(93,42,93,43): warning CS0168: The variable 'e' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Utility\Lib.cs(263,30,263,32): warning CS0168: The variable 'ex' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfPhoto_Comparison.xaml.cs(162,29,162,31): warning CS0168: The variable 'ex' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfPhoto_Comparison.xaml.cs(177,29,177,31): warning CS0168: The variable 'ex' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfPhoto_Comparison.xaml.cs(191,29,191,31): warning CS0168: The variable 'ex' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfPhoto_Comparison.xaml.cs(205,29,205,31): warning CS0168: The variable 'ex' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfPhoto_Comparison.xaml.cs(219,29,219,31): warning CS0168: The variable 'ex' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfPhoto_Comparison.xaml.cs(234,30,234,32): warning CS0168: The variable 'ex' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfPhoto_Comparison.xaml.cs(531,36,531,61): warning CS0252: Possible unintended reference comparison; to get a value comparison, cast the left hand side to type 'string'
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfPhoto_Comparison.xaml.cs(557,37,557,62): warning CS0252: Possible unintended reference comparison; to get a value comparison, cast the left hand side to type 'string'
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\UsageReport\UsageReport.xaml.cs(327,23,327,32): warning CS0168: The variable 'textBlock' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\UsageReport\Model\UsageReportModel.cs(62,32,62,33): warning CS0168: The variable 'e' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\UsageReport\Model\UsageReportModel.cs(169,30,169,32): warning CS0168: The variable 'ex' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\PhotoCapture\PhotoCapture.xaml.cs(667,20,667,21): warning CS0168: The variable 's' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\PhotoCapture\PhotoCapture.xaml.cs(997,55,997,56): warning CS0642: Possible mistaken empty statement
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\uc_NavBar.xaml.cs(129,17,129,38): warning CS0252: Possible unintended reference comparison; to get a value comparison, cast the left hand side to type 'string'
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Printing\Printer.xaml.cs(196,17,196,37): warning CS0252: Possible unintended reference comparison; to get a value comparison, cast the left hand side to type 'string'
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfHome.xaml.cs(282,17,282,18): warning CS0219: The variable 'i' is assigned but its value is never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfHome.xaml.cs(373,30,373,32): warning CS0168: The variable 'ex' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfHome.xaml.cs(411,30,411,32): warning CS0168: The variable 'ex' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfHome.xaml.cs(483,30,483,31): warning CS0168: The variable 'e' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfHome.xaml.cs(481,17,481,23): warning CS0162: Unreachable code detected
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Outputs.cs(504,30,504,32): warning CS0168: The variable 'ex' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfHydraFacial.xaml.cs(332,17,332,36): warning CS0252: Possible unintended reference comparison; to get a value comparison, cast the left hand side to type 'string'
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfHydraFacial.xaml.cs(798,30,798,31): warning CS0168: The variable 'e' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfHydraFacial.xaml.cs(986,17,986,34): warning CS0252: Possible unintended reference comparison; to get a value comparison, cast the left hand side to type 'string'
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfHydraFacial.xaml.cs(1042,17,1042,36): warning CS0252: Possible unintended reference comparison; to get a value comparison, cast the left hand side to type 'string'
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfHydraFacial.xaml.cs(1119,17,1119,36): warning CS0252: Possible unintended reference comparison; to get a value comparison, cast the left hand side to type 'string'
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfHydraFacial.xaml.cs(1153,17,1153,38): warning CS0252: Possible unintended reference comparison; to get a value comparison, cast the left hand side to type 'string'
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfHydraFacial.xaml.cs(1740,21,1740,44): warning CS0252: Possible unintended reference comparison; to get a value comparison, cast the left hand side to type 'string'
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfHydraFacial.xaml.cs(1757,30,1757,32): warning CS0168: The variable 'ex' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfVPlayer.xaml.cs(391,17,391,38): warning CS0252: Possible unintended reference comparison; to get a value comparison, cast the left hand side to type 'string'
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfUser.xaml.cs(74,20,74,22): warning CS0219: The variable 'ID' is assigned but its value is never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfUser.xaml.cs(213,13,213,23): warning CS0162: Unreachable code detected
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Printing\wpfProductMenu.xaml.cs(76,50,76,65): warning CS0067: The event 'Edge.Tower2.UI.Printing.wpfProductMenu.PropertyChanged' is never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfStatus.xaml.cs(21,22,21,42): warning CS0169: The field 'Edge.Tower2.UI.wpfStatus._inRinseCheckHandler' is never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfStatus.xaml.cs(23,50,23,65): warning CS0067: The event 'Edge.Tower2.UI.wpfStatus.PropertyChanged' is never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\xPhoto_List.xaml.cs(76,50,76,65): warning CS0067: The event 'Edge.Tower2.UI.Photo_List.PropertyChanged' is never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\uc_Keyboard.xaml.cs(59,34,59,65): warning CS0649: Field 'Edge.Tower2.UI.UC_Keyboard._PreviousTextBoxBorderThickness' is never assigned to, and will always have its default value
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfPhoto_Customer_Search.xaml.cs(25,24,25,36): warning CS0169: The field 'Edge.Tower2.UI.Photo_Customer_Search.CurrentState' is never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\UsageReport\UsageReport.xaml.cs(577,50,577,65): warning CS0067: The event 'Edge.Tower2.UI.UsageReport.UsageReport.PropertyChanged' is never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\PhotoCapture\PhotoCapture.xaml.cs(246,50,246,65): warning CS0067: The event 'Edge.Tower2.UI.PhotoCapture.PhotoCapture.PropertyChanged' is never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\PhotoCapture\PhotoCaptureModel.cs(23,27,23,30): warning CS0169: The field 'Edge.Tower2.UI.PhotoCapture.PhotoCaptureModel.fsw' is never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\PhotoCapture\PhotoCaptureModel.cs(43,28,43,39): warning CS0169: The field 'Edge.Tower2.UI.PhotoCapture.PhotoCaptureModel._dispatcher' is never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\PhotoCapture\PhotoCaptureModel.cs(44,30,44,43): warning CS0169: The field 'Edge.Tower2.UI.PhotoCapture.PhotoCaptureModel._photoCapture' is never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Printing\Printer.xaml.cs(75,50,75,65): warning CS0067: The event 'Edge.Tower2.UI.Printing.Printer.PropertyChanged' is never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\xLEDs.xaml.cs(214,50,214,65): warning CS0067: The event 'Edge.Tower2.UI.LEDs.PropertyChanged' is never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfHome.xaml.cs(492,50,492,65): warning CS0067: The event 'Edge.Tower2.UI.Home.PropertyChanged' is never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\DB\DB_Commend.cs(9,7,9,18): warning CS0105: The using directive for 'System.Data' appeared previously in this namespace
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfWifi.xaml.cs(15,7,15,18): warning CS0105: The using directive for 'System.Linq' appeared previously in this namespace
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\PhotoCapture\PhotoCapture.xaml.cs(17,7,17,28): warning CS0105: The using directive for 'System.ComponentModel' appeared previously in this namespace
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\App.xaml.cs(507,30,507,32): warning CS0168: The variable 'ex' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\c_DemoCode.cs(122,42,122,43): warning CS0168: The variable 'e' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\c_DemoCode.cs(142,42,142,43): warning CS0168: The variable 'e' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Printing\wpfProductMenu.xaml.cs(186,17,186,37): warning CS0252: Possible unintended reference comparison; to get a value comparison, cast the left hand side to type 'string'
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Utility\c_Volume.cs(29,13,29,16): warning CS0162: Unreachable code detected
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\CreditCode\cc_CreditCodeState.cs(673,30,673,32): warning CS0168: The variable 'ex' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\CreditCode\cc_CreditCodeState.cs(721,29,721,34): warning CS0168: The variable 'state' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfDemo.xaml.cs(174,30,174,31): warning CS0168: The variable 'e' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfDemo.xaml.cs(194,30,194,32): warning CS0168: The variable 'ex' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfDemo.xaml.cs(210,30,210,32): warning CS0168: The variable 'ex' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfDemo.xaml.cs(234,30,234,31): warning CS0168: The variable 'e' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfStatus.xaml.cs(56,30,56,31): warning CS0168: The variable 'e' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfUpdate.xaml.cs(165,33,165,45): warning CS0168: The variable 'webException' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfVideo.xaml.cs(126,17,126,38): warning CS0252: Possible unintended reference comparison; to get a value comparison, cast the left hand side to type 'string'
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfVideo.xaml.cs(182,17,182,38): warning CS0252: Possible unintended reference comparison; to get a value comparison, cast the left hand side to type 'string'
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfWifi.xaml.cs(161,30,161,32): warning CS0168: The variable 'ex' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\CreditCode\cc_MachineAlgorithm.cs(73,42,73,43): warning CS0168: The variable 'e' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\CreditCode\cc_MachineAlgorithm.cs(93,42,93,43): warning CS0168: The variable 'e' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Utility\Lib.cs(263,30,263,32): warning CS0168: The variable 'ex' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfPhoto_Comparison.xaml.cs(162,29,162,31): warning CS0168: The variable 'ex' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfPhoto_Comparison.xaml.cs(177,29,177,31): warning CS0168: The variable 'ex' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfPhoto_Comparison.xaml.cs(191,29,191,31): warning CS0168: The variable 'ex' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfPhoto_Comparison.xaml.cs(205,29,205,31): warning CS0168: The variable 'ex' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfPhoto_Comparison.xaml.cs(219,29,219,31): warning CS0168: The variable 'ex' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfPhoto_Comparison.xaml.cs(234,30,234,32): warning CS0168: The variable 'ex' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfPhoto_Comparison.xaml.cs(531,36,531,61): warning CS0252: Possible unintended reference comparison; to get a value comparison, cast the left hand side to type 'string'
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfPhoto_Comparison.xaml.cs(557,37,557,62): warning CS0252: Possible unintended reference comparison; to get a value comparison, cast the left hand side to type 'string'
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\UsageReport\UsageReport.xaml.cs(327,23,327,32): warning CS0168: The variable 'textBlock' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\UsageReport\Model\UsageReportModel.cs(62,32,62,33): warning CS0168: The variable 'e' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\UsageReport\Model\UsageReportModel.cs(169,30,169,32): warning CS0168: The variable 'ex' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\PhotoCapture\PhotoCapture.xaml.cs(667,20,667,21): warning CS0168: The variable 's' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\PhotoCapture\PhotoCapture.xaml.cs(997,55,997,56): warning CS0642: Possible mistaken empty statement
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\uc_NavBar.xaml.cs(129,17,129,38): warning CS0252: Possible unintended reference comparison; to get a value comparison, cast the left hand side to type 'string'
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Printing\Printer.xaml.cs(196,17,196,37): warning CS0252: Possible unintended reference comparison; to get a value comparison, cast the left hand side to type 'string'
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfHome.xaml.cs(282,17,282,18): warning CS0219: The variable 'i' is assigned but its value is never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfHome.xaml.cs(373,30,373,32): warning CS0168: The variable 'ex' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfHome.xaml.cs(411,30,411,32): warning CS0168: The variable 'ex' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfHome.xaml.cs(483,30,483,31): warning CS0168: The variable 'e' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfHome.xaml.cs(481,17,481,23): warning CS0162: Unreachable code detected
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Outputs.cs(504,30,504,32): warning CS0168: The variable 'ex' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfHydraFacial.xaml.cs(332,17,332,36): warning CS0252: Possible unintended reference comparison; to get a value comparison, cast the left hand side to type 'string'
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfHydraFacial.xaml.cs(798,30,798,31): warning CS0168: The variable 'e' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfHydraFacial.xaml.cs(986,17,986,34): warning CS0252: Possible unintended reference comparison; to get a value comparison, cast the left hand side to type 'string'
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfHydraFacial.xaml.cs(1042,17,1042,36): warning CS0252: Possible unintended reference comparison; to get a value comparison, cast the left hand side to type 'string'
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfHydraFacial.xaml.cs(1119,17,1119,36): warning CS0252: Possible unintended reference comparison; to get a value comparison, cast the left hand side to type 'string'
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfHydraFacial.xaml.cs(1153,17,1153,38): warning CS0252: Possible unintended reference comparison; to get a value comparison, cast the left hand side to type 'string'
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfHydraFacial.xaml.cs(1740,21,1740,44): warning CS0252: Possible unintended reference comparison; to get a value comparison, cast the left hand side to type 'string'
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfHydraFacial.xaml.cs(1757,30,1757,32): warning CS0168: The variable 'ex' is declared but never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfVPlayer.xaml.cs(391,17,391,38): warning CS0252: Possible unintended reference comparison; to get a value comparison, cast the left hand side to type 'string'
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfUser.xaml.cs(74,20,74,22): warning CS0219: The variable 'ID' is assigned but its value is never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfUser.xaml.cs(213,13,213,23): warning CS0162: Unreachable code detected
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Printing\wpfProductMenu.xaml.cs(76,50,76,65): warning CS0067: The event 'Edge.Tower2.UI.Printing.wpfProductMenu.PropertyChanged' is never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfStatus.xaml.cs(21,22,21,42): warning CS0169: The field 'Edge.Tower2.UI.wpfStatus._inRinseCheckHandler' is never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfStatus.xaml.cs(23,50,23,65): warning CS0067: The event 'Edge.Tower2.UI.wpfStatus.PropertyChanged' is never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\xPhoto_List.xaml.cs(76,50,76,65): warning CS0067: The event 'Edge.Tower2.UI.Photo_List.PropertyChanged' is never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\uc_Keyboard.xaml.cs(59,34,59,65): warning CS0649: Field 'Edge.Tower2.UI.UC_Keyboard._PreviousTextBoxBorderThickness' is never assigned to, and will always have its default value
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfPhoto_Customer_Search.xaml.cs(25,24,25,36): warning CS0169: The field 'Edge.Tower2.UI.Photo_Customer_Search.CurrentState' is never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\UsageReport\UsageReport.xaml.cs(577,50,577,65): warning CS0067: The event 'Edge.Tower2.UI.UsageReport.UsageReport.PropertyChanged' is never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\PhotoCapture\PhotoCapture.xaml.cs(246,50,246,65): warning CS0067: The event 'Edge.Tower2.UI.PhotoCapture.PhotoCapture.PropertyChanged' is never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\PhotoCapture\PhotoCaptureModel.cs(23,27,23,30): warning CS0169: The field 'Edge.Tower2.UI.PhotoCapture.PhotoCaptureModel.fsw' is never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\PhotoCapture\PhotoCaptureModel.cs(43,28,43,39): warning CS0169: The field 'Edge.Tower2.UI.PhotoCapture.PhotoCaptureModel._dispatcher' is never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\PhotoCapture\PhotoCaptureModel.cs(44,30,44,43): warning CS0169: The field 'Edge.Tower2.UI.PhotoCapture.PhotoCaptureModel._photoCapture' is never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Printing\Printer.xaml.cs(75,50,75,65): warning CS0067: The event 'Edge.Tower2.UI.Printing.Printer.PropertyChanged' is never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\xLEDs.xaml.cs(214,50,214,65): warning CS0067: The event 'Edge.Tower2.UI.LEDs.PropertyChanged' is never used
+7>C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\wpfHome.xaml.cs(492,50,492,65): warning CS0067: The event 'Edge.Tower2.UI.Home.PropertyChanged' is never used
+7>C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets(3678,5): warning MSB3026: Could not copy "C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\EdgeObject\bin\Debug\Edge.EdgeObject.dll" to "bin\Debug\Edge.EdgeObject.dll". Beginning retry 1 in 1000ms. The process cannot access the file 'bin\Debug\Edge.EdgeObject.dll' because it is being used by another process.
+7>C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets(3678,5): warning MSB3026: Could not copy "C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\EdgeObject\bin\Debug\Edge.EdgeObject.dll" to "bin\Debug\Edge.EdgeObject.dll". Beginning retry 2 in 1000ms. The process cannot access the file 'bin\Debug\Edge.EdgeObject.dll' because it is being used by another process.
+7>C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets(3678,5): warning MSB3026: Could not copy "C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\EdgeObject\bin\Debug\Edge.EdgeObject.dll" to "bin\Debug\Edge.EdgeObject.dll". Beginning retry 3 in 1000ms. The process cannot access the file 'bin\Debug\Edge.EdgeObject.dll' because it is being used by another process.
+7>C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets(3678,5): warning MSB3026: Could not copy "C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\EdgeObject\bin\Debug\Edge.EdgeObject.dll" to "bin\Debug\Edge.EdgeObject.dll". Beginning retry 4 in 1000ms. The process cannot access the file 'bin\Debug\Edge.EdgeObject.dll' because it is being used by another process.
+7>C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets(3678,5): warning MSB3026: Could not copy "C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\EdgeObject\bin\Debug\Edge.EdgeObject.dll" to "bin\Debug\Edge.EdgeObject.dll". Beginning retry 5 in 1000ms. The process cannot access the file 'bin\Debug\Edge.EdgeObject.dll' because it is being used by another process.
+7>C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets(3678,5): warning MSB3026: Could not copy "C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\EdgeObject\bin\Debug\Edge.EdgeObject.dll" to "bin\Debug\Edge.EdgeObject.dll". Beginning retry 6 in 1000ms. The process cannot access the file 'bin\Debug\Edge.EdgeObject.dll' because it is being used by another process.
+7>  Tower2UI -> C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\bin\Debug\Edge.Tower2.UI.exe
+7>  A subdirectory or file C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\bin\Debug\Skin already exists.
+7>  A subdirectory or file C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\bin\Debug\Skin\Images already exists.
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\CheckButton.xaml
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\CheckButton1.xaml
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\CheckButton2.xaml
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\ControlButton.xaml
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Icons.xaml
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\NavigationButton.xaml
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\StyleButton.xaml
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Window.xaml
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\creditcode\0.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\creditcode\1.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\creditcode\2.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\creditcode\3.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\creditcode\4.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\creditcode\5.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\creditcode\6.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\creditcode\7.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\creditcode\8.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\creditcode\9.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\creditcode\close1.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\creditcode\creditcode_popup_3 - Copy.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\creditcode\creditcode_popup_3.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\creditcode\del.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\creditcode\enter.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\creditcode\hyphen.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\creditcode\return.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\-WindowBackground_0.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\1light_d.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\1light_u.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\2lights_d.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\2lights_u.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Arrow_Left.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Arrow_Right.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Backward.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\bg_button1.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\bg_button2.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\body_d.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\body_therapy_off.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\body_therapy_on.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\body_u.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\btn_down.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\btn_up.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\close.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\cold_d.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\cold_u.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\creditRemain.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Daily-Essential-Form_mod1.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\DailyEssentials_config.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\DailyEssentials_mod3.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\delete.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\de_purchase.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Down.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\edit.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\face.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\face_BL.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\face_BR.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\face_d.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\face_TL.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\face_TR.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\face_u.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\facial_therapy_off.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\facial_therapy_on.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Faster.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Forward.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\HF-QuickStart-v18-4coder3_03.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\HF-QuickStart-v18-pop-up-video1.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\HF-Settings.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\home.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\home1.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\hotcold_off_d.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\hotcold_off_u.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\HotCold_ring_bg.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\hot_d.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\hot_u.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\hydra-facial-UI-v15-enter.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\hydra-facial-UI-v15-enter_notuse.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\hydra-facial-UI-v15-home.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\hydra-facial-UI-v15-home1.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\hydra-facial-UI-v15-home2-3.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\hydra-facial-UI-v15-home2.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\hydra-facial-UI-v17-home-1.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\hydrafacial Header-.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\icon-bodytherapy.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\icon-facialtherapy.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\icon-led.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\icon-pulsefusion.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\icon-thermal.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\icon-vortex.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\LED_body.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\led_body_lb.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\led_body_lt.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\led_body_rb.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\led_body_rt.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\led_face_lb.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\led_face_lt.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\led_face_rb.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\led_face_rt.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\led_next.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\led_pause.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\led_reset.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\led_start.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\led_stop.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\light_therapy_off.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\light_therapy_on.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\logo-.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\logo.ico
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\lotions.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\MainMenu-Camera.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\MainMenu-DailyEssentials.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\MainMenu-Modalities.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\MainMenu-Protocols.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\MainMenu-Quickstart.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\MainMenu-Technique.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\member1.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\minus.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\minus1.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Modalities_Main_Menu.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\modalities_view_all.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\No.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\notinuse_hydra-facial-UI-v17-home-1_.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\no_icon.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\n_Arrow_Left.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\n_Arrow_Right.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\n_Cold.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\n_help.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\n_High.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\n_Home.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\n_Hot.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\n_internet.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\n_internet_off.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\n_Login.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\n_Login1.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\n_Low.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\n_Med.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\n_play.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\n_Power.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\n_settings.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\n_Speaker.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\n_status.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\n_stop.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\n_Thermal.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\n_Volume.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\off.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\on.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Pause.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Pause_shadow.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\play.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\play1.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\play_shaow.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\plus.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\plus1.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\popup_cold.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\popup_cold1.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\popup_cold_btn.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\popup_hot.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\popup_hot1.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\popup_Hot_btn.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\power-icon-off.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\power-icon-on-gray.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\power-icon-on-lightblue.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\power-icon-on.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\pretreatment-pop-up.jpg
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\profile1.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\profile2.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\profile3.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\profile4.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\profile_1.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\profile_2.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\profile_3.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\profile_4.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\protocol-signature-platinum-opt.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\protocol.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Protocol_Main_Menu.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\protocol_signature_options.jpg
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\proto_arrow_l.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\proto_arrow_r.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\proto_audio.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\proto_suggest.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\proto_view_all.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Pulse-graph1_01.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Pulse-graph1_02.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Pulse-graph1_03.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Pulse-graph_B_01.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Pulse-graph_B_02.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Pulse-graph_B_03.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Pulse-graph_G_01.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Pulse-graph_G_02.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Pulse-graph_G_03.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\pulse1L.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\pulse2M.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\pulse3H.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\pulsefusion-ring-bg2.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\pulsefusion_ring_bg.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\pulseselect_bg1-1.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\pulseselect_bg1-2.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\pulseselect_bg1.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\pulseselect_bg2.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\pulseselect_bg3.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\pulseselect_bg_white.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\pulseselect_bg_white1.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\pulse_fusion_off.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\pulse_fusion_on.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\pulse_high_d.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\pulse_high_u.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\pulse_low_d.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\pulse_low_u.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\pulse_med_d.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\pulse_med_u.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\pulse_off_d.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\pulse_off_u.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Right_photo1.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\ring.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\ring_my1.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\ring_my1_bg1.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\ring_my2.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\ring_my2_bg2.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\ring_reversed.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\ring_reversed1.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\ring_TP.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\rinse Off.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\rinse On.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\SignaturePreClean.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Slower.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\ss_Content11.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\start.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\status.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\status1.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Stop.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Stop_shadow.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\SubMenu-icons1.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\SubMenu-icons2.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\SubMenu-icons3.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\SubMenu-icons4.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\SubMenu-icons5.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\SubMenu-icons6.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Submenu_5.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Submenu_6.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Submenu_7.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Submenu_8.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Submenu_9.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\suggestpattern.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Temp-graph0_01.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Temp-graph0_02.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Temp-graph0_03.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Temp-graph1_01.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Temp-graph1_02.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Temp-graph1_03.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Temp-graph2_01.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Temp-graph2_02.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Temp-graph2_03.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\thermal_off.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\thermal_on.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Up.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Vacuum_ring_bg.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Video_restart.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Volume_bg.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Volume_bg1.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\vortex_fusion_off.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\vortex_fusion_on.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\WindowBackground-.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\WindowBackground1.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\WindowBackground_DB.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\WindowBackground_v3.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Yes.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Player\body_therapy_off.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Player\facial_therapy_off.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Player\hydra-facial-UI-v15-home.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Player\light_therapy_off.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Player\media-playback-pause-3.ico
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Player\media-playback-pause-8.svg
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Player\media-playback-start-3.ico
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Player\media-playback-start-8.svg
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Player\media-playback-stop-3.ico
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Player\media-playback-stop-8.svg
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Player\media-seek-backward-3.ico
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Player\media-seek-backward-8.svg
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Player\media-seek-forward-3.ico
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Player\media-seek-forward-8.svg
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Player\media-skip-backward-3.ico
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Player\media-skip-backward-8.svg
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Player\media-skip-forward-3.ico
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Player\media-skip-forward-8.svg
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Player\n_internet_off.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Player\pulse_fusion_off.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Player\thermal_off.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Player\vortex_fusion_off.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Wifi\Wifi_Bar0.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Wifi\Wifi_Bar1.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Wifi\Wifi_Bar2.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Wifi\Wifi_Bar3.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Wifi\Wifi_Bar4.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images\Wifi\Wifi_Bar5.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images_dynamic\cleanup_pf.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images_dynamic\cleanup_vortex.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images_dynamic\Protocols-home-revised.jpg
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images_new\MainMenu-Camera.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images_new\MainMenu-DailyEssentials.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images_new\MainMenu-Modalities.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images_new\MainMenu-Protocols.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images_new\MainMenu-Quickstart.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images_new\MainMenu-Technique.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images_new\SubMenu-icons1.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images_new\SubMenu-icons2.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images_new\SubMenu-icons3.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images_new\SubMenu-icons4.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images_new\SubMenu-icons5.png
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Skin\Images_new\SubMenu-icons6.png
+7>  306 File(s) copied
+7>  A subdirectory or file C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\bin\Debug\Videos already exists.
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Videos\Videos\HydraFacial Basic.mp4
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Videos\Videos\Application\Back Lymph.mov
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Videos\Videos\Application\HydraFacial Basic.mov
+7>  3 File(s) copied
+7>  C:\My_Projects\_TowerII_API_New_Layout_Anita_design\TowerII_API_ver0102_11\Tower2App-03-05-2014(Source)\EdgeFramework\Tower2App\Edge.Tower2.UI.exe.config
+7>  1 File(s) copied
+7>  Press any key to continue . . . 
+========== Rebuild All: 7 succeeded, 0 failed, 0 skipped ==========

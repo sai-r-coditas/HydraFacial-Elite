@@ -1,0 +1,100 @@
+﻿<UserControl x:Class="Edge.Tower2.UI.NavBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:ui="clr-namespace:Edge.Tower2.UI"
+             mc:Ignorable="d" 
+             d:DesignHeight="77" d:DesignWidth="1280" Unloaded="UserControl_Unloaded" >
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources\rsStyle.xaml"/>
+                <ResourceDictionary Source="Resources\rsRoundButton.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid Height="Auto" Margin="0,0,0,0">
+
+
+        <Image x:Name="imgTopMenu" Width="1280" Height="100" Source="Skin/Images/top_menu_bg.png" />
+
+        <!--Buttons-->
+        <Canvas HorizontalAlignment="Left" VerticalAlignment="Top" Height="100" Margin="490,0,0,0" 
+                        Width="678">
+
+            <ui:HotColdNavButton x:Name="HotCold" Visibility="Hidden" />
+
+            <Button x:Name="btnHome" Width="74" Height="74" Style="{StaticResource st_FlatButton1}" BorderBrush="{x:Null}" Canvas.Left="377" Click="btnHome_Click">
+               
+            </Button>
+
+            <Button x:Name="btnVolume"  Width="74" Height="74" Style="{StaticResource st_FlatButton1}"  BorderBrush="{x:Null}" Canvas.Left="463" Click="btnVolume_Click">
+               
+            </Button>
+
+            <Button x:Name="btnInternet_off"  Width="74" Height="74" Style="{StaticResource AddShadow1}" Background="{x:Null}" BorderBrush="{x:Null}" Canvas.Left="290" Canvas.Top="-6" Click="btnInternet_Click" >
+                <Button.Template>
+                    <ControlTemplate>
+                        <Image Source = "Skin/Images/t2/n_Internet_off.png" />
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button x:Name="btnInternet"  Width="74" Height="74" Style="{StaticResource AddShadow1}" Visibility="Hidden"  Background="{x:Null}" BorderBrush="{x:Null}" Canvas.Left="290" Canvas.Top="-6" Click="btnInternet_Click" >
+                <Button.Template>
+                    <ControlTemplate>
+                        <Image Source = "Skin/Images/t2/n_Internet.png"/>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button x:Name="btnHelp"  Width="74" Height="74" Style="{StaticResource AddShadow1}" Canvas.Left="377" Canvas.Top="-6"  >
+                <Button.Template>
+                    <ControlTemplate>
+                        <Image Source = "Skin/Images/t2/n_Help.png" />
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <!--Style="{StaticResource st_FlatButton1}"-->
+            <Button x:Name="btnSettings"  Width="74" Height="74" Style="{StaticResource st_FlatButton1}"  BorderBrush="{x:Null}" Canvas.Left="550" Click="btnSettings_Click" >
+               
+            </Button>
+            <Button x:Name="btnStatus"  Width="74" Height="74" Style="{StaticResource AddShadow1}" Click="btnStatus_Click" Canvas.Left="551" Canvas.Top="-6">
+                <Button.Template>
+                    <ControlTemplate>
+                        <Image Source = "Skin/Images/t2/n_Status.png" />
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button x:Name="HydraFacial" Width="74" Height="74" Style="{StaticResource AddShadow1}"  Click="HydraFacialClick" Background="{x:Null}" BorderBrush="{x:Null}" Visibility="Collapsed">
+                <TextBlock FontSize="16"><Run Text="HydraFacial"/></TextBlock>
+            </Button>
+            <Button x:Name="VacJet" Width="75" Height="75" Style="{StaticResource AddShadow1}"
+                        Click="VacJetClick" Background="{x:Null}" BorderBrush="{x:Null}" Visibility="Collapsed">
+                <TextBlock TextWrapping="Wrap" FontSize="16"><Run Text="Pulse Fusion"/></TextBlock>
+            </Button>
+            <Label Width="20">
+
+            </Label>
+
+        </Canvas>
+
+        <Canvas x:Name="cvsVolume" HorizontalAlignment="Left" Height="179" Margin="995,70,0,-172" VerticalAlignment="Top" Width="70" PreviewMouseUp="cvsVolume_PreviewMouseUp" >
+
+            <Image x:Name="imgSliderVolume" Source="Skin/Images/Volume_bg1.png" Canvas.Left="1" Width="69" Height="181"/>
+
+            <Slider x:Name="sldVolume" Style="{StaticResource stSlider}"  Maximum="1"  Value="0.5" Width="109" Height="33" PreviewMouseDown="sldVolume_PreviewMouseDown" PreviewMouseUp="sldVolume_PreviewMouseUp" Canvas.Left="-28" Canvas.Top="85" RenderTransformOrigin="0.473,-0.99">
+                <Slider.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-89.901"/>
+                        <TranslateTransform X="-38.998" Y="44.374"/>
+                    </TransformGroup>
+                </Slider.RenderTransform>
+            </Slider>
+        </Canvas>
+
+    </Grid>
+</UserControl>
